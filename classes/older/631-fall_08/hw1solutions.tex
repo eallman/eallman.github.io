@@ -1,0 +1,550 @@
+\documentclass[10pt]{article}
+
+\usepackage[margin=1in, head=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+
+% if using a MAC, you may want to uncomment the following line
+% to enable reverse searches.
+\usepackage{pdfsync}
+
+
+% Headers and footers
+\fancyhf{}
+\rfoot{\thepage}
+
+%\setcounter{secnumdepth}{0}
+
+% macros for algebra class
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\b}{\textbf}
+\newcommand{\re}{\text{Re}}
+\newcommand{\im}{\text{Im}}
+\renewcommand{\iff}{\Leftrightarrow}
+\newcommand{\zbar}{\overline{z}}
+\newcommand\SL{\operatorname{SL}}
+\newcommand\GL{\operatorname{GL}}
+\newcommand{\divides}{\, \Big | \,}
+\newcommand\inv{^{-1}}
+\newcommand{\lcm}{\operatorname{lcm}}
+
+\parindent=0in
+\parskip=0.5\baselineskip
+
+% LOOK HERE
+% change assignment number and possibly date below
+\newcommand\header{{\sc 631 Homework Solutions \#1 \hfill \today}}
+
+\begin{document}
+
+\header
+
+% put in a section head with the appropriate chapter
+
+\section*{Section 0.2}
+
+\begin{itemize}
+
+\item[4.] Let $a,b$ and $N$ be fixed integers with $a$ and $b$ nonzero and let $d=(a,b)$ be the greatest common divisor of $a$ and $b$. Suppose $x_0$ and $y_0$ are particular solutions to $ax+by=N$ (i.e., $ax_0+by_0=N$). Prove for any integer $t$ that the integers
+$$ x=x_0+\frac{b}{d}t \quad \text{ and } \quad y=y_0-\frac{a}{d}t $$
+are also solutions to $ax+by=N$ (this is in fact the general solution).
+\begin{proof} (Bastille) \ Let $t \in \Z$. Assume $ax_0+by_0=N$ (with $x_0,y_0 \in \Z$). Define
+$$x=x_0+\frac{b}{d}t \quad , \quad y=y_0-\frac{a}{d}t. $$
+First we verify that $x,y \in \Z$: since $d=(a,b)$, $d|b$, $d|a$, $d \neq 0$. Therefore since also $a,b \neq 0$
+$$ \exists \; k_1, k_2 \in \Z^{*}: \quad b=k_1d \quad ,\quad  a=k_2d$$
+and so $k_1=\dfrac{b}{d} \in \Z$ and $k_2=\dfrac{a}{d} \in \Z$. Hence $x,y \in \Z$. Now we have:
+\begin{align*}
+ax+by &= a \left(x_0+\frac{b}{d}t\right)+b\left(y_0-\frac{a}{d}t\right) = ax_0+\frac{ab}{d}t+by_0-\frac{ba}{d}t \\
+      &= \underbrace{ax_0+by_0}_{=N \text{ by assumption}}+\underbrace{\left(\frac{ab}{d}-\frac{ba}{d}\right)}_{=0}t =N.
+\end{align*}
+\end{proof}
+\item[5.]Determine the value $\varphi(n)$ for each integer $n \leq 30$ where $\varphi$ denotes the Euler $\varphi$-function.
+
+(Bastille) \ We present the formulae used to compile the table below. By definition,
+\begin{equation} \label{eq0.2.1}
+\varphi(n)= \left| \left\{a: (a,n)=1 \; , 1 \leq a \leq n \right\} \right|.
+\end{equation}
+We also have for $p$ a prime and $\alpha \geq 1$
+\begin{equation} \label{eq0.2.2}
+\varphi(p^{\alpha})=p^{\alpha-1}(p-1).
+\end{equation}
+And for any $a,b$ such that $(a,b)=1$ we have
+\begin{equation} \label{eq0.2.3}
+\varphi(ab)=\varphi(a)\varphi(b).
+\end{equation}
+Hence we used \eqref{eq0.2.1} to compute $\varphi (1)$, \eqref{eq0.2.2} to compute $\varphi$ for $2,3,4,5,7,8,9,11,13,16,17,19,23,25,27,29$, and \eqref{eq0.2.3} for $6=3\cdot2, \; 10=2\cdot 5 , \; 12=3 \cdot 4, \; 14=2 \cdot 7, \; 15=3 \cdot 5, \; 18=2 \cdot 9, \; 20=4 \cdot 5, \; 21=3 \cdot 7, \; 22=2 \cdot 11, \; 24=3 \cdot 8, \; 26=2 \cdot 13, \; 28=4 \cdot 7, \; 30= 5\cdot 6$.
+\vskip0.2in
+\begin{center}
+\begin{tabular}{c|cccccccccccccccc}
+$n$ &  1 & 2&3&4&5&6&7&8&9&10&11&12&13&14&15& 16 \\
+\hline \\
+$\varphi(n)$ & 1 & 1&2&2&4&2&6&4&6&4&10&4&12&6&8&8\\
+\end{tabular}
+\vskip0.3in
+\begin{tabular}{c|cccccccccccccccc}
+$n$ &17&18&19&20&21&22&23&24&25&26&27&28&29&30 \\
+\hline \\
+$\varphi(n)$ &16&6&18&8&12&10&22&8&20&12&18&12&28&8 \\
+\end{tabular}
+\end{center}
+\item[11.] Prove that if $d$ divides $n$ then $\varphi(d)$ divides $\varphi(n)$ where $\varphi$ denotes Euler's $\varphi$-function.
+% display your last name
+\begin{proof}(Bastille) \ We assume $0<d \leq n$ to be able to define $\varphi(d), \varphi(n)$. Let $p_1^{\alpha_1} \cdots p_k^{\alpha_k}$ be the prime factorization of $d$. If $d|n$ with $0<d \leq n$ then there exists $\ell \in \Z^{+}$ such that
+$$ n=\ell d.$$
+We can always write  $\ell$ in the following way:
+$$\ell = p_1^{\beta_1}p_2^{\beta_2} \cdots p_k^{\beta_k}m $$
+such that $(m,p_i)=1 \quad \forall i \in \{1,\dots k\}$ with the stipulation that $\beta_i \geq 0$. Hence,
+$$n= \ell d = p_1^{\alpha_1+\beta_1}\cdots p_k^{\alpha_k+\beta_k}m, $$
+and
+\begin{align*}
+\varphi(n) &= \varphi(p_1^{\alpha_1+\beta_1}\cdots p_k^{\alpha_k+\beta_k})\cdot \varphi(m) \quad \text{ since } \left(m, p_1^{\alpha_1+\beta_1} \cdots p_k^{\alpha_k+\beta_k}\right)=1 \\
+&=p_1^{\alpha_1+\beta_1-1}(p_1-1)\cdots p_k^{\alpha_k+\beta_k-1}(p_k-1)\cdot \varphi(m) \\
+&= \underbrace{p_1^{\alpha_1-1}(p_1-1)\cdots p_k^{\alpha_k-1}(p_k-1)}_{=\varphi(d)}\cdot \underbrace{p_1^{\beta_1}p_2^{\beta_2}\cdots p_k^{\beta^k}\cdot \varphi(m)}_{=:r \in \Z^{+}}.
+\end{align*}
+Thus, there exists $r \in \Z$ such that $\varphi(n)=r \varphi(d)$. Therefore,
+$$\varphi(d)|\varphi(n).$$
+\end{proof}
+
+\end{itemize}
+
+
+
+\section*{Section 0.3}
+
+\begin{itemize}
+
+\item[9.]  Prove that the square of any odd integer always leaves a remainder of 1 when divided by 8.
+
+% display your last name
+\begin{proof} (Gillispie) \  Let $ n \in \Z $ be an odd positive integer, and there exists a $k \in \Z$ s.t. $ n = 2k + 1$. We will proceed by induction on $k$. 
+
+Supposing $k=0$, we have then that $n^2\mod 8 \equiv (0+1)^2\mod 8 \equiv 1\mod 8$.
+
+Now suppose the theorem holds for $k \ge 0$.
+Consider the odd integer $2(k+1)+1$, and note then that 
+\begin{align*}
+(2(k+1)+1)^2 \mod8 &\equiv (2k+3)^2] \mod 8\\
+ &\equiv (4k^2 + 12k + 9) \mod 8\\
+ &\equiv (4k^2 +4k + 1) \mod 8\\
+ &\equiv {(2k+1)}^2 \mod 8\\
+ &\equiv 1 \mod 8 \text{ by induction.}
+ \end{align*}
+ Thus, the theorem holds for all of the positive odd integers.
+
+Suppose $n=2k+1$ is an odd negative integer. Note then that $(2k+1)(-1)>0$
+\begin{align*}
+n \mod 8 &= (2k+1 )\mod 8\\
+          &= (2k+1)(-1)(-1) \mod 8\\
+          &\equiv ((2k+1)(-1) \mod 8)(-1 \mod 8)\\
+          &\equiv 1\cdot7 \mod 8\\
+          &\equiv 1 \mod 8.\\
+\end{align*}
+Hence the remainder of any odd integer when divided by 8 is 1.
+
+\end{proof}
+
+\item[13.] Let $n\in\Z$, $n>1$ and let $a\in \Z$ with $1\le a \le n$. If $(a,n)=1$ then there is an integer $c$ s.t. $ac \equiv 1 (mod n)$.
+
+ \begin{proof} (Gillispie) \ Since $(a,n)=1$, by 0.2.7 we know there are $x,y\in\Z$ s.t. \[ax + ny =1.\]\\
+ Using cancellation, we establish \[ax= -ny +1=(-y)n+1 \equiv 1 (mod n).\]\\
+
+ \end{proof}
+
+\end{itemize}
+
+\section*{Section 1.1}
+
+\begin{itemize}
+
+
+\item[21] Let $G$ be a finite group and let $x$ be an element of $G$ of order $n$.  Prove that if $n$ is odd then $x = (x^2)^k$ for some integer $k \geq 1$.
+
+\begin{proof}(Schamel) \ Since $n$ is the order of an element, $n \geq 1$.  Since $n$ is also odd, there is an integer $r \geq 0$ so that $2r +1 = n$.  Since $|x| =n$ in $G$ then $x = x^{n+1} = x^{(2r+1)+1} = x^{2(r+1)} = (x^2)^{r+1}$.  Since $r+1 \geq 1$, our claim is proven.
+\end{proof}
+
+\item[25] Prove that if $x^2 = 1$ for all $x \in G$ then $G$ is Abelian.
+
+\begin{proof}(Schamel) \ Note first that, by hypothesis, each non-identity
+element is its own inverse.  Let $x,y \in G$.  Since $xy \in G$, we have $(xy)^2 = 1$ and thus
+\[ xy = (xy)^{-1} = y^{-1}x^{-1} = yx. \]
+\end{proof}
+
+\item[27]  Prove that if $x$ is an element of the group $G$ then $\{x^n|n\in \Z\}$ is a subgroup of $G$.
+
+% display your last name
+\begin{proof}(Buchholz) \ Let $H=\{x^n|n\in \Z\}$.  Since $H\subseteq G$ we must show is that $H$ is a group.  First note that $H$ inherits associativity from $G$.  Then since $G$ is a group $e\in G$ and $e^n=e$ so $e\in H$.  Lastly since $x^{-1}\in G$ we we have $(x^{-1})^n=x^{-n}$ and $-n\in \Z$ we know that $x^{-1}\in H$.  Hence $H\leq G.$
+
+\end{proof}
+
+
+\item[31]  Prove that any finite group $G$ of even order contains an element of order 2.
+
+\begin{proof}(Buchholz) \ Let $t(G)=\{g\in G| g\neq g^{-1}\}$.  Note that if $a\in t(G)$ then $a^{-1}\in t(G)$ because $a\neq a^{-1}$.  So $e\notin t(G)$ since the inverse of $e$ is not in $t(G)$.  Since $e\notin t(G)$ then $|t(G)|$ is even because each element and its inverse are contained in $t(G)$.  We also know that $G$ is of even order.  Thus there exists some element $b\in G$, where $b\neq e$, such that $b^2=e$.  Hence $G$ contains an element of order 2.
+
+\end{proof}
+
+
+\end{itemize}
+
+
+
+
+\section*{Section 1.3}
+
+
+\begin{itemize}
+
+\item[4.] Compute the order of each of the elements in the following groups: \textbf{(a)} $S_3$, \textbf{(b)} $S_4$.
+
+\begin{proof} (Lawless)
+\begin{itemize}
+
+\item[(a)] $S_3 = $\{1, (1 2), (1 3), (2 3), (1 2 3), (1 3 2)\}. \\
+elements with order 1: 1. \\
+elements with order 2: (1 2), (1 3), (2 3). \\
+elements with order 3: (1 2 3), (1 3 2). \\
+
+\item[(b)] $S_4 =$ \{1, (1 2), (1 3), (1 4), (2 3), (2 4), (3 4), (1 2)(3 4), (1 3)(2 4), (1 4)(2 3), (1 2 3), (1 3 2), (1 2 4), (1 4 2), (1 3 4), (1 4 3), (2 3 4), (2 4 3), (1 2 3 4), (1 2 4 3), (1 3 2 4), (1 3 4 2), (1 4 2 3), (1 4 3 2),\} \\
+elements with order 1: 1. \\
+elements with order 2: (1 2), (1 3), (1 4), (2 3), (2 4), (3 4), (1 2)(3 4), (1 3)(2 4), (1 4)(2 3). \\
+elements with order 3: (1 2 3), (1 3 2), (1 2 4), (1 4 2), (1 3 4), (1 4 3), (2 3 4), (2 4 3). \\
+elements with order 4: (1 2 3 4), (1 2 4 3), (1 3 2 4), (1 3 4 2), (1 4 2 3), (1 4 3 2).
+\end{itemize}
+\end{proof}
+
+\item[5.] Find the order of $\sigma = $(1 12 8 10 4)(2 13)(5 11 7)(6 9).
+
+\begin{proof}(Lawless) \ Since disjoint cycles commute, and since each of the cycles of $\sigma$ are disjoint, then the order of $\sigma$ is the least common multiple of the orders of the cycles. Since $\sigma$ has a cycle of length 5, 3, and 2, then the order of $\sigma$ is 30.
+\end{proof}
+
+
+
+
+\item[6.] Write out the cycle decomposition of each element of order 4 in $S_4$.
+
+\begin{proof}(Lawless) \ The elements of order 4 in $S_4$ are: $$(1\,2\, 3\, 4), (1\, 2\, 4\, 3), (1\, 3\, 2\, 4), (1\, 3\, 4\, 2), (1\, 4\, 2\, 3), (1\, 4\, 3\, 2).$$
+This is a complete list since only four cycles can have order $4$ in $S_4$ and
+there are $3! = 6$ four cycles.
+\end{proof}
+
+
+
+
+\item[7.] Write out the cycle decomposition of each element of order 2 in $S_4$.
+
+\begin{proof}(Lawless) \ The elements of order 2 in $S_4$ are:
+$$(1\, 2), (1\,3), (1\,4), (2\,3), (2\,4), (3\,4), (1\,2)(3\,4), (1\,3)(2\,4), (1\,4)(2\,3).$$
+\end{proof}
+\end{itemize}
+
+
+
+\begin{itemize}
+
+\item[14.] Let $p$ be a prime. Show that an element has order $p$ in
+$S_n$ if and only if its cycle decomposition is a product of commuting
+$p$-cycles. Show by an explicit example that this need not be the case
+if $p$ is not prime.
+
+% display your last name
+\begin{proof}[Proof (Granade)] \ Let $p$ be prime, and let $x\in S_n$
+have a disjoint cycle decomposition given by:
+$$
+    x = x_1 x_2 \cdots x_m
+$$
+for some $x_i \in S_n$ being cycles. We shall then show each direction
+of the theorem in turn.
+
+\begin{itemize}
+
+\item[$\Leftarrow$] Suppose that each $x_i$ is a $p$-cycle. Then, since
+the order of $x$ is given by
+$\lcm \left(p, p, \dots, p\right)$, we have that
+$\left\vert x \right\vert = p$ as required.
+
+\item[$\Rightarrow$] We shall proceed here to show the contrapositive.
+Suppose $x$ is not a product of $p$-cycles. That is, that there exists
+$k \in \left\{1,2,\dots,m\right\}$ such that $\vert x_k  \vert = r \ne p$ for some
+$r\in\N$. Then, since $p$ is prime, $r\nmid p$, and the order of
+$x$ must include a factor of $r$. We conclude that
+$\left\vert x \right\vert \ne p$.
+\end{itemize}
+\end{proof}
+
+Note that the theorem proved above does \emph{not} hold if $x$ is a
+product of non-commuting $r$-cycles for some composite $r$. To see this,
+consider that in $S_5$,
+$\left\vert \left(12\right) \left(345\right)\right\vert =
+\lcm\left(2,3\right) = 6$, but that
+$\left(12\right)\left(345\right)$ is not a product of commuting
+$6$-cycles.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item[19.] Find all numbers $n$ such that $S_7$ contains an element of
+order $n$.
+
+\emph{Solution (Granade).} \ Note that each element in $S_7$ can be
+written as the product of disjoint cycles. This decomposition can each
+number in $\left\{1,2,3,4,5,6,7\right\}$ at most once, limiting the
+possible decompositions available. For instance, we know that no element
+in $S_7$ has a disjoint cycle decomposition into two $4$-cycles, since
+this would require that some number appear in two different cycles.
+
+We can use this insight, along with the fact that the order of a
+permutation is completely determined by the lengths of the cycles in its
+disjoint cycle decomposition. Thus, to figure out the possible orders of
+elements in $S_7$, we start by listing the ways in which we can add the
+integers $\left\{2,3,4,5,6,7\right\}$ and obtain a sum no greater than
+$7$:
+$$
+    2,\ 2+2,\ 2+2+2,\ 3,\ 3+3,\ 4,\ 5,\ 6,\ 7,\ 2+3,\ 2+4,\ 2+5,\
+    2+2+3,\ 3+4
+$$
+Each sum listed corresponds to a possible order for an element in $S_7$,
+with some orders duplicated, as can be seen if we view each term as the
+length of a cycle in the decomposition of an element in $S_7$. Taking
+the least common multiple of the terms in each sum listed above, we find
+the possible orders (omitting 1):
+\begin{eqnarray*}
+    2 & = & \lcm(2) = \lcm(2,2) = \lcm(2,2,2) \\
+    3 & = & \lcm(3) = \lcm(3,3) \\
+    4 & = & \lcm(4) = \lcm(2,4) \\
+    5 & = & \lcm(5) \\
+    6 & = & \lcm(6) = \lcm(2,3) = \lcm(2,2,3) \\
+    7 & = & \lcm(7) \\
+    10 & = & \lcm(2,5) \\
+    12 & = & \lcm(3,4)
+\end{eqnarray*}
+Thus, elements in $S_7$ can have orders in
+$\left\{1,2,3,4,5,6,7,10,12\right\}$.
+\end{itemize}
+
+
+
+
+\section*{Chapter 1.4}
+
+\begin{itemize}
+
+\item[2.] Write out all the elements of $GL_{2}(\mathbb{F}_{2})$ and compute
+the order of each element.
+
+(Baggett) \ $\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$ \ \ order = 1
+\\ $\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}$ \ \ order = 2
+\\ $\begin{pmatrix}1 & 1 \\ 0 & 1\end{pmatrix}$ \ \ order = 2
+\\ $\begin{pmatrix}1 & 0 \\ 1 & 1\end{pmatrix}$ \ \ order = 2
+\\ $\begin{pmatrix}0 & 1 \\ 1 & 1\end{pmatrix}$ \ \ order = 3
+\\ $\begin{pmatrix}1 & 1 \\ 1 & 0\end{pmatrix}$ \ \ order = 3
+
+\item[10.] Let $G = \{
+\begin{pmatrix}a & b \\ 0 & c\end{pmatrix}
+ | a,b,c\in \mathbb{R}; a \neq 0, c \neq 0\}$
+	\begin{itemize}
+	
+	\item[a.] Compute the product of $\begin{pmatrix}a_1 & b_1 \\ 0 & c_1\end{pmatrix}$
+	and $\begin{pmatrix}a_2 & b_2 \\ 0 & c_2\end{pmatrix}$ to show that $G$ is closed
+	under matrix multiplication.
+
+(Baggett) \ \begin{center}
+				$\begin{pmatrix}a_1 & b_1 \\ 0 & c_1\end{pmatrix}\begin{pmatrix}a_2 & b_2 \\ 0 & c_2\end{pmatrix}
+				= \begin{pmatrix}a_1a_2 & a_1b_2 + b_1c_2 \\ 0 & c_1c_2\end{pmatrix}$
+		\end{center}
+	Since $a_1 \neq 0$ and $a_2 \neq 0$, $a_1a_2 \neq 0$; similarly, since $c_1 \neq 0$
+	and $c_2 \neq 0$, $c_1c_2 \neq 0$. Thus,
+	$\begin{pmatrix}a_2 & b_2 \\ 0 & c_2\end{pmatrix}\begin{pmatrix}a_2 & b_2 \\ 0 & c_2\end{pmatrix}
+	\in G$, and $G$ is closed under matrix multiplication.
+	
+	\item[b.] Find the matrix inverse of $\begin{pmatrix}a & b \\ 0 & c\end{pmatrix}$ and
+	deduce that $G$ is closed under inverses.
+
+
+(Baggett) \ Since $\det\begin{pmatrix}a & b \\ 0 & c\end{pmatrix} = ac \neq 0$ because $a \neq 0$ and
+	$c \neq 0$, $\begin{pmatrix}a & b \\ 0 & c\end{pmatrix}^{-1}$ exists. Furthermore,
+	\\ $\begin{pmatrix}a & b \\ 0 & c\end{pmatrix}^{-1} =
+	\begin{pmatrix}\frac{1}{a} &\frac{-b}{ac} \\ 0 & \frac{1}{c}\end{pmatrix}$ since
+		\begin{center}
+			$\begin{pmatrix}a & b \\ 0 & c\end{pmatrix}
+			\begin{pmatrix}\frac{1}{a} &\frac{-b}{ac} \\ 0 & \frac{1}{c}\end{pmatrix} =
+			\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$
+		\end{center}
+	and
+		\begin{center}
+			$\begin{pmatrix}\frac{1}{a} &\frac{-b}{ac} \\ 0 & \frac{1}{c}\end{pmatrix}
+			\begin{pmatrix}a & b \\ 0 & c\end{pmatrix} =
+			\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$.
+		\end{center}
+	Note that since $a \neq 0$ and $c \neq 0$, $\frac{1}{a}$, $\frac{-b}{ac}$,
+	$\frac{1}{c} \in \mathbb{R}$. Also, $\frac{1}{a} \neq 0$ and $\frac{1}{c} \neq 0$.
+	Hence, $\begin{pmatrix}a & b \\ 0 & c\end{pmatrix}^{-1} \in G$ and $G$ is closed
+	under inverses.
+	
+	\item[c.] Deduce that $G$ is a subgroup of $GL_{2}(\mathbb{R})$.
+
+(Baggett) \ Firstly, $\emptyset \neq G \subseteq GL_{2}(\mathbb{R})$, since
+	$\det\begin{pmatrix}a & b \\ 0 & c\end{pmatrix} = ac \neq 0$ because $a \neq 0$ and
+	$c \neq 0$. Secondly, $G$ is closed under inverses and matrix multiplication. This
+	is enough to show that $G$ is a subgroup of $GL_{2}(\mathbb{R})$. (If $A \in G$, then
+	$A^{-1} \in G$, and $AA^{-1} = I_2 \in G$ since $G$ is closed under multiplication.
+	Since matrix multiplication is associative in $GL_{2}(\mathbb{R})$, matrix multiplication
+	is associative in $G$.) Therefore, $G$ is a subgroup of $GL_{2}(\mathbb{R})$.
+	
+	\item[d.] Prove that the set of elements of $G$ whose two diagonal entries are equal
+	(i.e. $a = c$) is also a subgroup of $GL_{2}(\mathbb{R})$.
+	\begin{proof} (Baggett) \ First, we will show that $H = \{\begin{pmatrix}a & b \\ 0 & a\end{pmatrix} |
+		a,b \in \mathbb{R}; a \neq 0\}$ is closed under matrix multiplication. Take any two matrices
+		$\begin{pmatrix}a_1 & b_1 \\ 0 & a_1\end{pmatrix}, \begin{pmatrix}a_2 & b_2 \\ 0 & a_2\end{pmatrix}
+		\in H$. Then
+			\begin{center}
+				$\begin{pmatrix}a_1 & b_1 \\ 0 & a_1\end{pmatrix}
+				\begin{pmatrix}a_2 & b_2 \\ 0 & a_2\end{pmatrix} =
+				\begin{pmatrix}a_1a_2 & a_1b_2 + b_1a_2 \\ 0 & a_1a_2\end{pmatrix}$
+			\end{center}
+		Since $a_1 \neq 0$ and $a_2 \neq 0$, $a_1a_2 \neq 0$. Thus,
+		$\begin{pmatrix}a_1 & b_1 \\ 0 & a_1\end{pmatrix}
+		\begin{pmatrix}a_2 & b_2 \\ 0 & a_2\end{pmatrix} \in H$ and $H$ is
+		closed under matrix multiplication. Second, we will show that $H$ is
+		closed under inverses. Take any matrix $\begin{pmatrix}a & b \\ 0 & a\end{pmatrix}
+		\in H$. Then $\det\begin{pmatrix}a & b \\ 0 & a\end{pmatrix} = a^2 \neq 0$ because
+		$a \neq 0$, so $\begin{pmatrix}a & b \\ 0 & a\end{pmatrix}^{-1}$ exists. Furthermore,
+		$\begin{pmatrix}a & b \\ 0 & a\end{pmatrix}^{-1} =
+		\begin{pmatrix} \frac{1}{a} & -\frac{b}{a^2} \\ 0 & \frac{1}{a}\end{pmatrix}$ since
+			\begin{center}
+				$\begin{pmatrix}a & b \\ 0 & a\end{pmatrix}
+				\begin{pmatrix}\frac{1}{a} &-\frac{b}{a^2} \\ 0 & \frac{1}{a}\end{pmatrix} =
+				\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$
+			\end{center}
+		and
+			\begin{center}
+				$\begin{pmatrix}\frac{1}{a} &-\frac{b}{a^2} \\ 0 & \frac{1}{a}\end{pmatrix}
+				\begin{pmatrix}a & b \\ 0 & a\end{pmatrix} =
+				\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$
+			\end{center}
+		Because $a \neq 0$, $\frac{1}{a}, -\frac{b}{a^2} \in \mathbb{R}$ and $\frac{1}{a} \neq 0$.
+		Hence, $\begin{pmatrix}a & b \\ 0 & a\end{pmatrix}^{-1} \in H$ and $H$ is closed under
+		inverses. Lastly, $H \subseteq GL_2(\mathbb{R})$ since for any
+		$\begin{pmatrix}a & b \\ 0 & a\end{pmatrix} \in H$,
+		$\det\begin{pmatrix}a & b \\ 0 & a\end{pmatrix} = a^2 \neq 0$ because $a \neq 0$.
+		As before, this is enough to conclude that $H$ is a subgroup of $GL_2(\mathbb{R})$.
+			
+	\end{proof}
+	
+	\end{itemize}
+	
+\end{itemize}
+
+\section*{Chapter 1.5}
+
+\begin{itemize}
+
+\item[1.] Compute the order of each of the elements in $Q_8$.
+
+(Baggett) 
+\\ $\left|\phantom{-}1\right| = 1$
+\\ $\left|-1\right| = 2$
+\\ $\left|\phantom{-}i\right| = 4$
+\\ $\left|-i\right| = 4$
+\\ $\left|\phantom{-}j\right| = 4$
+\\ $\left|-j\right| = 4$
+\\ $\left|\phantom{-}k\right| = 4$
+\\ $\left|-k\right| = 4$
+
+\end{itemize}
+
+
+
+\section*{Section 1.6}
+
+\begin{itemize}
+
+\item[2.]  If $\varphi:G\rightarrow H$ is an isomorphism, prove that $|\varphi (x)|=|x|$ for all $x\in G$.  Deduce that any two isomorphic
+groups have the same number of elements of order $n$ for each $n\in\Z^{+}$.  Is the result true if $\varphi$ is only assumed to be a
+homomorphism?
+
+Lemma:  The identity element of $G$ maps to the identity element of $H$.
+
+Let $e_{G}$ be the identity element in $G$.  Then we know that $ae_{G}=e_{G}a=a$ where $a \in G$.  Further, it is true that
+$\varphi (ae_{G})=\varphi (e_{G}a)=\varphi (a)=\varphi (a) \varphi (e_{G}) = \varphi (e_{G}) \varphi (a)$.  Let $\varphi (a) = b$ where
+$b \in H$.  Then $b \varphi (e_{G}) = \varphi (e_{G}) b = b$ and $\varphi (e_{G})$ is the identity element in $H$ or $\varphi (e_{G}) = e_{H}$.
+Thus, the identity element of $G$ maps to the identity element of $H$.
+
+\begin{proof}(Mobley) \ If $x \in G$ has order $n$, it follows that $x^{n}=e_{G}$.  Then $\varphi(x^{n})=\left[ \varphi(x)\right]^{n}=\varphi(e_{G})$.
+From the lemma, we can state that $\left[ \varphi(x)\right]^{n}=\varphi(e_{G})=e_{H}$, and therefore $|\varphi(x)| \divides n$.  However, if $\vert \varphi(x) \vert = k < n$, then $e_H = \varphi(x)^k = \varphi(x^k) = \varphi(e_G)$ and
+since $\varphi$ is an isomorphism, we have $x^k = e_G$.   It follows that $\vert x \vert \divides k < n$ which contradicts that $n$ is the \emph{smallest} positive integer for which $\vert x^n \vert = e_G$.
+Thus, $|\varphi (x)|=|x|$ in
+the finite case.
+
+Let $y \in G$ have infinite order.  Suppose $|\varphi(y)|=m$.  Then $\left[ \varphi(y) \right]^{m}= \varphi(y^{m})=e_{H}$.  We have shown in the lemma
+that $\varphi (e_{G}) = e_{H}$.  Then  $\varphi(y^{m})=\varphi (e_{G})$.  It must follow that $y^{m}=e_{G}$ and that $y$ has a finite order.  But this is a
+contradiction.  Thus, if the order of $y \in G$ is infinite, the order of $\varphi(y)$ is also infinite.
+
+\end{proof}
+
+Since $|\varphi (x)|=|x|$ for all $x\in G$, it must be the case that any two isomorphic groups have the same number of elements of order $n$
+for each $n\in\Z^{+}$.  If the case existed that one group had more elements of order n than the other group, it would not be true that
+$|\varphi (x)|=|x|$ for all $x\in G$.
+
+The result is not true if $\varphi$ is only assumed to be a homomophism.  As an example we have the homomorphism of $\varphi:\C\rightarrow\C$ defined
+by $\varphi(z)=z^{2}$.  Here the order of $i$ is $4$.  The order of $\varphi(i)$ is $2$.
+
+\item[4.]  Prove that the multiplicative groups $\R-\lbrace 0 \rbrace $ and $\C-\lbrace 0 \rbrace$ are not isomorphic.
+
+\begin{proof}(Mobley) \ If it were true that $\R-\lbrace 0 \rbrace \cong \C-\lbrace 0 \rbrace$, then for all $x \in G$, $|x|=|\varphi (x)|$.  However, in
+$R-\lbrace 0 \rbrace$, $|e|=1$, $|-1|=2$ and all other elements have infinite order.  In the case of $\C-\lbrace 0 \rbrace$, $|e|=1$, $|-1|=2$, but
+$|i|=4$.  Since there is no element in $\R-\lbrace 0 \rbrace$ with order $4$, $\R-\lbrace 0 \rbrace \ncong \C-\lbrace 0 \rbrace$.
+
+\end{proof}
+
+\item[5.]  Prove that the additive groups $\R$ and $\mathbb{Q}$ are not isomorphic.
+
+\begin{proof} (Mobley) \ If it were true that $\R \cong \mathbb{Q}$, then $|\R|$ would have to be equal to $|\mathbb{Q}|$.  But $\R$ is an uncountable
+set whereas $\mathbb{Q}$ is a countable set.  Therefore $|\R|\neq |\mathbb{Q}|$ and the two additive groups are not isomorphic.
+
+\end{proof}
+
+\item[6.]  Prove that the additive groups $\Z$ and $\mathbb{Q}$ are not isomorphic.
+
+\begin{proof} (Mobley) \ If it were true that $\Z \cong \mathbb{Q}$, then a group
+isomorphism $\varphi$ would have to exist between the two groups.  However,  
+since $\varphi$ sends $1_\Z$ to $1_\Q$ and preserves sums, we have that 
+$\varphi(z) = z \in \mathbb{Q}$ for all $z \in \Z$.
+We can see however that this mapping is not surjective. 
+\end{proof}
+
+\item[14.] (Hazlett) \ Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism.  Prove that the kernel of $\phi$ is a subgroup of $G$.  Prove that $\phi$ is injective if and only if the kernel of $\phi$ is the identity subgroup of $G$
+
+\begin{proof}
+First, notice that $e_G \in \ker(\phi)$ so the kernel is non-empty.
+Now choose $x,y \in \ker(\phi)$.  Then $\phi(xy) = \phi(x)\phi(y) = 1_H1_H = 1_H$.  So $xy \in \ker(\phi)$ and the kernel is closed under products.  Note $\phi(x\inv) = 1_H\phi(x\inv) = \phi(x)\phi(x\inv) = \phi(xx\inv) = \phi(1_G) = 1_H$.  Consequently $x\inv \in \ker(\phi)$.  Since $\ker(\phi)$ is non-empty, closed
+under products and inverses, $\ker(\phi) \leq G$.
+
+Suppose $\ker(\phi) = \{1_G\}$ and $\phi(x) = \phi(y)$.  Thus $\phi(xy\inv) = \phi(x)\phi(y\inv) = \phi(y)\phi(y\inv) = \phi(yy\inv) = \phi(1_G) = 1_H$.  So $xy\inv \in \ker(\phi)$. This implies that $xy\inv = 1_G$.  Hence $x = y$ and $\phi$ is an injection.  Assume instead then that $\phi$ is an injection.  Let $x \in \ker(\phi)$.  Then $\phi(x) = \phi(1_G)$.  Therefore $x = 1_G$ and $\ker(\phi) = \{1_G\}$.
+\end{proof}
+
+
+
+\item[19.] (Hazlett) \ Let $G = \{z \in \C|z^n = 1 \text{ for some } n \in \Z^+\}$.  Prove that for any fixed integer $k > 1$ the from $G$ to itself defined by $z \mapsto z^k$ is a surjective homomorphism but is not an isomorphism.
+
+\begin{proof}
+Let $\phi:G\to G$ such that $\phi(x) = x^k$ for some fixed integer $k$.
+Note $\phi(xy) = (xy)^k = x^ky^k = \phi(x)\phi(y)$.
+Thus $\phi$ is a homomorphism.
+Choose $z \in G$. Then for some $n \in \Z^+$ we have $z^n = 1$.  Note further
+that if we write $z = e^{i\theta}$ then, $z$ has a $k$th root,  $w=e^{i \frac{\theta}{k}}$.  Moreover, $(w)^{nk} = z^n = 1$.  Hence $w \in G$.  Also, $\phi(w) = z$.  Consequently $\phi$ is a surjection.  Note, there are exactly $k$ $k$th-roots of unity.  Thus there are $w_1, w_2, \ldots, w_k \in \C$ where $w_i^k = 1$.  Then $w_i \in G$ for $1 \leq i \leq k$.  However, $\phi(w_i) = w_i^k = 1$ for all $1 \leq i \leq k$.  Thus $\phi$ is not an injection.  Therefore $\phi$ is not an isomorphism.
+\end{proof}
+
+
+
+\end{itemize}
+
+
+
+
+\end{document}

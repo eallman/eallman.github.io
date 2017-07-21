@@ -1,0 +1,735 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MATH 202</title>
+</head>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: small;
+}
+.red {
+	color: #F00;
+}
+-->
+</style></head>
+
+<body>
+<h2>MATH 202: Multivariable Calculus</h2>
+<p>
+<img src="IsaacNewton-1689.jpg" width="90" height="109" alt="Newton" />
+<img src="Gottfried_Wilhelm_von_Leibniz.jpg" width="90" height="109" alt="Leibniz" />
+
+</p>
+<p>Spring 2012 <br />
+  Elizabeth S. Allman <br />
+MWF 1-2pm Gruening 306; T 2-3pm Gruening 206<br />
+<span class="red">Office Hours:  Monday 12-1 pm; Tuesday 3-4 pm; Wednesday 11-12 pm; (on demand Friday 10-11 am)</span><p>
+
+<strong>Current Homework assignment:</strong><br />
+<table width="1000" border="0">
+  <tr>
+    <td width="10"><strong>HW</strong></td>
+    <td width="90"><div align="center"><strong>Due</strong></div></td>
+    <td width="90"><div align="center"><strong>Assigned</strong></div></td>
+    <td width="500"><strong>Skill Problems</strong></td>
+    <td width="400"><strong>Graded Problems</strong></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red">15</span></div></td>
+    <td><div align="center">never collected</div></td>
+    <td><div align="center">5/2, 5/4</div></td>
+    <td>15.6: 21-31 odd<br />
+        15.7: 7-17 odd</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">5/8</div></td>
+    <td>drop in office hours 10 - 3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">5/9</div></td>
+    <td>Exam, 1-3pm regular classroom</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"><hr /></span></div></td>
+    <td><div align="center"><hr /></div></td>
+    <td><div align="center"><hr /></div></td>
+    <td><hr /></td>
+    <td><hr /></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><span class="red">Sat May 5</span></td>
+    <td><span class="red"><a href="FinalReviewNotes-opt.pdf">Review session</a> Notes</span></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></td>
+    <td><div align="center"></div></td>
+    <td><a href="finalf11.pdf">Practice exam</a></td>
+    <td><a href="finalf11sol.pdf">Solutions here</a >.</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></td>
+    <td><div align="center"></div></td>
+    <td>Notes: <br /> 
+        * Hint Problem 3: Think about integrating over closed contours.<br />
+        * Problem 7, iii requires Stoke's Theorem which we did not cover.  
+          Skip.  Or better,
+          do the integral around the boundary of S of F dot dr.<br />
+        * Problem 8, iii: The questions asks you to set up the appropriate integral.
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></td>
+    <td><div align="center"></div></td>
+    <td><a href="Exam1.pdf">Exam 1</a>, &nbsp; <a href="Exam2.pdf">Exam 2</a ></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></td>
+    <td><div align="center"></div></td>
+    <td><br />Exam 1 <a href="details-exam1.pdf">details</a> here; &nbsp; Details for other exams below.<br />
+        <br />All links should be live now; Notes from Saturday's review available soon.</td>
+    <td></td>
+  </tr>
+</table>
+<hr />
+<hr />
+
+<h4>Syllabus; Quiz, Homework, and Exam solutions</h4>
+<ul>
+<li><a href="syll-202-2012.pdf">Syllabus</a>
+<li>Quiz 1 <a href="q1-solns-2012.pdf">Solutions</a> &nbsp; Average:  4.1/5 &nbsp; High:  5 &nbsp; Low: 1
+<li>Quiz 2 <a href="q2-solns-2012.pdf">Solutions</a> &nbsp; Average:  3.3/5 &nbsp; High:  5 &nbsp; Low: 1
+<li>"Quiz 3" <a href="q3-solns-2012.pdf">Solutions</a>
+<li>Quiz 4 <a href="q4-solns-2012.pdf">Solutions</a> &nbsp; Average:  3.7/5 &nbsp; High:  5 &nbsp; Low: 1
+<li>Quiz 5 <a href="q5-solns-2012.pdf">Solutions</a> &nbsp; Average:  3.9/5 &nbsp; High:  5 &nbsp; Low: 2
+<li>Quiz 6 <a href="q6-solns-2012.pdf">Solutions</a> &nbsp; Average:  3.9/5 &nbsp; High:  5 &nbsp; Low: 1
+<li>Quiz 7 <a href="q7-solns-2012.pdf">Solutions</a> &nbsp; Average:  2.8/5 &nbsp; High:  5 &nbsp; Low: 1
+<li>Quiz 8 <a href="q8-solns-2012.pdf">Solutions</a> &nbsp; Average:  3.2/5 &nbsp; High:  5 &nbsp; Low: 1.2
+<br/><br />
+<li>HW 3 graded problems <a href="HW3-solns.pdf">solutions</a>.
+<li>HW 4 graded problems <a href="HW4-solns.pdf">solutions</a>.
+<li>HW 6 graded problems <a href="HW6-solns.pdf">solutions</a>.
+<li>HW 7 graded problems <a href="HW7-solns.pdf">solutions</a>.
+<li>HW 8 graded problems <a href="HW8-solns.pdf">solutions</a>.
+<li>HW 10 graded problems <a href="HW10-solns.pdf">solutions</a>.
+<li>HW 12 and HW 13 graded problems <a href="HW12-and-13-solns.pdf">solutions</a>.
+<li>HW 14 graded problems <a href="HW14-solns.pdf">solutions</a>.
+<br/><br />
+<li>Exam 1 <a href="e1-solns-2012.pdf">Solutions.</a> &nbsp; Stats:  Mean:  60.5 &nbsp; High:  93 &nbsp; 
+<li>Exam 2 <a href="e2-solns-2012.pdf">Solutions.</a> &nbsp; Stats:  Mean:  76.7 &nbsp; High:  98 &nbsp; 
+<li>Exam 3 <a href="e3-solns-2012.pdf">Solutions.</a> &nbsp; Stats:  Mean:  69.1 &nbsp; High:  100 &nbsp; (achieved twice; 5 scores > 90) 
+</ul>
+
+
+</p> 
+
+<hr />
+<hr />
+
+<h4>Previous homework assignments</h4>
+
+<table width="1100" border="0">
+  <tr>
+    <td width="10">HW</td>
+    <td width="90"><div align="center">Due</div></td>
+    <td width="90"><div align="center">Assigned</div></td>
+    <td width="500">Skill Problems</td>
+    <td width="300">Graded Problems</td>
+  </tr>
+ <tr>
+    <td></td>
+    <td></td>
+    <td><div align="center"></div><br /></td>
+    <td>&nbsp; </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red">14</span></div></td>
+    <td><div align="center">W May 2</div></td>
+    <td><div align="center">4/30</div></td>
+    <td>15.4: 25, 27, 31 </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td>15.5: 1-9 odd, 17-29 odd, 35-41 odd</td>
+    <td>15.5: 20, 24, 26</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td>15.6: 1-5 odd, 11-19 odd</td>
+    <td>15.6: 12</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red">13</span></div></td>
+    <td><div align="center">W April 25</div></td>
+    <td><div align="center">4/18</div></td>
+    <td>15.2: 27-31 odd, 35-45 odd, 51-61 odd</td>
+    <td>15.2: 36, 40</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td>15.3: 5-21 odd, 35, 45  (one more example coming in F's lecture)</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">4/20</div></td>
+    <td>15.4: 1, 7, 11-23 odd</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></td>
+    <td><div align="center"></div></td>
+    <td>Exam III is Wed April 25.  Some <a href="details-exam3.pdf">details.</a></td>
+    <td></td>
+  </tr>
+<!--  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></td>
+    <td><div align="center"></div></td>
+    <td>Some review problems from the book:</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></td>
+    <td><div align="center"></div></td>
+    <td>14.2: 41, 53; &nbsp; 14.3: 45; &nbsp; 14.4: 17; &nbsp; 14.5: 11;</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></td>
+    <td><div align="center"></div></td>
+    <td>14.6: 31; &nbsp; 14.7: 19, 33; &nbsp; 15.1: 47, 49, 63; </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></td>
+    <td><div align="center"></div></td>
+    <td>15.2: 35, 43, 45; &nbsp; 15.3: 25; &nbsp; 15.4: 15</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></td>
+    <td><div align="center"></div></td>
+    <td>Use these practice problems to find the areas where you need to study more.
+        Then review and do more problems.</td>
+    <td></td>
+  </tr>
+-->
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></td>
+    <td><div align="center"></div></td>
+    <td>Some practice problems for Exam III.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></td>
+    <td><div align="center"></div></td>
+    <td><a href="probfin.pdf">Practice exam</a>, 3b, 4-11a  (11b has been removed)</td>
+    <td><a href="solsprobfin.pdf">Solutions here</a >.</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red">12</span></div></td>
+    <td><div align="center">W April 18</div></td>
+    <td><div align="center">4/11</div></td>
+    <td>15.1: 1-6, 7-15 odd</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">4/13</div></td>
+    <td>15.1: 21-51 odd, 55, 57-61 odd</td>
+    <td>15.1: 58, 64, 90, 94</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">4/16</div></td>
+    <td>15.1: 63-69 odd</td>
+    <td>finish those above</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">4/17</div></td>
+    <td>15.2: 1-25 odd</td>
+    <td></td>
+  </tr>
+ <tr>
+    <td></td>
+    <td></td>
+    <td><div align="center"></div><br /></td>
+    <td>&nbsp; </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red">11</span></div></td>
+    <td><div align="center">W April 11</div></td>
+    <td><div align="center">4/4<br /></div></td>
+    <td>14.5: 1-17 odd, 31, 33</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">4/6</div></td>
+    <td>14.6: 1-7 odd, 13-31 odd, 37-41 odd, 45, 47, 63 a, b</td>
+    <td>14.6: 38, 40, 44</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">4/9</div></td>
+    <td>14.7: 9-13 odd, 19, 33, 37, 39</td>
+    <td>14.7: 14, 16, 20, 24, 38</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">4/10</div></td>
+    <td>Nothing.  Catch up.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red">10</span></div></td>
+    <td><div align="center">W April 4</div></td>
+    <td><div align="center">3/28 <br /></div></td>
+    <td>14.2: 53-57 odd, 91</td>
+    <td>14.2: 44, 46, 54, 56, 58</td>
+   </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"> <br /></div></td>
+    <td></td>
+    <td>Find the volume of the tetrahedron bounded by the plane x+3y+z=6, x=3y, x=0, and z=0.</td>
+   </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">3/30 <br /></div></td>
+    <td>14.3: 1-25 odd, 33-37 odd</td>
+    <td>14.3: 36, 38</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">4/2, 4/3</div></td>
+    <td>14.4: 1-21 odd (center of mass will be discussed on Tuesday)</td>
+    <td>14.4: 50</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red">9</span></div></td>
+    <td><div align="center">W Mar 28</div></td>
+    <td><div align="center">3/23 </div></td>
+    <td>Nothing.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">3/26, 3/27 <br /></div></td>
+    <td>14.1: 11-33 odd, 45-61 odd, 67, 71 <br />
+        14.2: 13-29 odd, 33-41 odd</td>
+    <td>14.1: 70</td>
+  </tr>
+ <tr>
+    <td></td>
+    <td></td>
+    <td><div align="center"></div><br /></td>
+    <td>&nbsp; </td>
+    <td></td>
+  </tr>
+ <tr>
+    <td height="23"><div align="center"><span class="red">8</span></div></td>
+    <td><div align="center">F Mar 23</div></td>
+    <td><div align="center">3/19 <br /></div></td>
+    <td>13.8: 1, 21, 25, 31, 33, 37-45 odd, 49</td>
+    <td>13.8: 38</td>
+  </tr>
+ <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">3/20</div></td>
+    <td>13.9: 9, 15</td>
+    <td></td>
+  </tr>
+ <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td>13.10: 1-15 odd, 23, 45</td>
+    <td><br /></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">3/23</div></td>
+    <td><span class="red">Exam II</span>
+&nbsp;<a href="details-exam2.pdf">Exam details</a>
+&nbsp;<a href="http://www.math.lsa.umich.edu/courses/215/17exampractice/index.html">Online practice</a></td>
+    </td>
+    <td></td>
+  </tr>
+ <tr>
+    <td></td>
+    <td></td>
+    <td><div align="center"></div><br /></td>
+    <td>&nbsp; </td>
+    <td></td>
+  </tr>
+ <tr>
+    <td height="23"><div align="center"><span class="red">7</span></div></td>
+    <td><div align="center">F Mar 9</div></td>
+    <td><div align="center">2/29</div></td>
+    <td>13.5: 5-11 odd, 17-35 odd, 53, 55</td>
+    <td></td>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">3/2</div></td>
+    <td>13.6: 1-29 odd</td>
+    <td>13.6: 30, 50 a-c (d optional)</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">3/5</div></td>
+    <td>13.6: 31- 45 odd (51, 65 postponed one day)</td>
+    <td>13.6: 56, 66, 70</td>
+  </tr>  
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">3/6</div></td>
+    <td> 13.6: 51, 65, 71</td>
+    <td></td>
+  </tr> 
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">3/7<br /><br /></div></td>
+    <td>13.7: 1-41 odd, 51, 57, 59 (in 31-41 odd, give the vector equation of the line, rather than the symmetric equations), </td>
+    <td>13.7: 20, 24, 54<br /><br /></td>
+  </tr>
+ <tr>
+    <td></td>
+    <td></td>
+    <td><div align="center"></div><br /></td>
+    <td>&nbsp; </td>
+    <td></td>
+  </tr>
+ <tr>
+    <td height="23"><div align="center"><span class="red">6</span></div></td>
+    <td><div align="center">W Feb 29</div></td>
+    <td><div align="center">2/22</div></td>
+    <td>13.1: 31-39 odd, 45-48 all, 51, 53, 69-75 odd, 77, 83, 85</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">2/24</div></td>
+    <td>13.2: 1, 9-37 odd, 43, 45, 59, 63, 81</td>
+    <td>13.2: 28, 30, 32</td>
+  </tr>
+   <tr>
+    <td height="15"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">2/27</div></td>
+    <td>13.3: 1, 3, 9-35 odd, 45-51 odd, 65-79 odd, 95, 121, 123, 125</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td height="15"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">2/28</div></td>
+    <td>13.4: 1-15 odd, 31, 33, 37</td>
+    <td>13.4: 38</td>
+  </tr>
+ <tr>
+    <td></td>
+    <td></td>
+    <td><div align="center"></div><br /></td>
+    <td>&nbsp; </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red">5</span></div></td>
+    <td><div align="center">W Feb 22</div></td>
+    <td><div align="center">2/20</div></td>
+    <td>12.4: 1-15 odd, 21- 29 odd, 51, 53, 57, 61<br />
+        12.5: 5, 7, 11, 13, 21, 31, 41</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">2/21</div></td>
+    <td>13.1: 9, 13, 15, 19-29 odd </td>
+    <td></td>
+ <tr>
+    <td></td>
+    <td></td>
+    <td><div align="center"></div><br /></td>
+    <td>&nbsp; </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red">4</span></div></td>
+    <td><div align="center">F Feb 17</div></td>
+    <td><div align="center">2/8</div></td>
+    <td>12.1: 9-15 odd, 21-24, 25, 35-41 odd, 69-73 odd</td>
+    <td>12.1: 58, 90-92 (carefully explain your answers)</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td></td>
+    <td><div align="center">2/10 </div></td>
+    <td>12.2: 1-9 odd, 15-29 odd, 37, 43, 53-69 odd, 87</td>
+    <td>12.2: 86</td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td></td>
+    <td><div align="center">2/13</div></td>
+    <td>12.3: 1-23 odd, 29, 31, 41, 45, 49, 59</td>
+    <td>12.3: 56 </td>
+  </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td></td>
+    <td><div align="center">2/14</div></td>
+    <td>This will be collected next week: 12.4: 1-15 odd, 21- 29 odd, 51, 53, 57, 61</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td height="23"><div align="center">EXAM</div></td>
+    <td><div align="center">2/17</div></td>
+    <td>Sections 11.1 - 12.4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>&nbsp;</td>
+    <td></td>
+    <td></td>
+   </tr>
+  <tr>
+<!--
+  <tr>
+    <td height="23"><div align="center"><span class="red"></span></div></td>
+    <td></td>
+    <td><div align="center"><span class="red"></span></div></td>
+    <td><span class="red"><a href="http://www.math.lsa.umich.edu/courses/215/17exampractice/index.html">Online practice</a></span></td>
+    <td></td>
+  </tr>
+-->
+
+  <tr>
+    <td height="23"><div align="center"><span class="red">3</span></div></td>
+    <td><div align="center">W Feb 8</div></td>
+    <td><div align="center">2/1</div></td>
+    <td>11.5: 39, 41-57 odd, 91, 99, 101 </td>
+    <td>11.5: 62, 92</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><div align="center">2/3, 2/6</div></td>
+    <td>11.6 1-6 all, 7-29 odd</td>
+    <td></td>
+   </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><div align="center"></div></td>
+    <td></td>
+    <td></td>
+   </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><div align="center">2/7</div></td>
+    <td>11.7 1-51 odd, 107, 109, 113 </td>
+    <td></td>
+   </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><div align="center"></div><br /></td>
+    <td>&nbsp; </td>
+    <td></td>
+   </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red">2</span></div></td>
+    <td><div align="center">W Feb 1</div></td>
+    <td><div align="center">1/25, 1/27</div></td>
+    <td>11.3: 1-29 odd, 43-49 odd, 71, 73</td>
+    <td>11.3: 76</td>
+   </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><div align="center">1/30</div></Td>
+    <td>11.4: 1-17 odd, 27, 29, 35, 37, 41, 45, 47, 49</td>
+    <td>11.4: 40 a-d</td>
+   </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><div align="center">1/31</div></td>
+    <td>11.5: 5-9 odd, 11a, 15-21 odd, 27</td>
+    <td></td>
+   </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>&nbsp;</td>
+    <td></td>
+    <td></td>
+   </tr>
+  <tr>
+    <td height="23"><div align="center"><span class="red">1</span></div></td>
+    <td><div align="center">W Jan 25</div></td>
+    <td><div align="center">1/20</div></td>
+    <td>11.1: 1-45 odd, 51, 53, 55, 75, 81, 91</td>
+    <td>11.1: 52, 90</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><div align="center">1/23, 1/24</div></td>
+    <td>11.2: 1-5 odd, 25, 27, 31, 37, 43, 45, 47, </td>
+    <td></td>
+   </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 53, 55, 59, 63, 65, 69, 73, 83, 85, 111</td>
+    <td></td>
+   </tr>
+
+<!--
+
+-->
+</table>
+<hr />
+
+<p>
+<span class="red"><strong>Formatting of written homework assignments.</strong></span>
+<br /><br />
+
+<em>Important:</em>  The <span class="red">graded problems</span> should be at the 
+<span class="red">front</span> of
+your homework assignment.  All of the skill problems should follow the graded problems.<br /><br />
+
+<!--
+Each written homework assignment should have your name, my name, and the assignment
+number and due date on top.  For each section, list the assigned problems before the
+beginning of your solutions.  For example, Section 11.1 1-29 odd.  Neatly state the
+problem before giving a neat and correct solution.  Messy assignments or solutions
+may not be graded.  <br /><br />
+
+An example is included here: <a href="hw-202-example.pdf"> HW heading</a>.
+-->
+
+</body>
+</html>
+
+
+
+<!--
+<span class ="red">Signing up for WebAssign</span>
+
+<ul>
+<li>Go to <a href ="www.webassign.com">www.webassign.com</a> (or click
+the Web Assign link from class homepage)
+<li>On the right of the page at the bottom of the ACCOUNT LOGIN box,
+you will see a link called "Have a class key?" Click this link.
+<li>Type in our class key: uaf 3124 9795
+<li>Once you push ENTER, our class should come up: Calculus III with
+Elizabeth Allman at UAF. Click Yes, this is my class.
+<li>You will be asked if you already have an account. It is OK if you
+have an account and do not remember the login or password. They can
+email that information to you.
+<li>If you must make a new account, you will have to enter a username,
+password, first name, last name, and email address. Two critical
+issues are remembering your password and giving an email address that
+is correct. This is the address I will use to respond to any questions
+you ask me through WebAssign.
+<li>Once logged in, you will have the opportunity to either purchase
+access online, enter an access code, or continue with a trial period.
+<li>Under the "My Assignments" heading you will see the current
+assignments with due dates.
+</ul>
+
+WebAssign problems will be due roughly three days after they are
+assigned.  
+
+<span class="red"><strong>It is your responsibility to make sure you are checking daily for exercises.</strong></span>
+-->

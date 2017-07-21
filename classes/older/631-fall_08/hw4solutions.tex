@@ -1,0 +1,483 @@
+\documentclass[10pt]{article}
+
+\usepackage[margin=1in, head=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+
+% if using a MAC, you may want to uncomment the following line
+% to enable reverse searches.
+%\usepackage{pdfsync}
+
+\usepackage{fancyhdr}
+
+% Headers and footers
+\fancyhf{}
+\rfoot{\thepage}
+
+%\setcounter{secnumdepth}{0}
+
+% macros for algebra class
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\b}{\textbf}
+\newcommand{\re}{\text{Re}}
+\newcommand{\im}{\text{Im}}
+\renewcommand{\iff}{\Leftrightarrow}
+\newcommand{\zbar}{\overline{z}}
+\newcommand\SL{\operatorname{SL}}
+\newcommand\GL{\operatorname{GL}}
+\newcommand{\divides}{\, \Big | \,}
+
+\newcommand{\normsubeq}{\trianglelefteq}
+\newcommand{\normsub}{\triangleleft}
+\newcommand{\gen}[1]{\left\langle #1 \right\rangle}
+\newcommand{\sect}[1]{\vspace{.25in}\noindent\textbf{Section #1}}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\zmod}[1]{\Z/#1 \Z}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand\inv{^{-1}}
+
+\parindent=0in
+\parskip=0.5\baselineskip
+
+% LOOK HERE
+% change assignment number and possibly date below
+\newcommand\header{\sc Math 631 \hfill Homework 4 \hfill October 1, 2008}
+
+\begin{document}
+
+\header
+
+\section*{Section 3.2}
+
+\begin{itemize}
+
+\item[4.] Show that if $|G| = pq$ for some primes $p$ and $q$ (not necessarily distinct) then either
+$G$ is abelian or $Z(G) = 1$.
+
+\begin{proof}(Baggett) \ Since $Z(G)$ is a subgroup of $G$,
+from Lagrange's Theorem we have that $|Z(G)| = 1, p, q,$ or $pq$.
+Suppose that $|Z(G)| \neq 1$. If $|Z(G)| = p$, then $|G/Z(G)| =
+\frac{pq}{p} = q$. Since the order of $G/Z(G)$ is prime, $G/Z(G)$ is
+cyclic. Similarly, if $|Z(G)| = q$, then $|G/Z(G)| = \frac{pq}{q} =
+p$. Since the order of $G/Z(G)$ is prime, $G/Z(G)$ is cyclic. If
+$|Z(G)| = pq$, then $|G/Z(G)| = \frac{pq}{pq} = 1$. Thus, $G/Z(G)$
+is the trivial group and is therefore cyclic. In all three cases
+where $|Z(G)| \neq 1$, $G/Z(G)$ is cyclic. From Exercise 3.1.36, we
+can conclude that $G$ is abelian. Thus, either $G$ is abelian or
+$Z(G) = 1$.
+\end{proof}
+
+\item[5.]  Let $H$ be a subgroup of $G$ and fix some element $g\in G$.
+
+(a)  Prove that $gHg^{-1}$ is a subgroup of $G$ of the same order as
+$H$.
+
+(b)  Deduce that if $n\in \Z^{+}$ and $H$ is the unique subgroup of
+$G$ of order $n$ then $H\unlhd G$.
+
+\begin{proof}(Mobley) 
+
+(A) We know that the identity is contained in $gHg^{-1}$ and it is
+therefore nonempty. Pick $gh_{1}g^{-1}, gh_{2}g^{-1} \in gHg^{-1}$.
+Then $(gh_{1}g^{-1})(gh_{2}g^{-1})=gh_{1}h_{2}g^{-1}$ and the subset
+is closed under the operation.  Next,
+$(ghg^{-1})^{-1}=(g^{-1})^{-1}h^{-1}g^{-1}=gh^{-1}g^{-1}$ and the
+subset is closed under inverses.  Thus, $gHg^{-1}\leq G$.
+
+\smallskip
+
+Let $\phi: H \rightarrow gHg^{-1}$ be defined by $h \mapsto ghg^{-1}$.  
+Pick two elements in $gHg^{-1}$ such
+that $gh_1g^{-1}=gh_2g^{-1}$.  Then by using cancellation laws,
+$h_1=h_2$ and $\phi$ is one-to-one.  Now if $ghg^{-1} \in gHg^{-1}$,
+then $\phi(h) = g h g^{-1}$ and $\phi$ is surjective.  Thus, $H$ and
+$gHg^{-1}$ have the same cardinality.
+
+\smallskip
+
+(B)  $H$ is the only subgroup of order $n$.  But from the first part
+$|H|=|gHg^{-1}|$ for an arbitrary $g\in G$.  Thus, $gHg^{-1}=H$ for
+all $g \in G$ and $H \unlhd G$.
+\end{proof}
+
+
+\item[8.]  Prove that if $H$ and $K$ are finite subgroups of $G$ whose orders are relatively prime then $H\cap K=1$.
+
+\begin{proof}(Mobley) \ We will use Proposition 3 on page 55 of the text.  Pick $g\in H\cap K$.  Since $|H|=p$ and $|K|=q$ and $(p,q)=1$, it follows that
+$g^p=1$, $g^q=1$ and $g^1=1$.  Thus $g$ must be the identity and
+$H\cap K=1$.
+\end{proof}
+
+\item[16.]  Use Lagrange's Theorem in the multiplicative group $(\Z/p\Z)^{\text{x}}$ to prove \textsl{Fermat's Little Theorem:} if $p$ is a prime then $a^p\equiv a(\text{mod}p)$ for all $a\in \Z$.
+
+\begin{proof}(Buchholz)
+Let $G=(\Z/p\Z)^{\text{x}}$ and note that $|G|=p-1$ where $p$ is
+prime.  Then choose $a\in G$   and let $|a|=k$.  By Lagrange's
+Theorem $|a|\big| |G|$, so $k | p-1$.  Then $p-1=km$ for some $m\in
+\Z^{+}$, which implies that $p=km+1$.  Consider,
+$$a^p=a^{km+1}=(a^k)^m a=(1^m)a\equiv a(\text{mod}p).$$
+Hence $a^p\equiv a(\text{mod}p)$ for all $a\in \Z$.
+
+\end{proof}
+
+\item[22.]  Use Lagrange's Theorem in the multiplicative group $(\Z/n\Z)^{\text{x}}$ to prove \textsl{Euler's Theorem: }$a^{\varphi(n)}\equiv 1(\text{mod}) n$ for every integer $a$ relatively prime to $n$, where $\varphi$ denotes Euler's $\varphi-$function.
+
+\begin{proof}(Buchholz)
+Let $G=(\Z/n\Z)^{\text{x}}$ and note that $|G|=\varphi(n)$.  Then
+choose $a\in G$ where $(a,n)=1$.  Let $|a|=k.$  By Lagrange's
+Theorem $|a|\big| |G|$, so $k \big| \varphi(n)$.  Then
+$\varphi(n)-1=km$ for some $m\in \Z^{+}$.  Consider,
+$$a^{\varphi(n)}=a^{km}=(a^k)^m =(1^m)\equiv 1(\text{mod}n).$$
+Hence $a^{\varphi(n)}\equiv 1(\text{mod}) n$ for all $a\in \Z$ which
+is relatively prime to $n$.
+
+\end{proof}
+
+\end{itemize}
+
+\section*{Section 3.3}
+
+\begin{itemize}
+
+\item[3.3.1]  Let $F$ be a finite field of order $q$  and let $n \in \Z^+$, then $|GL_n (F):SL_n (F)|=q-1$.
+
+% display your last name
+\begin{proof}(Gillispie) Consider the function $\phi:GL_n (F) \rightarrow F$ defined by \[ g \mapsto \det (g)\].\\
+Note that by the properties of the determinate we know that $\phi(e)=1$  and if $g_1,g_2 \in GL_n (F)$, then $\det(g_1 )\det(g_2)=\det(g_1 g_2 )$ and so $\phi$  is a group homomorphism.\\
+Now if we let $s\in SL_n (F)$, by definition we know that $\phi(s)=\det(s)=1$, so $s\in Ker\phi$ and $SL_n (F)\subset Ker\phi$.\\
+If we let $k\in Ker\phi$, then we know that $1=\phi(k)=\det(k)$, which by definition means that $k\in SL_n (F)$, and so $SL_n (F)=Ker\phi$.\\
+By the first isomorphism theorem we mow have that $|GL_n (F):SL_n (F)|=|\phi(GL_n (F))|$.\\
+If $g\in GL_n (F)$, then $\det(g)\in F-{0}$ and so $\phi(GL_N(F))\subset F-\{0\}$. Now, if we let $f\in F$, I claim that the $n\times n$ matrix with all zeroes(in $F$) off the main diagonal, $f$  in the upper-left hand position, and ones(in $F$) in every other main diagonal position has determinate $f$. By construction this matrix is in $GL_n (F)$, and so $F-\{0\}\subset \phi(GL_n (F)$.\\
+We have that $|GL_n (F):SL_n (F)|=|\phi(GL_n (F))|=|F-\{0\}|=q-1$.
+As needed.
+
+\end{proof}
+
+\item[3.] Prove that if $H$ is a normal subgroup of $G$ of prime index $p$ then for all $K \leq G$ either \\
+\begin{itemize}
+\item[i.] $K\leq H$ or
+
+\item[ii.] $G = HK$ and $|K: K\bigcap H| = p$.
+
+\end{itemize}
+
+\begin{proof}(Hazlett)
+Suppose $K \not \leq H$.  Then $H \subset K$.  Hence we can deduce
+that $|G : HK| = 1$ since $|G: H| = p$, a prime.  So $HK = G$.  Then
+by the Second Isomorphism Theorem we have $HK/H \cong K/H\cap K$.
+Consequently $G/H \cong K/H\cap K$.  Therefore $|K: K\bigcap H| =
+p$.
+\end{proof}
+
+\item[3.3.7] Let $M$ and $N$  be normal subgroups of $G$ s.t. $MN=G$, then $G/(N\cap M) \cong (G/M)\times (G/N)$.
+
+\begin{proof} (Gillispie) Define $\phi:G\rightarrow G/M\times G/N$ by $g\mapsto gM,gN$.
+
+Note that $\phi(e_{G})=e_{G}M,e_{G}N=M,N$ which is the identity in
+$G/M\times G/N$.
+
+Let $g_{1},g_{2}\in G$. Because $G=MN$, there exist $m_{1},m_{2}\in
+M$ and $n_{1},n_{2}\in N$ s.t. $g_{1}=m_{1}n_{1}$and
+$g_{2}=m_{2}n_{2}$\begin{eqnarray*}
+\phi(g_{1}g_{2}) & = & g_{1}g_{2}M,g_{1}g_{2}N\\
+ & = & (g_{1}M,g_{1}N)(g_{2}M,g_{2}N)\\
+ & = & \phi(g_{1})\phi(g_{2})\end{eqnarray*}
+
+
+And so $\phi$ is a homomorphism.
+
+Consider the kernel of $\phi$. Let $k\in Ker\phi$, that is
+$kM,kN=M,N$ by proposition 3.1.4 we have then that $k\in M$ and
+$k\in N$, so
+$k\in M\cap N$.\\
+Now let $g\in M\cap N$, notice that $\phi(g)=(gM,gN)=(M,N)$ again by
+proposition 3.1.4, and so $Ker\phi=M\cap N$.
+
+I claim now that $\phi$ is surjective, and thus by the first
+isomorphism theorem $G/M\times G/N\cong G/M\cap N$.
+
+Let $(pM,qN)\in G/M\times G/N$, since $p,q\in G=MN$ and by
+proposition 3.2.6 $MN=NM$, there exist $m_{1},m_{2}\in M$ and
+$n_{1},n_{2}\in N$ s.t. $p=m_{1}n_{1}$ and $q=n_{2}m_{2}$. By
+Theorem 3.1.6
+
+\begin{eqnarray*}
+\phi(n_{1}m_{2}) & = & (n_{1}m_{2}M,n_{1}m_{2}N)\\
+ & = & (n_{1}M,Nn_{1}m_{2})\\
+ & = & (n_{1}m_{1}M,Nm_{2})\\
+ & = & (pM,Nn_{2}m_{2})\\
+ & = & (pM.,Nq)\\
+ & = & (pM,qN)\end{eqnarray*}
+So, $\phi$ is surjective onto $G/M\times G/N$, and by the first
+isomorphism theorem $G/M\cap N=G/Ker\phi\cong\phi(G)=G/M\times G/N$.
+\end{proof}
+
+\end{itemize}
+
+\section*{Section 3.4}
+
+\begin{itemize}
+
+\item[2.]  Exhibit all 3 composition series for for $Q_8$ and all 7 composition series for $D_8$.  List the composition factors in each case.
+
+% display your last name 
+(Schamel)
+$Q_8:$
+\begin{align*}
+  &\gen{1} \normsub \gen{-1} \normsub \gen{i} \normsub Q_8 \\
+  &\gen{1} \normsub \gen{-1} \normsub \gen{j} \normsub Q_8 \\
+  &\gen{1} \normsub \gen{-1} \normsub \gen{j} \normsub Q_8 
+\end{align*} 
+
+$D_8:$
+\begin{align*}
+  &\gen{1} \normsub \gen{s} \normsub \gen{s,r^2} \normsub D_8 \\
+  &\gen{1} \normsub \gen{sr^2} \normsub \gen{s,r^2} \normsub D_8 \\
+  &\gen{1} \normsub \gen{r^2} \normsub \gen{s,r^2} \normsub D_8 \\
+  &\gen{1} \normsub \gen{r^2} \normsub \gen{r} \normsub D_8 \\
+  &\gen{1} \normsub \gen{r^2} \normsub \gen{sr,r^2} \normsub D_8 \\
+  &\gen{1} \normsub \gen{sr} \normsub \gen{sr,r^2} \normsub D_8 \\
+  &\gen{1} \normsub \gen{sr^3} \normsub \gen{sr,r^2} \normsub D_8 
+\end{align*} 
+In both groups and all composition series, the index between sucessive terms is always 2.  Thus, for both groups, each composition series has 3 composition factors, all isomorphic to $C_2$. 
+
+\item[5.] Prove that subgroups and quotient groups of a solvable group are solvable.
+\begin{proof} (Bastille) \ Let $G$ be a solvable group, and let $N \leq G$. Since $G$ is solvable, there exists a chain of subgroups of $G$ satisfying:
+\begin{equation*}
+1=G_0 \normsubeq G_1 \normsubeq G_2 \normsubeq \cdots \normsubeq
+G_s=G
+\end{equation*}
+where $G_{i+1}/G_i$ is Abelian for $i=0,1, \cdots, s-1$.
+
+We will show that $N$ is solvable by considering a chain of $G_i
+\cap N$. Let $i \in \{0,1,\cdots, s-1 \}$.
+
+Since $G_i \normsubeq G_{i+1}$, $G_i \subseteq G_{i+1}$. Hence if $g
+\in G_i \cap N$ then $g \in N$ and $g \in G_i \subseteq G_{i+1}$, so
+$g \in G_{i+1} \cap N$. Furthermore, the intersection of two
+subgroups is a subgroup, hence $G_i \cap N \leq G_{i+1} \cap N$. We
+also note that if $g \in G_{i+1} \cap N$ and $h \in G_{i} \cap N$,
+then $ghg\inv \in N$ by closure under . of $N$ (because $g,h \in
+N$), and $ghg\inv \in G_i$ since $g \in G_{i+1}, h \in G_i$ and $G_i
+\normsubeq G_{i+1}$. Thus, for all $g \in G_{i+1} \cap N$, and for
+all $h \in G_i \cap N$, $ghg\inv \in G_i \cap N$ , and so $G_i \cap
+N \normsubeq G_{i+1} \cap N$.
+
+Now we need to show that $G_{i+1} \cap N / G_i \cap N$ is Abelian.
+In Exercise 3.1.40, we showed that $\bar{x}, \bar{y} \in
+G_{i+1}/G_i$ commute if and only if $x\inv{y}\inv xy \in G_i$. So in
+particular, since $G_{i+1}/G_i$ is indeed Abelian, if $x,y \in
+G_{i+1} \cap N \subseteq G_{i+1}$ then ${x}\inv{y}\inv xy \in G_i$.
+But since $x,y \in N$, by closure under inverses and .,
+${x}\inv{y}\inv xy \in N$. Hence ${x}\inv{y}\inv xy \in G_i \cap N$.
+Thus by Exercise 3.1.40, $\bar{x}, \bar{y}$ commute in $G_{i+1} \cap
+N / G_i \cap N$ (well-defined) so $G_{i+1} \cap N / G_i \cap N$ is
+Abelian.
+
+Therefore we have the following chain of subgroups (with possibly
+several $\{1\}$ sets on the left, and several $N$'s on the right):
+\begin{equation*}
+1=H_0 \normsubeq H_1 \normsubeq \cdots \normsubeq H_{s-1} \normsubeq
+H_s=N
+\end{equation*}
+where $H_i= G_i \cap N$ for all $i=0,1, \cdots, s$ and $H_{i+1}/H_i$
+is Abelian for all $i=0,1, \cdots, s-1$. Therefore by definition,
+$N$ is solvable.
+
+Now for quotient groups, let $H$ be a normal subgroup of $G$. If
+$H=G$, then trivially we have the chain $1=1H/H \normsubeq G/H= 1$
+and $(G/H)/(H/H)$ is Abelian (it contains again only the trivial
+group), and so $G/H$ is solvable. Now assume that $H \normsub G$. We
+will construct a chain using $(G_iH)/H$. Let $i \in
+\{0,1,\cdots,s-1\}$.
+
+By the Second Isomorphism Theorem, since $G_i \leq G=N_G(H)$, then
+$G_iH \leq G$, and $H \normsubeq G_iH$. We also have $G_iH \leq
+G_{i+1}H$ (since if $y=gh \in G_iH$ then $g \in G_i \subseteq
+G_{i+1}$ so $gh \in G_{i+1}H$). Hence we obtain the following chain:
+$$H=G_0H \leq G_1H \leq G_2H \leq \cdots \leq G_{s-1}H \leq G_sH=GH=G. $$
+
+We now show that $G_iH \normsubeq G_{i+1}H$. Let $y=bh_1 \in
+G_{i+1}H$ and let $x=ah_2 \in G_iH$. Then,
+\begin{align*}
+yxy\inv &=bh_1ah_2h_1\inv b\inv=bh_1(b\inv b)a(b\inv b)h_2h_1\inv b\inv \\
+                &= \underbrace{(bh_1b\inv)}_{\in H}(bab\inv)\underbrace{(bh_2h_1\inv b\inv)}_{\in H} \quad \text{ since $H \normsubeq G$ and }b \in G_{i+1} \subseteq G \\
+                &=h_3\underbrace{bab\inv}_{\in G_i}h_4 \quad \text{ since } G_i \normsubeq G_{i+1} \text{ so set } bab\inv=a_1\\
+                &=\underbrace{h_3a_1}_{\in HG_i=G_iH}h_4 \quad \text{ since they are subgroups, so }h_3a_1=a_2h_5 \text{ for some }a_2 \in G_i, h_5 \in H \\
+                &=a_2h_5h_4=a_2h_6 \in G_iH.
+\end{align*}
+
+Therefore $G_iH$ is normal in $G_{i+1}H$. Hence by the Fourth
+Isomorphism Theorem, we have:
+\begin{equation*}
+1=(G_0H)/H \normsubeq (G_1H)/H \normsubeq \cdots \normsubeq
+(G_{s-1}H)/H \normsubeq G/H.
+\end{equation*}
+
+We now need only show that
+$\left((G_{i+1}H)/H\right)/\left((G_iH)/H\right)$ is Abelian. By the
+Third Isomorphism Theorem, this is equivalent to showing
+$(G_{i+1}H)/(G_iH)$ is Abelian since
+$\left((G_{i+1}H)/H\right)/\left((G_iH)/H\right)\cong
+(G_{i+1}H)/(G_iH)$. We reprise a similar argument: since
+$G_{i+1}/G_i$ is Abelian, for any $x,y \in G_{i+1}$, $x\inv y \inv
+xy \in G_i$. Now consider $(G_{i+1}H)/(G_iH)$. Let $z_1, z_2 \in
+G_{i+1}H$. Then there exist $x,y \in G_{i+1}$ and $h_1,h_2 \in H$
+such that $z_1=xh_1, z_2=yh_2$. We must show that $z_1\inv z_2\inv
+z_1z_2 \in G_iH$. Observe that:
+\begin{align*}
+z_1\inv z_2\inv z_1z_2 &= h_1\inv x\inv h_2\inv y\inv xh_1yh_2 = h_1\inv x\inv h_2\inv(xx\inv) y\inv x(yy\inv)h_1yh_2 \\
+                       &= h_1\inv\underbrace{((x\inv)h_2\inv(x\inv)\inv)}_{\in H}x\inv y\inv xy \underbrace{(y\inv h_1(y\inv)\inv)}_{\in H}h_2 \quad \text{ since }H \normsubeq G \text{ and } x\inv,y\inv \in G \\
+                       &=h_1\inv h_3\underbrace{x\inv y\inv xy}_{\in G_i}h_4h_2 \quad \text{ since $G_{i+1}/G_i$ is Abelian} \\
+                       &=\underbrace{h_5g_1}_{\in HG_i=G_iH}h_6=g_2h_7h_6=g_2h_8 \in G_iH.
+\end{align*}
+
+Therefore $(G_{i+1}H)/(G_iH)$ is Abelian and so is
+$\left((G_{i+1}H)/H\right)/\left((G_iH)/H\right)$. Thus, $G/H$ is
+solvable.
+
+Hence we find that subgroups and quotient groups of solvable groups
+are solvable.
+\end{proof}
+
+\item[6.] Prove part (1) of the Jordan-Holder Theorem by induction on $|G|$:  Every finite group $G$ with $|G| > 1$ has a composition series.
+
+\begin{proof}(Schamel)
+If $|G| = 2$ then $G \cong C_2$.  Since $1$ is normal in $G$ and $G/1 \cong G$, which is simple, we conclude that $1 = N_1 \normsub N_2 = G$ is a composition series for G. \\
+
+Suppose $|G| =n > 2$ and that every group of strictly smaller order has a composition series.  Note that $1 \normsub G$, so $G$ has at least one normal subgroup.  Let $H$ be a proper normal subgroup of $G$ of maximal order (that is, there is no proper normal subgroup of $G$ of larger order).  We will show that $G/H$ is simple.  To the contrary, suppose $G/H$ is not simple.  Then there is a normal subgroup $K/H \normsub G/H$ such that $K/H$ is neither the trivial subgroup nor all of $G/H$.  But then, by the Fourth Isomorphism Theorem, $\exists K \normsub G$ and $|G : K| = |G/H: K/H| > 1$ and hence $K \neq G$, but $H \leq K$ and $|K : H| = |K/H : 1| = |K/H| > 1$.  Thus $H$ is does not have maximal order amongst the proper normal subgroups of $G$, a contradiction.  We conclude $G/H$ is simple.  By our induction hypothesis, $H$ has a composition series: $1 = N_1 \normsub \cdots \normsub N_k = H$ where $N_{i+1}/N_i$ is simple for all $i$.  Then $1 = N_1 \normsub \cdots \normsub N_k = H \normsub G$ is a composition series for $G$.  This inductive construction allows us to conclude that every finite group of order 2 or more has a composition series.
+\end{proof}
+
+\end{itemize}
+
+\section*{Section 3.5}
+
+\begin{itemize}
+
+\item[3.] Prove that $S_n$ is generated by $\{(i \ \ i+1)\  | \ 1 \leq i \leq n-1 \}$.
+
+\begin{proof}(Baggett) Let $A = \langle\{(i \ \ i+1)\  | \ 1 \leq i \leq n-1 \}\rangle$. Since $S_n$ is
+closed under products, $A \leq S_n$. Because any permutation in
+$S_n$ can be expressed as a product of transpositions, we need only
+show that all transpositions are generated by $A$. Take $(a \ \ b)$
+where $1 \leq a < b \leq n$. Then
+\\$(b-1 \ \ b)...(a+2 \ \ a+3)[(a \ \ a+1)(a+1 \ \ a+2)(a \ \ a+1)](a+2 \ \ a+3)...(b-1 \ \ b)$
+\\ \hspace*{1cm}$= (b-1 \ \ b)...(a+2 \ \ a+3)(a \ \ a+2)(a+2 \ \ a+3)...(b-1 \ \ b)$
+\\ \hspace*{1cm}$= (b-1 \ \ b)...(a \ \ a+3)...(b-1 \ \ b)$
+\\ \hspace*{1cm}.
+\\ \hspace*{1cm}.
+\\ \hspace*{1cm}.
+\\ \hspace*{1cm}$= (a \ \ b).$
+\\ Thus, $(a \ \ b) \in A$ for any transposition $(a \ \ b)$. Therefore, $A = S_n$.
+\end{proof}
+
+\item[4.] Show that $S_n = \la (1 \, 2), (1 \, 2 \, 3 \ldots n) \ra$ for all $n \geq 2$.
+
+
+\begin{proof} (Lawless)
+We have just shown that $S_n$ is generated by the set of transpositions of the form $(i \quad i+1)$. We will show we can generate these elements as products of elements from $\{(1 \, 2), (1 \, 2 \, 3 \ldots n)\}$. 
+
+Pick an arbitrary $i$ with $1 \leq i \leq n-1$. Then $(1 \, 2 \, \ldots \, n)^{n-i+1}$ gives us:
+\begin{equation*}
+\left(
+\begin{matrix}
+1 & 2 & \cdots & i & i+1 & \cdots & n \\
+n-i+2 & n-i+3 & \cdots & 1 & 2 & \cdots & n-i+1
+\end{matrix}
+\right)
+\end{equation*}
+Composing this with $(1\, 2)$ to this gives us:
+\begin{equation*}
+\left(
+\begin{matrix}
+1 & 2 & \cdots & i & i+1 & \cdots & n \\
+n-i+2 & n-i+3 & \cdots & 2 & 1 & \cdots & n-i+1
+\end{matrix}
+\right)
+\end{equation*}
+Finally, composing this with $(1\, 2\, \cdots \, n)^{i-1}$ gives us:
+\begin{equation*}
+\left(
+\begin{matrix}
+1 & 2 & \cdots & i & i+1 & \cdots & n \\
+1 & 2 & \cdots & i+1 & i & \cdots & n
+\end{matrix}
+\right)
+\end{equation*}
+Therefore, $(i \quad i+1) = (1\, 2\, \cdots\, n)^{i-1}(1\, 2)(1\, 2\, \cdots\, n)^{n-i+1}$. Thus $S_n = \la (1 \, 2), (1 \, 2 \, 3 \ldots n) \ra$. 
+
+\end{proof}
+
+\item [6.] Show that $\left\langle \left(13\right),\left(1234\right)\right\rangle $
+is a proper subgroup of $S_{4}$. What is the isomorphism type of
+this group?
+
+\begin{proof}[Proof (Granade)]
+Recall that $D_{8}=\left\langle r,s|r^{4}=s^{2}=1,\, rs=sr^{-1}\right\rangle $.
+If we show that these relations hold for $s=\left(13\right)$ and
+$r=\left(1234\right)$, then we will have that $\left\langle \left(13\right),\left(1234\right)\right\rangle \cong D_{8}$.
+Then, since $\left|D_{8}\right|=8<4!$, we will have that $\left\langle \left(13\right),\left(1234\right)\right\rangle $
+is a proper subgroup of $S_{4}$. Following this plan, note that $\left|\left(13\right)\right|=2$
+and $\left|\left(1234\right)\right|=4$. Then, $\left(13\right)\left(1234\right)=\left(12\right)\left(34\right)$,
+while $\left(4321\right)\left(13\right)=\left(12\right)\left(34\right)$.
+Thus, all three relations hold, and we are done.
+\end{proof}
+
+\item [10.] Find a composition series for $A_{4}$. Deduce that $A_{4}$
+is solvable.
+
+\begin{proof}[Proof (Granade)]
+We claim that the following is a composition series for $A_{4}$:\[
+\left\{ 1\right\} \le\left\langle \left(12\right)\left(34\right)\right\rangle \le K_{4}\le A_{4}\]
+To show this, we must demonstrate that $\left\langle \left(12\right)\left(34\right)\right\rangle \lhd K_{4}$,
+$K_{4}\lhd A_{4}$, and that $K_{4}/\left\langle \left(12\right)\left(34\right)\right\rangle $
+and $A_{4}/K_{4}$ are simple.
+
+Note that $K_{4}=\left\{ \left(12\right)\left(34\right),\left(13\right)\left(24\right),\left(14\right)\left(23\right),\left(1\right)\right\} \subseteq A_{4}$.
+Then, since $K_{4}$ is a group, $K_{4}\le A_{4}$. Moreover, since
+conjugation in $S_{4}$ (and hence $A_{4}\le S_{4}$) preserves cycle
+decomposition structure, and since $K_{4}$ contains all elements
+of $A_{4}$ that are the product of two disjoint transpositions, we
+have that $\sigma K_{4}\sigma^{-1}=K_{4}$ and thus that $K_{4}\lhd A_{4}$.
+To see that $A_{4}/K_{4}$ is simple, note that $\left|A_{4}/K_{4}\right|=\left[A_{4}:K_{4}\right]=\left|A_{4}\right|/\left|K_{4}\right|=12/4=3$.
+But then, since $3$ is prime, $A_{4}/K_{4}\cong C_{3}$, which is
+simple.
+
+Next, note that since $K_{4}$ is Abelian, all subgroups are also
+normal. In particular, $\left\langle \left(12\right)\left(34\right)\right\rangle \lhd K_{4}$.
+To see that $K_{4}/\left\langle \left(12\right)\left(34\right)\right\rangle $
+is simple, note that $\left|K_{4}/\left\langle \left(12\right)\left(34\right)\right\rangle \right|=\left|K_{4}\right|/\left|\left\langle \left(12\right)\left(34\right)\right\rangle \right|=\left|K_{4}\right|/\left|\left(12\right)\left(34\right)\right|=4/\text{lcm}\left(2,2\right)=4/2=2$.
+Thus, $K_{4}/\left\langle \left(12\right)\left(34\right)\right\rangle \cong C_{2}$,
+which is simple.
+
+We have therefore shown that each subgroup inclusion is normal, and
+that each factor is simple. We conclude that the given series is in
+fact a composition series for $A_{4}$.
+\end{proof}
+
+Note that the proof also gives that $A_{4}$ is solvable, since $A_4/K_4 \cong C_3, \left\langle \left(12\right)\left(34\right)\right\rangle $
+are both isomorphic to cyclic groups, which are Abelian.
+
+
+\item[15.] \ Prove that if $x$ and $y$ are distinct 3-cycles in $S_4$ with $x \neq y\inv$, then the subgroup of $S_4$ generated by $x$ and $y$ is $A_4$.
+
+\begin{proof}(Bastille)\ Note that $H:=\la x \ra = \{1,x,x\inv \}$ and $K:=\la y \ra = \{1,y,y\inv \}$. We verify that any finite product of $x,y$ and their powers will give an even permutation since $x$ and $y$ are both even, so $\la x,y \ra \leq A_4$. We have by assumption $x \neq y,y\inv$ hence $x\inv \neq y\inv, y$. Therefore $H \cap K =1$. Hence we have:
+\begin{equation*}
+|HK|= \frac{|H|\cdot|K|}{|H \cap K|}=9.
+\end{equation*}
+But by definition, $ HK \subseteq \la x,y \ra$. Hence $9 \leq | \la
+x,y \ra | \leq |A_4|=12$. By Lagrange's Theorem, we must have $|\la
+x,y \ra| \divides A_4$. Hence $| \la x,y \ra | =12$ and $\la x,y
+\ra=A_4$.
+\end{proof}
+\end{itemize}
+
+ \end{document}

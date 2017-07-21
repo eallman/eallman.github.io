@@ -1,0 +1,40 @@
+LIB "elim.lib";
+LIB "solve.lib";
+
+system("--browser", "mac");
+option("redSB");
+
+// Example 4.22 in text
+"Example 4.22";
+ring r = 0,(x1,x2,x3),dp;
+ring s = 0,(u,t1),dp;
+
+map phi = r,u*t1+(1-t1),1-t1,u*(1-t1);
+
+phi;
+
+" ";
+setring r;
+"The kernel of the map phi is ";
+kernel(s,phi);
+
+
+// Example 4.22 again
+" ";
+"Doing Example 4.22 for a second time.";
+
+ring R = 0,(u,t1,t2,x1,x2,x3),(dp(3),dp(3));
+
+poly f1 = x1-(t1*u+t2);
+poly f2 = x2-(t2);
+poly f3 = x3-(u*t2);
+poly delta = t1+t2-1;
+
+ideal i = f1,f2,f3,delta;
+
+ideal stdI = std(i);
+stdI;
+
+" ";
+elim(i,u*t1*t2);
+

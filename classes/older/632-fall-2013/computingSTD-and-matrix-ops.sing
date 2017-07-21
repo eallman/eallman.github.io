@@ -1,0 +1,50 @@
+// Computing Groebner bases in Singular
+
+// for help
+// system("--browser", "mac");
+
+// for a reduced Groebner basis, uncomment the following line
+// option("redSB");
+
+
+" ";
+ring r = 0,(x,y),lp;
+
+poly f1 = x + 2y +1;
+poly f2 = x-y-5;
+
+ideal i = f1,f2;
+
+// The next lines will compute a Groebner basis for I
+ideal stdI = std(i);
+"Groebner basis wrt lex is";
+stdI;
+
+
+// Let's test if g is in I, Hassett p. 14 Example 2
+" ";
+poly g = y+2;
+reduce(g,stdI);
+"If the result of the last command (", reduce(g,stdI), ") is zero, then g is in ideal!";
+
+
+// Some useful matrix commands.
+" ";
+ring r = 0,(a11,a12,a21,a22);
+
+matrix A[2][2] = a11,a12,a21,a22;
+print(A);                         // compare to A;
+
+//  What is i better known as ???
+ideal i = minor(A,2);
+i;
+
+ideal entries = minor(A,1);
+entries;
+
+
+// Loading libraries in Singular
+LIB "solve.lib";
+
+
+

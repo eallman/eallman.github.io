@@ -1,0 +1,356 @@
+\documentclass[10pt]{article}
+
+\usepackage[margin=1in, head=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+
+% if using a MAC, you may want to uncomment the following line
+% to enable reverse searches.
+%\usepackage{pdfsync}
+
+\usepackage[all,2cell,ps]{xy}
+
+\usepackage{braket}
+\theoremstyle{plain}
+\newtheorem*{cor*}{Corollary}
+
+\newcommand{\edge}[1]{\ar@{-}[#1]}
+
+% Headers and footers
+\fancyhf{}
+\rfoot{\thepage}
+
+%\setcounter{secnumdepth}{0}
+
+% macros for algebra class
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\b}{\textbf}
+\newcommand{\re}{\text{Re}}
+\newcommand{\im}{\text{Im}}
+\renewcommand{\iff}{\Leftrightarrow}
+\newcommand{\zbar}{\overline{z}}
+\newcommand\SL{\operatorname{SL}}
+\newcommand\GL{\operatorname{GL}}
+\newcommand{\divides}{\, \Big | \,}
+
+\newcommand{\sect}[1]{\vspace{.25in}\noindent\textbf{Section #1}}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\zmod}[1]{\Z/#1 \Z}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand\inv{^{-1}}
+\newcommand{\normsubeq}{\trianglelefteq}
+\newcommand{\normsub}{\triangleleft}
+\newcommand{\gen}[1]{\left\langle #1 \right\rangle}
+
+\parindent=0in
+\parskip=0.5\baselineskip
+
+% LOOK HERE
+% change assignment number and possibly date below
+\newcommand\header{{\sc 631 Homework Solutions \#3 \hfill \today}}
+
+\begin{document}
+
+\header
+
+% put in a section head with the appropriate chapter
+
+\section*{Section 2.5}
+
+\begin{itemize}
+
+\item[6.] \ Use the given lattices to help find the centralizers of every element in the following groups:
+\begin{enumerate}
+\item $D_8$
+\item $Q_8$
+\item $S_3$
+\item $D_{16}$
+\end{enumerate}
+(Schamel)
+\begin{enumerate}
+\item \noindent
+\begin{center}
+\begin{tabular}{c|cccccccc}
+$g $&  $e$ & $r$&$r^2$&$r^3$&$s$&$rs$&$r^2s$&$r^3s$ \\
+\hline \\
+$C_{D_8}(g)$ & $D_8$ & $\gen{r}$&$D_8$&$\gen{r}$&$\gen{s,r^2}$&$\gen{rs,r^2}$&$\gen{s,r^2}$&$\gen{rs,r^2}$\\
+\end{tabular}
+\end{center}
+\item \noindent
+\begin{center}
+\begin{tabular}{c|cccccccc}
+$g $&  $1$ & $-1$&$i$&$-i$&$j$&$-j$&$k$&$-k$ \\
+\hline \\
+$C_{Q_8}(g)$ & $Q_8$ & $Q_8$&$\gen{i}$&$\gen{i}$&$\gen{j}$&$\gen{j}$&$\gen{k}$&$\gen{k}$\\
+\end{tabular}
+\end{center}
+\item \noindent
+\begin{center}
+\begin{tabular}{c|cccccc}
+$g $&  $e$ & $(1\;2)$&$(1\;3)$&$(2\;3)$&$(1\;2\;3)$&$(1\;3\;2)$ \\
+\hline \\
+$C_{S_3}(g)$ & $S_3$ & $\gen{(1\;2)}$&$\gen{(1\;3)}$&$\gen{(2\;3)}$&$\gen{(1\;2\;3)}$&$\gen{(1\;3\;2)}$\\
+\end{tabular}
+\end{center}
+\item \noindent
+\begin{center}
+\begin{tabular}{c|cccccccc}
+$g $&  $e$ & $r$&$r^2$&$r^3$&$r^4$&$r^5$&$r^6$&$r^7$ \\
+\hline \\
+$C_{D_{16}}(g)$ & $D_{16}$ & $\gen{r}$&$\gen{r}$&$\gen{r}$&$D_{16}$&$\gen{r}$&$\gen{r}$&$\gen{r}$\\
+\end{tabular}
+\vskip0.3in
+\begin{tabular}{c|cccccccc}
+$g $&  $s$ & $sr$&$sr^2$&$sr^3$&$sr^4$&$sr^5$&$sr^6$&$sr^7$ \\
+\hline \\
+$C_{D_{16}}(g)$ & $\gen{s,r^4}$ & $\gen{sr^5,r^4}$&$\gen{sr^2,r^4}$&$\gen{sr^3,r^4}$&$\gen{s,r^4}$&$\gen{sr^5,r^4}$&$\gen{sr^2,r^4}$&$\gen{sr^3,r^4}$\\
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\item[8.] \ In each of the following groups find the normalizer of each subgroup:
+\begin{enumerate}
+\item $S_3$
+\item $Q_8$
+\end{enumerate}
+(Schamel)
+\begin{enumerate}
+\item \noindent
+\begin{center}
+\begin{tabular}{c|cccccc}
+$A $&  $\{e\}$ & $\gen{(1\;2)}$&$\gen{(1\;3)}$&$\gen{(2\;3)}$&$\gen{(1\;2\;3)}$&$S_3$ \\
+\hline \\
+$N_{S_3}(A)$ & $S_3$ & $\gen{(1\;2)}$&$\gen{(1\;3)}$&$\gen{(2\;3)}$&$S_3$&$S_3$\\
+\end{tabular}
+\end{center}
+\item \noindent
+\begin{center}
+\begin{tabular}{c|cccccc}
+$A $&  $\gen{1}$ & $\gen{-1}$&$\gen{i}$&$\gen{j}$&$\gen{k}$&$Q_8$ \\
+\hline \\
+$N_{Q_8}(A)$ & $Q_8$ & $Q_8$&$Q_8$&$Q_8$&$Q_8$&$Q_8$\\
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\item[9.] Draw the lattices of subgroups of the following groups:
+\\ (Baggett)
+\begin{itemize}
+
+\item[a.] $\Z/16\Z$
+\begin{center}
+$ \xymatrix{
+\Z/16\Z \edge{dd} & \\ \\
+\langle\bar{2}\rangle \edge{dd} & \\ \\
+\langle\bar{4}\rangle \edge{dd} & \\ \\
+\langle\bar{8}\rangle \edge{dd} & \\ \\
+\{\bar{0}\}
+}$
+\end{center}
+
+\item[b.] $\Z/24\Z$
+\begin{center}
+$ \xymatrix{
+& & & \edge{ld} \Z/24\Z \edge{rd} & \\
+& & \edge{ld} \langle\bar{2}\rangle \edge{rd} & & \edge{ld} \langle\bar{3}\rangle & \\
+& \edge{ld} \langle\bar{4}\rangle \edge{rd} & & \edge{ld} \langle\bar{6}\rangle & \\
+ \langle\bar{8}\rangle \edge{rd} & & \edge{ld} \langle\bar{12}\rangle & \\
+& \{\bar{0}\}
+}$
+\end{center}
+
+\item[c.] $\Z/48\Z$
+\\
+$ \xymatrix{
+& & & & \edge{ld} \Z/48\Z \edge{rd} & \\
+& & & \edge{ld} \langle\bar{2}\rangle \edge{rd} & & \edge{ld} \langle\bar{3}\rangle & \\
+& & \edge{ld} \langle\bar{4}\rangle \edge{rd} & & \edge{ld} \langle\bar{6}\rangle & \\
+& \edge{ld} \langle\bar{8}\rangle \edge{rd} & & \edge{ld} \langle\bar{12}\rangle & \\
+\langle\bar{16}\rangle \edge{rd} & & \edge{ld} \langle\bar{24}\rangle & \\
+& \{\bar{0}\} 
+}$
+
+
+\end{itemize}
+\end{itemize}
+
+\section*{Section 3.1}
+
+\begin{itemize}
+
+\item[3.] Let $A$ be an Abelian group and let $B$ be a subgroup of $A$. Prove that $A/B$ is Abelian. Give an example of a non-Abelian group $G$ containing a proper normal subgroup $N$ such that $G/N$ is Abelian.
+
+% display your last name 
+\begin{proof}(Bastille) \ First we show that $B$ is normal. Let $b \in B \leq A$ and let $a \in A$. Then $aba^{-1} \in aBa^{-1}$ and
+\begin{align*}
+aba^{-1}&= aa^{-1}b \qquad \text{ since $A$ is Abelian (and $a^{-1},b \in A$)} \\
+				&= b \in B. 
+\end{align*}
+Since $a,b$ were chosen arbitrarily, it follows that $aBa^{-1} \subseteq B$ for all $a \in A$; hence $B$ is normal in $A$. Now consider $A/B=\left\{aB | a \in A \right\}$. Let $a_1B, a_2B \in A/B$. Then we have
+\begin{align*}
+\left(a_1B\right)\left(a_2B\right) &= (a_1a_2)B \qquad \text{ since $B$ is normal so the operation is well-defined} \\
+																	 &= (a_2a_1)B \qquad \text{ since $a_1,a_2 \in A$, $A$ Abelian} \\
+																	 &= \left(a_2B\right)\left(a_1B\right) \qquad \text{ since $B$ is normal.}
+\end{align*}
+Therefore, $A/B$ is Abelian.
+\end{proof}
+\underline{Remark}: \
+There exist non-Abelian groups $G$ containing a proper normal subgroup $N$ such that $G/N$ is Abelian. For example, take $G=Q_8$ and $N=\left\{1,-1\right\}$. Then $G$ is non-Abelian since for example $ij=k \neq -k=ji$, and $N \lhd G$ since for all $a \in Q_8$:
+\begin{equation*}
+a1a^{-1}=1 \in N \qquad \text{ and } \qquad a(-1)a^{-1}=-1 \in N.
+\end{equation*}
+Now we have: $G/N = \left\{N, iN, jN, kN \right\}$. Note that if $a,b \in Q_8$, then
+\begin{itemize}
+\item if WLOG $b=\pm 1$ then $ab=ba$ so 
+\begin{equation*}
+\left(aN\right)\left(\pm1N\right) = \left(a\left(\pm1\right)\right)N = \left(\left(\pm1\right)a\right)N=\left(\pm1N\right)\left(aN\right).
+\end{equation*}
+\item if $a,b \neq \pm 1$, note that if $ab=c$ then $ba=-c$ but for any coset $cN$ we have $cN=\left\{c,-c\right\}$ so
+\begin{equation*}
+\left(aN\right)\left(bN\right) = \left(ab\right)N = cN=(-c)N=(ba)N=\left(bN\right)\left(aN\right).
+\end{equation*}
+\end{itemize}
+Therefore $G/N$ is Abelian.
+
+\item[27.]Let $N$ be a finite subgroup of a group $G$.  Show that $gNg\inv \subseteq N$ if and only if $gNg\inv = N$. Deduce that $N_G(N) = \{g\in G\, |\, gNg\inv \subseteq N\}$.
+
+\begin{proof} (Lawless)
+Clearly, if $gNg\inv = N$, then $gNg\inv \subseteq N$. Assume $gNg\inv \subseteq N$. Consider the map $\phi: N \to gNg\inv$ defined by $\phi(n) = gng\inv$. We can see this map is injective, since if $\phi(n) = \phi(m)$, then $gng\inv = gmg\inv$, and thus $n = m$. Since $|N| < \infty$, and the map is injective, then we know this is a bijection from $N \to gHg\inv$. This, combined with our assumption that $gNg\inv \subseteq N$ gives us that $gNg\inv = N$. 
+
+\end{proof}
+
+\item[28.] Let $N$ be a \textit{finite} subgroup of a group $G$ and assume $N=\langle S \rangle$ for some subset $S$ of $G$. Prove that an element $g \in G$ normalizes $N$ if and only if $gSg^{-1}\subseteq N$.
+
+% display your last name 
+\begin{proof}(Bastille) \ If $g$ normalizes $N$ then for all $n \in N$, $gng^{-1} \in N$. In particular, for all $s \in S \subseteq N$, $gsg^{-1} \in N$. Hence $gSg^{-1} \subseteq N$. 
+
+Now if $gSg^{-1} \subseteq N$, note that since $N$ is finite, so must be $S$ and all its elements have finite order. So we can write $S=\left\{a_1,a_2,\cdots, a_k\right\}$ for some fixed $k$ and any $n \in N$ can be expressed in the form:
+\begin{equation*}
+n=a_1^{\alpha_1}a_2^{\alpha_2}\cdots a_k^{\alpha_k} \qquad \text{where } \alpha_i \geq 0 \text{ since $|a_i|$ is finite.}
+\end{equation*}
+We also note that for any $a,b \in G$, 
+\begin{equation*}
+gabg^{-1}=ga1bg^{-1}=ga(g^{-1}g)bg^{-1}=(gag^{-1})(gbg^{-1}).
+\end{equation*}
+So inductively we find that $ga^{\ell}g^{-1}=(gag^{-1})^\ell$ for any $\ell \geq 0$. Therefore,
+\begin{align*}
+gng^{-1}&= ga_1^{\alpha_1}a_2^{\alpha_2}\cdots a_k^{\alpha_k}g^{-1}  \\
+				&= \left(ga_1^{\alpha_1}g^{-1}\right)\left(ga_2^{\alpha_2}g^{-1}\right)\cdots\left(ga_k^{\alpha_k}g^{-1}\right) \\
+				&= \left(ga_1g^{-1}\right)^{\alpha_1}\left(ga_2g^{-1}\right)^{\alpha_2}\cdots\left(ga_kg^{-1}\right)^{\alpha_k}. 
+\end{align*}
+But for all $1 \leq i \leq k$, $ga_ig^{-1}$ is an element of $gSg^{-1}$ so $ga_ig^{-1} \in N$ since we assume $gSg^{-1}$ is contained in $N$, and hence by closure under the operation in $N$, $\left(ga_ig^{-1}\right)^{\alpha_i} \in N$. Therefore,
+\begin{equation*}
+gng^{-1}= \prod_{i=1}^k\left(ga_ig^{-1}\right)^{\alpha_i} \in N,
+\end{equation*}
+and hence since $n$ was chosen arbitrarily, we have $gNg^{-1} \subseteq N$, and so $g$ normalizes $N$.
+\end{proof}
+
+\item[31.]  Prove that if $H\leq G$ and $N$ is a normal subgroup of $H$ then $H\leq N_{G}(N)$.  Deduce that $N_{G}(N)$ is the largest subgroup
+of $G$ in which $N$ is normal (i.e., is the join of all subgroups $H$ for which $N\unlhd H$).
+
+\begin{proof}(Mobley) \ Since $H$ and $N_{G}(N)$ are both groups, it is sufficient to show that $H\subseteq N_{G}(N)$.  To this end, pick $h\in H$.  
+Since $N\unlhd H$, for all $h\in H$, $hNh^{-1}=N$.  Thus, $h\in N_{H}(N)$.  Since $H$ is a subgroup of $G$, it must be the case that 
+$H \le N_{G}(N)$.   
+
+\end{proof}
+
+Suppose that $K\leq G$ and $N\unlhd K$. Using arguments similar to those above, we can show that $K\leq N_{G}(N)$.  Thus, any arbitrary normal 
+subgoup of $G$ is contained in $N_{G}(N)$ and $N_{G}(N)$ is the largest subgroup of $G$ in which $N$ is normal.
+
+\item[33.]  Find all normal subgroups of $D_8$ and for each of these find the isomorphism types of its corresponding quotient.
+
+% display your last name 
+\begin{proof}(Buchholz)
+The normal subgroups of $D_8$ are $<s,r^2>, <r>$, $<rs,r^2>$, $<r^2>$,
+$1$ and $D_8$.  The first three of these have index 2 in $D_8$ and therefore are normal.  For the subgroup $<r^2>$, we note that $rr^2r^{-1}=r^2$ and $sr^2r^{-1}=r^{-2}=r^2$.  Since $r$ and $s$ generate $D_8$, it follows that $g<r^2>g^{-1}=<r^2>$ for any $g\in G.$  Thus, $<r^2>\lhd D_8.$\newline
+Now we must find the isomorphism types of each corresponding quotients.  First note that $|D_8/<s,r^2>|=|D_8/<rs,r^2>|=|D_8/<r>|=2$ so all are isomorphic to $\Z/2\Z$.  Now $|D_8/<r^2>|=4$ and $D_8/<r^2>$ is not cyclic so $D_8/<r^2>\cong \Z/2\Z \oplus \Z/2\Z .$
+
+
+\end{proof}
+
+
+\item[35.] Prove that $SL_n(F) \unlhd GL_n(F)$ and describe the isomorphism type of the quotient group.
+
+\begin{proof} (Hazlett)
+Let $\phi: GL_n(F) \to F$ such that $\phi(A) = \det(A)$.  Note, $\phi(A)\phi(B) = \det(A)\det(B) = \det(AB) = \phi(AB)$.  Then $\phi$ is a homomorphism.  Note, the kernel of $\phi$ is $SL_n(F)$.  Consequently $SL_n(F)$ is normal in $GL_n(F)$.
+
+Let $\psi: GL_n(F)/SL_n(F) \to F \setminus \{0\}$ such that $\psi(ASL_n(F)) = \det(A)$.  We claim that $ASL_n(F)$ is the set of all things with determinant equal to $\det(A)$.  Suppose we have a matrix $B$ such that $\det(B) = \det(A)$.  Then $\det(A\inv B) = \det(A\inv)\det(B) = \frac{1}{\det(A)}\det(A) =1$.  So $A\inv B \in SL_n(F)$ and $ASL_n(F) = BSL_n(F)$.  Choose $C \in ASL_n(F)$.  Then $C = AS$ where $S\in SL_n(F)$.  Hence $\det(C) = \det(AS) = \det(A)\det(S) = \det(A)$.  Consequently $ASL_n(F)$ is the set of all matrixes in $GL_n(F)$ with the same determinant as $A$.  We can conclude then that $\psi$ is not only well defined but also an injection.  Also, given $f \in F \setminus \{0\}$  the $n \times n$ matrix $H$ with $h_{1,1} = f$, $h_{i,i} = 1$ for $2\leq i \leq n$ and $h_{i,j} = 0$ otherwise has the property $\det(H) = f$.  Hence $\psi(HSL_n(F)) = f$.  So $\psi$ is a surjection.  Hence $\psi$ is a bijection.  Finally, note that $\psi(ASL_n(F))\psi(BSL_n(F)) = \det(A)\det(B) = \det(AB) = \psi(ABSL_n(F))$.  Thus $\psi$ is a homomorphism.  This implies that $\psi$ is an isomorphism between $GL_n(F)/SL_n(F)$ and $F \setminus \{0\}$.
+\end{proof}
+
+\item[36.]  Prove that if $G/Z(G)$ is cyclic then $G$ is abelian.
+\begin{proof}(Gillispie) 
+Suppose $G/Z(G)$ is cyclic with generator $xZ(G)$.\\
+Proposition 3.2.4 shows us that the sets $aZ(G)$ partition $G$ and if we pick some $g\in G$, we know that $g\in gZ(G)$\\.
+We also know that there exists some $n\in\mathbb{N}$ s.t.$gZ(G)=x^{n}Z(G)$. Thus there exists some $z\in Z(G)$ so that $g=x^{n}z$\\.
+Now, pick $g,h\in G$.
+We showed that there are $m,n\in\mathbb{Z}$ and $z_{1},z_{2}\in Z(G)$ so that  $g=x^{n}z_{1}$ and  $h=x^{m}z_{2}$.
+Notice that since $z_{1}$ and $z_{2}$ commute with anything in $G$ we have 
+ \begin{eqnarray*}
+gh & = & x^{n}z_{1}x^{m}z_{2}\\
+ & = & x^{n}x^{m}z_{1}z_{2}\\
+ & = & x^{m}x^{n}z_{2}z_{1}\\
+ & = & x^{m}z_{2}x^{n}z_{1}\\
+ & = & hg
+ \end{eqnarray*}
+
+And so  $G$ is abelian.$\square$
+
+ 
+
+
+\end{proof}
+
+\item [41.] Let $G$ be a group. Prove that
+$N=\Braket{x^{-1}y^{-1}xy|x,y\in G}$
+is a normal subgroup of $G$ and that $G/N$ is Abelian.
+
+\begin{proof}[Proof (Granade)]
+We claim that for all $g\in G$, $gN=Ng$. To see this, note that
+it suffices to show that for all $g\in G$ and $n\in N$, there exists
+$n'$ such that $gn=n'g$. Thus, pick $x,y,g\in G$. By the definition
+of $N$, $x^{-1}y^{-1}xy\in N$. Next, let $x'=gxg^{-1}$ and $y'=gyg^{-1}$,
+so that $x=g^{-1}x'g$ and $y=g^{-1}y'g$. Substituting, we get that:
+\begin{eqnarray*}
+gx^{-1}y^{-1}xy & = & g\left(g^{-1}x'^{-1}g\right)\left(g^{-1}y'^{-1}g\right)\left(g^{-1}x'g\right)\left(g^{-1}y'g\right)\\
+ & = & \left(gg^{-1}\right)x'^{-1}\left(gg^{-1}\right)y'^{-1}\left(gg^{-1}\right)x'\left(gg^{-1}\right)y'g\\
+ & = & x'^{-1}y'^{-1}x'y'g
+\end{eqnarray*}
+But then, $x'^{-1}y'^{-1}x'y'\in N$ and so $x'^{-1}y'^{-1}x'y'g\in Ng$.
+Therefore, $gN\subseteq Ng$. Reversing the argument above gives that
+$gN=Ng$, as required.
+\end{proof}
+
+\begin{cor*}
+$G/N$ is Abelian.
+\end{cor*}
+
+\begin{proof}[Proof (Granade)]
+Let $aN,bN\in G/N$. Then, we claim that $abN=baN$. It is thus sufficient
+to show that $ab\left(ba\right)^{-1}\in N$. But then,
+$ab\left(ba\right)^{-1}=aba^{-1}b^{-1}\in N$.
+\end{proof}
+
+
+
+\item[42.] Assume both $H$ and $K$ are normal subgroups of $G$ with $H \cap K = \{1\}$. Prove
+that $xy = yx$ for all $x \in H$ and $y \in K$.
+
+\begin{proof}(Baggett) \ Take any elements $x \in H$ and $y \in K$. Since $H$ is normal, we
+have that \\ $y^{-1}xy \in y^{-1}Hy = H$; since $x^{-1} \in H$ and $H$ is closed under multiplication,
+$x^{-1}y^{-1}xy \in H$. Similarly, we have that $x^{-1}y^{-1}x \in x^{-1}Kx = K$; since $y \in K$
+and $K$ is closed under multiplication, $x^{-1}y^{-1}xy \in K$. Thus, $x^{-1}y^{-1}xy \in H \cap K$.
+However, $H \cap K = \{1\}$, so $x^{-1}y^{-1}xy = 1$. Equivalently, we have that $xy = yx$.
+\end{proof}
+
+\end{itemize}
+
+
+\end{document}

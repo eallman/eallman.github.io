@@ -1,0 +1,95 @@
+\documentclass[11pt]{report}
+\usepackage{amsmath,amssymb}
+%\usepackage{pdfsync}
+
+\setlength{\oddsidemargin}{0in} \setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{-.25in} \setlength{\textheight}{9in}
+
+%\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand\RR{{\mathbb R}}
+\newcommand\QQ{{\mathbb Q}}
+\newcommand\NN{{\mathbb N}}
+\newcommand\ZZ{{\mathbb Z}}
+\newcommand\A{{\mathbb A}}
+\newcommand\image{\operatorname{Image}}
+\newcommand\lex{>_{\operatorname{lex}}}
+\newcommand\grlex{>_{\operatorname{grlex}}}
+\newcommand\grevlex{>_{\operatorname{grevlex}}}
+
+
+\newcommand\dsp{\displaystyle}
+
+\begin{document}
+
+{\LARGE HW 2 problems}
+
+\vskip 1cm
+
+\begin{enumerate}
+
+\item Chap 1, \#4, second part in slightly modified form.  That is, compute the dimension of the vector space of
+homogeneous polynomials in $n$ variables of degree exactly equal to $d$.
+
+\item Consider the morphism of affine spaces given by $\phi: \A^2 \to \A^4$ where
+$$
+(u, v) \mapsto (u+v, \quad u + 2v, \quad u-v, \quad 2u-v ).
+$$
+
+\smallskip
+
+\begin{enumerate}
+
+\item Using ideas we developed in class, solve the implicitization problem for this morphism.  That is,
+find the polynomial equations in $y_1, y_2, y_3, y_4$ such that any point $p = (y_1, y_2, y_3, y_4) \in
+\image(\phi)$ must satisfy.
+
+\item Informally but with justification, answer the following question
+
+\smallskip
+
+\centerline{``What is the dimension of $\image(\phi)$?''}
+
+\end{enumerate}
+
+\item Use the multivariate division algorithm developed in class to express $f = x^2 y^2 + xy^3$ in
+the form 
+$$f = a_1 f_1 + a_2 f_2 +r$$ 
+for $f_1 = xy^2 - 1$ and $f_2 = y+1$ under the lexicographic ordering $\lex$.
+
+\begin{enumerate}
+
+\item Do this with the divisors ordered by $(f_1, f_2)$.
+
+\item Do this with the divisors ordered by $(f_2, f_1)$.
+
+\item Indeed, $f \in I = \langle f_1, f_2 \rangle$. Express $f$ as a linear combination
+of $f_1$ and $f_2$, if you can.
+
+\end{enumerate}
+
+\item Order the following monomials with respect to the $\lex$, $\grlex$, and $\grevlex$ monomial
+orderings.  In your answer, justify one of the inequalities (\emph{e.g.} $f \grevlex g$ since ....)
+for each monomial order, and just report the others.
+
+$$ x^8, \quad xyz, \quad x^2y, \quad xz, \quad xy, \quad z^5, \quad x^5yz^2, \quad x^4y^2z^2$$
+
+\item Sort the following polynomial with respect to the $\lex$, $\grlex$, and $\grevlex$ monomial
+orderings.
+
+\begin{enumerate}
+
+\item $f(x,y,z) = 2x + 3y +z + x^2 -z^2 + x^3$
+
+\item $g(x,y,z) = 5x^2yz^8 - x^5yz^4 +3xyz^3 - xy^4$
+
+\end{enumerate}
+
+\item Using $\grlex$, find an element $g \in \langle f_1, f_2 \rangle = \langle 2xy^2-x, 3x^2y - y -1\rangle
+\subset \RR[x]$  whose remainder on division by $(f_1, f_2)$ is nonzero.  \emph{Hint}: you can
+find such a $g$ where the remainder is $g$ itself.
+
+\end{enumerate}
+
+\end{document}
+

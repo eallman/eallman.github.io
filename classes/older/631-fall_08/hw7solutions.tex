@@ -1,0 +1,271 @@
+\documentclass[10pt]{article}
+
+\usepackage[margin=1in, head=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+
+% if using a MAC, you may want to uncomment the following line
+% to enable reverse searches.
+\usepackage{pdfsync}
+
+% Headers and footers
+\fancyhf{}
+\rfoot{\thepage}
+
+%\setcounter{secnumdepth}{0}
+
+% macros for algebra class
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\b}{\textbf}
+\newcommand{\re}{\text{Re}}
+\newcommand{\im}{\text{Im}}
+\renewcommand{\iff}{\Leftrightarrow}
+\newcommand{\zbar}{\overline{z}}
+\newcommand\SL{\operatorname{SL}}
+\newcommand\GL{\operatorname{GL}}
+\newcommand{\divides}{\, \Big | \,}
+
+\newcommand{\normsubeq}{\trianglelefteq}
+\newcommand{\normsub}{\triangleleft}
+\newcommand{\gen}[1]{\left\langle #1 \right\rangle}
+\newcommand{\sect}[1]{\vspace{.25in}\noindent\textbf{Section #1}}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\zmod}[1]{\Z/#1 \Z}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand\inv{^{-1}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\Inn}{\text{Inn}}
+\renewcommand{\char}{\text{ char }}
+\newcommand{\Syl}{\operatorname{Syl}}
+
+
+\parindent=0in
+\parskip=0.5\baselineskip
+
+% LOOK HERE
+% change assignment number and possibly date below
+\newcommand\header{{\sc Math 631 \hfill Homework 7 \hfill October 22, 2008}}
+
+\begin{document}
+
+\header  
+
+\section*{Chapter 4.5}
+
+\begin{itemize}
+
+\item[7.]  Exhibit all Sylow 2-subgroups of $S_{4}$
+and find elements of $S_{4}$ which conjugate one of these into each
+of the others.
+
+% display your last name 
+\begin{proof}(Gillispie) 
+Since $|S_{4}|=4!=2^{3}\cdot3$, if $P\in Syl_{2}(S_{4})$,
+then $|P|=8$.\\
+Notice that \begin{eqnarray*}
+\langle(1\,2\,3\,4),\,(1\,2)(3\,4)\rangle & = & \{(1),\,(1\,2)(3\,4),\,(1\,2\,3\,4),\,(1\,3)(2\,4),\\
+ &  & (1\,4\,3\,2),\,(2\,4),\,(1\,3),\,(1\,4)(2\,3)\}\end{eqnarray*}
+is of order $8$. Also\begin{eqnarray*}
+\langle(1\,3\,4\,2),\,(1\,3)(4\,2)\rangle & = & \{(1),\,(1\,3)(2\,4),\,(1\,3\,4\,2),\,(1\,4)(2\,3),\\
+ &  & (1\,2\,4\,3),\,(2\,3),\,(1\,4),\,(1\,2)(3\,4)\}\\
+ & \mbox{and}\\
+\langle(1\,4\,2\,3),\,(1\,4)(2\,3)\rangle & = & \{(1),\,(1\,4)(2\,3),\,(1\,4\,2\,3),\,(1\,2)(3\,4),\\
+ &  & (1\,3\,2\,4),\,(3\,4),\,(1\,2),\,(1\,3)(2\,4)\}\end{eqnarray*}
+are distinct and of order 8.\\
+Sylow's Theorem states that $n_{2}\divides3$. Either $n_{2}=1$,
+which we've shown to be untrue, or $n_{2}=3$, and so we have described
+every Sylow 2-subgroup.
+
+Now, notice that
+
+\begin{eqnarray*}
+(2\,3\,4)(1\,2\,3\,4)(2\,4\,3)=(1\,3\,4\,2) & \mbox{and} & (2\,3\,4)(1\,2)(3\,4)(2\,4\,3)=(1\,3)(2\,4).\end{eqnarray*}
+And so $(2\,3\,4)\langle(1\,2\,3\,4),\,(1\,2)(3\,4)\rangle(2\,3\,4)^{-1}=\langle(1\,3\,4\,2),\,(1\,3)(4\,2)\rangle$.
+
+Also,
+
+\begin{eqnarray*}
+(2\,3\,4)(1\,3\,4\,2)(2\,4\,3)=(1\,4\,2\,3) & \mbox{and} & (2\,3\,4)(1\,3)(2\,4)(2\,4\,3)=(1\,4)(2\,3).\end{eqnarray*}
+So $(2\,3\,4)\langle(1\,3\,4\,2),\,(1\,3)(2\,4)\rangle(2\,3\,4)^{-1}=\langle(1\,4\,2\,3),\,(1\,4)(2\,3)\rangle$.
+
+Finally notice that \begin{eqnarray*}
+(2\,3\,4)(1\,4\,2\,3)(2\,4\,3)=(1\,2\,3\,4) & \mbox{and} & (2\,3\,4)(1\,4)(2\,3)(2\,4\,3)=(1\,2)(3\,4).\end{eqnarray*}
+And so $(2\,3\,4)\langle(1\,4\,2\,3),\,(1\,4)(2\,3)\rangle(2\,3\,4)^{-1}=\langle(1\,2\,3\,4),\,(1\,2)(3\,4)\rangle$.
+
+We've shown that powers of $(2\,3\,4)$ conjugate the elements of
+$Syl_{2}(S_{4})$ into other elements of $Syl_{2}(S_{4})$, and that
+every element of $Syl_{2}(S_{4})$ can be taken into any other element
+of $Syl_{2}(S_{4})$ by conjugation by $(2\,3\,4)$.\\
+\end{proof}
+
+\item[8.]  Exhibit two distinct Sylow $2$-subgroups of $S_5$ and an element of $S_5$ that conjugates one into the other.
+ 
+% display your last name 
+\begin{proof}(Mobley) \ The order of $S_5$ is $120$ or $2^3 \cdot 3 \cdot 5$.  Since we are looking for Sylow 
+$2$-subgoups of $S_5$, we need the highest power of $2$ that divides $120$.  The highest power of $2$ is $2^3=8$.  
+Recognizing that each of the subgroups from \#7 is also contained in $S_5$, let our first Sylow $2$-subgroup be 
+$$A=\lbrace e, (1 2), (1 2)(3 4), (3 4), (1 3)(2 4), (1 4)(2 3),(1 3 2 4), (1 4 2 3)\rbrace$$  
+from the previous problem.  Another subgroup is 
+$$B=\lbrace e, (1 5), (1 2)(3 5), (2 3), (1 3)(2 5), (1 5)(2 3),(1 2 5 3), (1 3 5 2)\rbrace.$$  
+(Note that this is just one of the subgroups from \#7 with fives replacing the fours.)  The element of $S_5$ that
+conjugates one into the other is $\sigma = (1 2 3)(4 5)$ with $\sigma A \sigma^{-1} \subset B$.
+
+\end{proof}
+
+
+\item [14.] Prove that a group of order 312 has a normal Sylow $p$-subgroup for some prime $p$ dividing its order.
+\begin{proof}(Hazlett)
+Note, $n_{13} \equiv 1 \mod 13$ and $n_{13} |24$.  Hence $n_{13} = 1$.  Then there exists a unique Sylow 13-subgroup $P$.  Therefore $P \unlhd G$ and $G$ is not simple.
+\end{proof}
+
+\item[17.] Prove that if $|G| = 105$, then $G$ has a normal Sylow 5-subgroup 
+and a normal Sylow 7-subgroup.
+
+\begin{proof}(Baggett) \ We have that $|G| = 3\cdot5\cdot7$. From Sylow's Theorem, we
+have that $n_5 \equiv 1 (mod \ 5)$ and $n_5 \divides 21$. Thus, $n_5 = 1$ or 21. Similarly,
+we have that $n_7 \equiv 1 (mod \ 7)$ and $n_7 \divides 15$. Thus, $n_7 = 1$ or 15. We will
+show that $n_5 = 1$ or $n_7 = 1$. Suppose to the contrary that $n_5 = 21$ and $n_7 = 15$.
+Then there are $21(4) = 84$ elements of order 5 in $G$ and $15(6) = 90$ elements of order
+7 in $G$. This is a contradiction since $84 + 90 > 105$. Thus, either $n_5 = 1$ or $n_7 = 1$. \\
+\ \ Suppose that $n_5 = 1$. Then there is a unique Sylow 5-subgroup $P \triangleleft G$. Let 
+$Q \in Syl_7(G)$. Then $Q \leq N_G(P) = G$, so $PQ \leq G$. Furthermore, 
+$|PQ| = \frac{|P||Q|}{|P \cap Q|} = 35$ and $[G:PQ] = 3$, the smallest prime dividing $|G|$.
+Thus, $PQ \triangleleft G$. Moreover, $Q \leq PQ$, $n_7(PQ) \equiv 1 (mod 7)$, and 
+$n_7(PQ) \divides 5$. Thus, $n_7(PQ) = 1$ and $Q$ is the unique Sylow 7-subgroup of $PQ$. 
+Therefore, $Q$ is characteristic in $PQ$. Since $Q$ char $PQ$ and $PQ \triangleleft G$,
+it follows that $Q \triangleleft G$. Thus, there is a normal Sylow 5-subgroup $P$ in $G$ and
+a normal Sylow 7-subgroup $Q$ in $G$. The proof for the case when $n_7 = 1$ is similar.
+\end{proof}
+
+
+
+\item[20.]    Prove that if $|G|=1365$ then $G$ is not simple.
+ 
+\begin{proof}(Buchholz)
+Let $|G|=1365=3\cdot 5\cdot 7\cdot 13$.\\
+Then $n_{13}\equiv 1 \mod 13$ and $n_{13} \divides 105$, implies that $n_{13}=1\text{ or }105.$\\ 
+Then $n_{7}\equiv 1 \mod 7$ and $n_{7} \divides 195$, implies that $n_{7}=1\text{ or }15.$\\
+Then $n_{5}\equiv 1 \mod 5$ and $n_{5} \divides 273$, implies that $n_{5}=1,21\text{ or }91.$\\
+First consider $n_{13}=105$, $n_7=15$, and $n_5=21$.  Then there are $12(105)=1260$ elements of order 13, $6(15)=90$ elements of order 7, and $4(21)=84$ elements of order 5.  But $1260+90+84=1434$, which is larger then the order of $G$.  Hence either $n_{13}=1$,$n_7=1$, or $n_5=1$ and so there is a normal subgroup.  (We have either $P_{13}\in \operatorname{Syl}_{13}(G)$, $P_{7}\in \operatorname{Syl}_{7}(G)$, or $P_{5}\in \operatorname{Syl}_{5}(G)$ is a non-trivial, proper normal subgroup of $G$.)
+
+\end{proof}
+
+% Begin Granade 4.5.21. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item [21.]  Prove that if $\left|G\right|=2907$, then $G$ is not simple.
+
+\begin{proof}
+[Proof (Granade)] Let $G$ be a group such that $\left|G\right|=2907$.
+Then, note that $2907=3^{2}\cdot17\cdot19$. Using the Sylow theorems,
+we list the possible candidates for $n_{3}$, $n_{17}$ and $n_{19}$:\[
+\begin{array}{rcl|rcl|rcl}
+n_{3} & \equiv & 1\,\bmod3 & n_{17} & \equiv & 1\,\bmod17 & n_{19} & \equiv & 1\,\bmod19\\
+ & \mid & 323 &  & \mid & 171 &  & \mid & 153\\
+ & \in & \left\{ 1,19\right\}  &  & \in & \left\{ 1,171\right\}  &  & \in & \left\{ 1,153\right\} \end{array}\]
+Next, note that if any of $n_{3},n_{17},n_{19}$ is 1, then by Corollary
+20 in the text, we have that there exists a normal subgroup of order
+$9$, $17$ or $19$, respectively. Thus, in that case, we are done.
+
+On the other hand, suppose that $n_{3},n_{17},n_{19}\ne1$. Then,
+by the list of candidates above, we have that $n_{3}=19$, $n_{17}=171$
+and $n_{19}=153$. Since $17$ and $19$ are both prime, we have that
+the intersection between two arbitrary elements of $\Syl_{17}\left(G\right)\cup\Syl_{19}\left(G\right)$
+is $\left\{ e\right\} $. Thus, $G$ contains $16\cdot171=2736$ elements
+of order 17 and $18\cdot153=2754$ elements of order 19. Thus, $\left|G\right|\ge2736+2754+1=5491$.
+This contradicts that $\left|G\right|=2907$, and so we conclude that
+at least one of $n_{3},n_{17},n_{19}$ is 1.
+\end{proof}
+
+\begin{proof}
+[Proof (Granade)] Let $G$ be a group such that $\left|G\right|=132$.
+Then, note that $132=2^{2}\cdot3\cdot11$. Using the Sylow theorems,
+we list the possible candidates for $n_{2}$, $n_{3}$ and $n_{11}$:\[
+\begin{array}{rcl|rcl|rcl}
+n_{2} & \equiv & 1\,\bmod2 & n_{3} & \equiv & 1\,\bmod3 & n_{11} & \equiv & 1\,\bmod11\\
+ & \mid & 33 &  & \mid & 44 &  & \mid & 12\\
+ & \in & \left\{ 1,3,11,33\right\}  &  & \in & \left\{ 1,4,22\right\}  &  & \in & \left\{ 1,12\right\} \end{array}\]
+Next, note that if any of $n_{2},n_{3},n_{11}$ is 1, then by Corollary
+20 in the text, we have that there exists a normal subgroup of order
+$4$, $3$ or $11$, respectively. Thus, in that case, we are done.
+
+On the other hand, suppose that $n_{2},n_{3},n_{11}\ne1$. Then, by
+the list of candidates above, we have that $n_{11}=12$. By the same
+counting argument as in Problem 21, we thus have that there are $10\cdot12=120$
+elements of order 11 in $G$. We can therefore exclude exclude that
+$n_{3}=22$, since that would imply that $\left|G\right|\ge2\cdot22+120=142$.
+Thus, $n_{3}=4$, and so we have $8$ elements of order 3, leaving
+3 non-identity elements to choose from for elements in our Sylow 2-subgroups.
+Since each Sylow 2-subgroup has order 4, that implies that we have
+a unique subgroup of order 4, contradicting that $n_{2}\ne1$. We
+can therefore conclude that at least one of $n_{2},n_{3},n_{11}$
+is 1, and so we are done.
+\end{proof}
+
+
+\item[25.] Prove that if $G$ is a group of order 385 then $Z(G)$ contains a Sylow 7-subgroup of $G$ and a Sylow 11-subgroup is normal in $G$.
+\begin{proof} (Bastille) \ We note that $|G|=385= 5 \cdot 7 \cdot 11$ and for $p=5,7,11$, since $|\text{Syl}_p(G)|=n_p$ must satisfy $n_p \equiv 1 \bmod{p}$ and $n_p \divides \frac{385}{p}$ (because each prime divisor divides exactly $|G|$), we have the following table of possibilities:
+\begin{center}
+\begin{tabular}{c|l|l}
+$p$ & $1 \bmod{p}$ & divisors of  $\frac{385}{p}$ \\
+\hline
+5 & 1,6,11,16,21,26,31,36,41,46,51,56,61,66,71,76 & 1,7,11,77 \\
+7 & 1,8,15,22,29,36,43,50,57 & 1,5,11,55 \\
+11 & 1,12,23,34 & 1,5,7,35
+\end{tabular}
+\end{center}
+Hence our choices for $n_p$ are:
+\begin{equation*}
+n_5=1,11; \qquad n_7=1; \qquad n_{11}=1.
+\end{equation*}
+
+Since $n_7=1$, $\text{Syl}_{7}(G)=\{P_7\}$ and $P_7$ must be cyclic since $|P_7|=7$, a prime. Let $a \in P_7$ such that $P_7=\gen{a}$. Let $G$ act on $P_7$ by conjugation. Then the associated homomorphism:
+\begin{equation*}
+\varphi: \quad G \rightarrow S_{P_7} \cong S_7
+\end{equation*}
+is well-defined (since $gP_7g^{-1}=P_7$ for all $g \in G$ by Corollary 20). Furthermore, $S_7$ can be viewed as the group of automorphisms of $P_7$, and since $P_7$ is cyclic, $\text{Aut}(P_7) \cong \zmod{(7-1)}$ by Proposition 17 (1) p. 136. Therefore, if $K$ denotes the kernel of $\varphi$, we have
+\begin{equation*}
+G / K \cong \varphi(G) \leq \zmod{6}.
+\end{equation*}
+ So $$\frac{|G|}{|K|} \divides 6 \quad \Rightarrow \quad K=G \quad \text{ since }2,3 \nmid |G|.$$
+But by definition, $K=\ker \varphi= \{ g \in G \ | \ ga^kg\inv=a^k \ \forall k \in \Z \}$, so
+\begin{equation*}
+\forall \ a^k \in P_7: \qquad ga^k=a^kg \quad \text{ for all }g \in G.
+\end{equation*}
+Hence $P_7 \leq Z(G)$.
+
+We also have that $n_{11}=1$, so the unique Sylow 11-subgroup of $G$ is normal in $G$ (by Corollary 20). 
+\end{proof}
+
+
+\item[26.]   Let $G$ be a group of order 105.  Prove that if a Sylow 3-subgroup of $G$ is normal then $G$ is abelian.
+% display your last name 
+(Schamel)
+Note that $|G| = 3\cdot 5 \cdot 7$.  Let $P_3$ be our unique Sylow 3-subgroup of $G$.  Since $3$ is the smallest prime dividing the order of $G$ and $|P_3|=3$ so $P_3$ is cyclic, by problem 4.5.44 we have that $N_G(P_3) = C_G(P_3)$.  Since $P_3$ is normal in $G$, we conclude $C_G(P_3) = G$ and hence $P_3 \in Z(G)$.  But then $|G/Z(G)|$ divides 35.  If $|G/Z(G)|$ is one of 1,5, or 7, then $G/Z(G)$ is cyclic.  If $|G/Z(G)| = 35$, we also have the $G\Z(G)$ is cyclic, since
+this quotient group is of order $pq$ for $p \nmid q-1$.  Thus $G/Z(G)$ is cyclic.  Hence, by 3.1.36, $G$ is abelian.
+
+\item[44.] Let $p$ be the smallest prime dividing the order of a group $G$. If $P \in Syl_p(G)$ and $P$ is cyclic, prove that $N_G(P) = C_G(P)$. 
+
+\begin{proof} (Lawless)
+Let $|G| = p^{\alpha}m$ where $p$ is the smallest prime dividing $|G|$, and $p \nmid m$. Let $P$ be a Sylow $p$-subgroup of $G$, and let $P$ be cyclic. Notice $|P| = p^{\alpha}$. 
+
+Consider the action of $N_P(G)$ on $P$ by conjugation. Notice this gives rise to a homomorphism $\psi: N_G(P) \to S_P$, with $ker(\psi) = C_G(P)$. By the first isomorphism theorem, $N_G(P)/C_G(P) \cong K = \operatorname{Im}(\psi)$. Since conjugation by elements of $N_G(P)$ induce a subgroup of the automorphism group of $P$, then we know $K \leq Aut(P)$, and so $|K| \divides |Aut(P)|$. Since $P$ is cyclic, we know $|Aut(P)| = \phi(|P|) = p^\alpha - p^{\alpha - 1}$. So $|K| \divides p^{\alpha-1}(p-1)$. 
+
+Since $P$ is cyclic, we know $P$ is abelian, and so $P \leq C_G(P)$. Moreover, we know $C_G(P) \leq N_G(P) \leq G$. Thus, there exist some integers $m_1,m_2$ such that $p^{\alpha} m_2 = C_G(P)$ and $p^\alpha m_1 = N_G(P)$, and so
+$$|N_G(P)/C_G(P)| = \frac{m_1}{m_2} \divides p^{\alpha-1}(p-1).$$
+If $m_1/m_2 = 1$, then we know $C_G(P) = N_G(P)$. Assume that $m_1/m_2 \neq 1$. However, since $p^{\alpha}$ was the highest power of $p$ dividing the order of $G$, then we know $m_1/m_2 \nmid p^{\alpha - 1}$. And since $p$ was the smallest prime dividing the order of $G$, then we know $m_1/m_2 \nmid (p-1)$. So $m_1/m_2 \nmid p^{\alpha-1}(p-1)$, a contradiction. 
+
+Therefore, $m_1/m_2 = 1$, and thus $|C_G(P)| = |N_G(P)|$. Thus, $C_G(P) = N_G(P)$, as desired. 
+
+\end{proof}
+
+\end{itemize}
+
+ \end{document}

@@ -1,0 +1,195 @@
+
+\documentclass[11pt]{report}
+
+\usepackage{pdfsync, color}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage[margin=1in]{geometry}
+%\setlength{\textwidth}{6in}
+%\setlength{\oddsidemargin}{.25in}
+
+\newcommand\ZZ{\mathbb Z}
+\newcommand\QQ{\mathbb Q}
+\newcommand\R{\mathbb R}
+\newcommand\C{\mathbb C}
+\newcommand\F{\mathbb F}
+\newcommand\Gal{\operatorname{Gal}}
+\newcommand\norm{\operatorname{N}}
+\newcommand\trace{\operatorname{Tr}}
+\newcommand\dsp{\displaystyle}
+\newcommand\gen{\sqrt[3]{2}}
+\newcommand\Rp{R_{\mathfrak p}}
+\newcommand\Rf{R_f}
+
+\begin{document}
+
+%\thispagestyle{empty}
+
+\begin{center}
+{\sc Galois Theory Midterm
+
+}
+
+\end{center}
+
+\bigskip
+
+%\input{instructions.tex}
+
+\begin{enumerate}
+
+\item (15 pts.) Give, if possible, examples of the following.  If not, explain why it is impossible.
+
+\begin{enumerate}
+
+\item An extension of characteristic $0$ fields $L/K$ with Galois group $C_8$.
+
+\item An extension of characteristic $p$ fields $L/K$ with Galois group $C_8$, where $p$ is a prime.
+
+\item A subfield $F$ of the real numbers $\R$ such that $\pi$ is algebraic of degree $3$ over $F$.
+
+\item A Galois extension of $\QQ$ of order $9$ with no proper subfields.
+
+\item An extension of characteristic $p$ fields $L/K$ where the Frobenius map is not an automorphism.
+ 
+\end{enumerate}
+
+\item (6 pts.)
+
+\begin{enumerate}
+
+\item Construct explicitly a finite field $\F_{25} = \F_5(\alpha)$ with $25$ elements.
+
+\item Compute the image of the Frobenius automorphism $\sigma$ for each element
+$a \in \F_{25}$.
+
+\end{enumerate}
+
+\item (4 pts.) Suppose $f(x)$ is a cubic polynomial in $\QQ[x]$.
+
+\begin{enumerate}
+
+\item  Suppose that $\big\vert \Gal( f(x) / \QQ ) \big\vert = 3$.  Prove that all the roots of $f(x)$ are real.
+
+\item  If $f(x)$ is irreducible, show that $f(x)$ has three real roots if, and only if, $\Delta(f) > 0$.  What
+can you say about the roots if $\Delta(f) < 0$?
+
+\end{enumerate}
+
+\item (3 pts.) Suppose that $f(x) \in \ZZ[x]$ is an irreducible quartic polynomial whose splitting field has Galois
+group $S_4$ over $\QQ$.  Let $\theta$ be a root of $f(x)$ and set $K = \QQ(\theta)$.  Prove that $K$ is an
+extension field of $\QQ$ with no proper subfields.
+
+\item (3 pts.) Suppose that $K$ is a Galois extension of $\QQ$ of degree $p^n$ for $p$ prime.  Prove that
+there exist subfields $E_p$, $E_{p^{n-1}}$ of $K$ containing $\QQ$ that are Galois over $\QQ$.
+
+
+\item (13 pts.) Let $L$ be an extension of a field of degree $n$.
+
+\begin{enumerate}
+
+\item For any $\alpha \in L$ prove that $\alpha$ acting by left multiplication on $L$ is a $K$-linear transformation
+of $L$.
+
+\item Prove the $L$ is isomorphic to a subfield of the ring of $n \times n$ matrices over $K$, so the ring
+of $n \times n$ matrices over $K$ contains an isomorphic copy of \emph{every} field extension of $K$ of
+degree $\le n$.
+
+\item Find an isomorphic copy of $\C$ in $M_2(\R)$.
+
+\item Show that if the matrix of the linear transformation described in part (a) is $A$, then $\alpha$ is the
+root of the characteristic polynomial of $A$.  Use this result to find the minimal polynomial of 
+$1 + \sqrt[3]{2} + \sqrt[3]{4}$ over $\QQ$.
+
+\end{enumerate}
+
+\item (8 pts.) Find the Galois group of $x^4 - 12 x^2 + 9$ over $\QQ$.  Then give the Galois correspondence.
+
+\item (10 pts.) Prove that $\F_{p^{18}}$
+is a Galois extension of $\F_p$.  Find the Galois group $G = \Gal(\F_{p^{18}} / \F_p)$,
+and illustrate the Galois correspondence for this extension of fields.
+
+
+\item (8 pts.) Let $L$ be an extension field of $K$.
+
+\begin{enumerate}
+
+\item Let $\alpha \in L$.  Let $\phi_\alpha: K[x] \to L$ be the evaluation
+homomorphism that is the identity on $K$ and maps $x \mapsto \alpha$.  Prove the $\alpha$ is transcendental
+over $K$ if, and only if, $\phi_\alpha$ gives an isomorphism of $K[x]$ onto a subdomain of $L$.
+
+\item Let $\alpha, \beta \in L$.  Suppose that $\alpha$ is transcendental
+over $K$, but algebraic over $K(\beta)$.  Show that $\beta$ is algebraic over $K(\alpha)$.
+
+\end{enumerate}
+
+\item (9 pts.)
+
+\begin{enumerate}
+
+\item Let $L$ be a Galois extension of a field $K$.  Prove that for every $\alpha \in L$, the
+\emph{norm of $\alpha$ over $K$} and the \emph{trace of $\alpha$ over $K$} given by 
+$$
+\norm_{L/K}( \alpha ) = \prod_{\sigma \in \Gal (L/K)} \sigma(\alpha), \hskip 1cm
+\trace_{L/K}( \alpha ) = \sum_{\sigma \in \Gal (L/K)} \sigma(\alpha),
+$$
+are elements of $K$.
+
+\item Consider the extension of fields $\QQ(\sqrt{2}, \sqrt{3}) / \QQ$.  Find the norm and trace
+for the elements $\alpha = \sqrt{2}, \sqrt{6}, \sqrt{2} + \sqrt{3}, 2$.
+
+\item Consider the Galois, simple extension of fields $K(\beta) / K$, and let $f(x) \in K[x]$
+be the minimal polynomial of $\beta$ over $K$, $\dsp f(x) = \sum_{i=0}^d b_i x^i$.
+
+Prove that $\norm_{K(\beta) / K} (\beta) = {(-1)}^d b_0$ and $\trace_{K(\beta) / K} (\beta) = -b_{d-1}.$
+
+\end{enumerate}
+
+\item (15 pts. )  Let $F$ be a field and $\zeta$ a primitive $n$-th  root of unity, 
+where the characteristic of $F$ is either $0$ or does not divide $n$.
+
+\begin{enumerate}
+
+\item Show that $F(\zeta)$ is a Galois extension of $F$.
+
+\item Show that the Galois group $G = \Gal (F(\zeta) / F)$ is Abelian.
+
+\item Let $K$ be the splitting field for $x^{12} - 1$ over $\QQ$.
+
+\begin{enumerate}
+
+\item Find $[K : \QQ]$.
+
+\item By computing the order of elements in $G = \Gal (K / \QQ)$, find the isomorphism
+class of $G$.
+
+\item Illustrate the Galois correspondence for the extension of fields $K / \QQ$.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\item (6 pts.) Let $\zeta_n$ denote a primitive $n$-th root of unity.
+
+\begin{enumerate}
+
+\item Prove that $\QQ ( \zeta_n ) = \QQ( \zeta_{2n} )$ for $n$ odd.
+
+\item Find the Galois group of $f(x) = x^6 - 1$.
+ 
+\end{enumerate}
+
+\item (5 pts.) Let $t$ be an indeterminate, and $k(t)$ the field of rational functions over $k$.  Prove that the
+Galois group of $k(t) / k$ is the group of \emph{linear fractional transformations}.  A linear fractional
+transformation is the map defined by 
+$$
+f(t) \mapsto f \bigg( \frac{at + b}{ct + d} \bigg),
+$$ 
+for $f(t) \in k(t),  \thinspace a,b,c,d \in k$, and $ad - bc \neq 0$.  (This is Dummit and Foote 14.2 \#8.)
+
+\item (5 pts.)
+Suppose $n, m$ are relatively prime positive integers.  Prove that the splitting field in $\C$ of
+$x^{mn} - 1$ over $\QQ$ is the same as the splitting field of $(x^m - 1) (x^n - 1)$ over $\QQ$.
+
+\end{enumerate}
+
+\end{document}
