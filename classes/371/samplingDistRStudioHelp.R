@@ -19,8 +19,8 @@ pchisq(.050636, 2, lower.tail = F)
 
 
 # t-distribution quantiles and probabilities
-pt(q, df, lower.tail = FALSE)
-qt(p, df, lower.tail = FALSE)
+#    pt(q, df, lower.tail = FALSE)
+#    qt(p, df, lower.tail = FALSE)
 
 # same syntax as above
 # Check with Table in book
@@ -29,8 +29,8 @@ qt(.01, 20, ncp=0, lower.tail = FALSE)
 
 
 # F-distribution
-pf(q, df1, df2, lower.tail = F)
-qf(p, df1, df2, lower.tail = F)
+#   pf(q, df1, df2, lower.tail = F)
+#   qf(p, df1, df2, lower.tail = F)
 # same syntax as above, df1 = denominator degrees of freedom, df2 = numerator df
 pf(24224,10,1, lower.tail=F)
 qf(.005,10,1, lower.tail=F)
