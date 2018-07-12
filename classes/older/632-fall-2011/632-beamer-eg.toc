@@ -1,5 +1,0 @@
-\beamer@endinputifotherversion {3.07pt}
-\beamer@sectionintoc {1}{Title}{1}{0}{1}
-\beamer@sectionintoc {2}{Multispecies coalescent model}{4}{0}{2}
-\beamer@subsectionintoc {2}{1}{columns example}{4}{0}{2}
-\beamer@subsectionintoc {2}{2}{overlay example}{5}{0}{2}
