@@ -1,0 +1,158 @@
+\documentclass{report}
+\usepackage{amsthm, amsmath, amssymb,verbatim,xspace, graphicx}
+\usepackage{pdfsync, listings, color}  
+\usepackage[normalem]{ulem}
+
+\setlength{\oddsidemargin}{0in} \setlength{\textwidth}{6in}
+\setlength{\topmargin}{-0.25in} \setlength{\textheight}{8.5in}
+
+\newcommand{\assignmentNumber}[1]{Homework #1 Selected Solutions}
+\newcommand{\duedate}[1]{#1}
+
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand\Z{{\mathbb Z}}
+\newcommand\Zn{\mathbb Z / n \mathbb Z}
+\newcommand\eP{\varphi}
+\newcommand\dsp{\displaystyle}
+
+\title{Student Solution Template}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}{Conjecture}
+\newtheorem{quest}{Question}
+\newtheorem*{rem}{Remark}
+
+\date{August 24, 2018}
+
+\begin{document} 
+
+% Change assignment number below
+\centerline{\sc \Large \assignmentNumber{$0$}}
+\smallskip
+% Change due date below
+\centerline{\duedate{August 31, 2018}}
+
+\begin{enumerate}
+
+\item[\S 0.2: 10.] Prove for any given positive integer $N$ there exist only finitely many integers $n$ with 
+$\varphi(n) = N$ where $\varphi$ denotes Euler's $\varphi$-function.  Conclude in particular that $\varphi(n)$
+tends to infinity as $n$ tends to infinity.
+
+\begin{proof} (Allman) 
+
+Fix $N \in \Z^+$ and suppose that $n$ is an integer such that $\varphi(n) = N$.  We will show that any such
+$n$ is bounded above by some positive integer $K$.  That is, for all $n \in \Z^+$ with $\varphi(n) = N$,
+$n \le K$.  It follows immediately that there are only finitely many such $n$.
+
+Note first that if $p \, \vert \, n$, then $p \le N+1$.  This follows from the multiplicative formula for the Euler $\varphi$-function.
+Specifically, if $p$ exactly divides $n$, $p \,\Vert \, n$, then $\varphi(p) = p-1 \, \vert \, N$, and if $p^a \, \vert \, n$ for
+$a > 1$, then $\varphi(p^a) = p^{a-1} (p-1) \, \vert \, N$.  In both cases, $p$ is at most $N+1$.
+
+Let $p_1 = 2, p_2 = 3, \dots, p_k \le N+1$ be an ordered list of all the primes less than or equal to $N+1$.  We will show that there
+is a maximal exponent $a_i$ such that $p^{a_i} \, \vert \, n$.  Supposing this, then $n \le 2^{a_1} 3^{a_2} \cdots p_k^{a_k}$, and there
+can be only finitely many such $n$.  For each of the primes $p_i$, $i = 1, \dots, k$, let $e_i$ be the highest power of $p_i$
+with $p_i^{e_i} \, \vert \, N$.  Then taking $a_i = e_i +1$, the formula for $\varphi(p^{a_i})$ shows that 
+$p^{a_i}$ is the highest power of $p_i$ dividing $n$.
+
+\smallskip
+
+To establish the second claim of the problem, note that since $\varphi(n)$ is not bounded above by any $N \in \Z^+$, $\varphi(n)$ must
+go to infinity as $n$ does.
+\end{proof}
+
+Indeed, the bound in the proof is \emph{overkill} for most $p_i$.  For a fun test, try finding this
+bound for $N= 24$, and then find the $n$ with $\varphi(n) = 24$.
+
+\emph{Solution:} If $N = 24 = 2^3 \cdot 3$, then a list of all the primes less than or equal to $25$ and the prime powers
+$p_i^{a_i}$ from the proof are provided in the Table below,
+
+\begin{center}
+\begin{tabular}{c || ccccccccc}
+$p_i$ & 2 & 3 & 5 & 7 & 11 & 13 & 17 & 19 & 23\\
+\hline
+$p_i^{a_i}$ & $2^4$ & $3^2$ & 5  & 7 & 11 & 13 & 17 & 19 & 23\\
+\end{tabular}
+\end{center}
+
+and the bound for $n$ in the proof is the product of all the numbers in the second row!
+
+Now, for finding the $n$ with $\varphi(n) = 24$, we methodically step through the primes, checking the values for which
+we might get $\varphi(p^k) \, \vert \, 2^3 \cdot 3$.
+
+For instance, for $p=2$, it is possible that $2, 2^2, 2^3, 2^4$ divide $n$, since the values of $\varphi(2^k)$ are
+$1, 2, 2^2, 2^3$ respectively.    The possible values of $p^k$ dividing $n$ and their corresponding contributions
+to $\varphi(n)$ are reported below on the left.  On the right, by piecing together divisors of $24$, I have found   
+the values of $n$ with $\varphi(n) = 24$.
+
+\end{enumerate}
+
+% end enumerate early just so table fits better
+\bigskip
+
+\hskip -.5cm \begin{minipage}{4cm}
+\begin{tabular}{c || cccc}
+$p$ & $2$ & $2^2$ & $2^3$ & $2^4$\\
+\hline
+$\varphi(p^k)$ & $1$ & $2$ & $2^2$ & $2^3$\\ 
+\end{tabular}
+
+\smallskip
+
+\begin{tabular}{c || cccc}
+$p$ & $3$ & $3^2$ \\
+\hline
+$\varphi(p^k)$ & $2$ & $2 \cdot 3$\\ 
+\end{tabular}
+
+\smallskip
+
+\begin{tabular}{c || cccc}
+$p$ & 5 \\
+\hline
+$\varphi(p^k)$ & $2^2$\\
+\end{tabular}
+
+\smallskip
+
+\begin{tabular}{c || cccc}
+$p$ & 7 \\
+\hline
+$\varphi(p^k)$ & $2\cdot 3$\\
+\end{tabular}
+
+\smallskip
+
+\begin{tabular}{c || cccc}
+$p$ & 13 \\
+\hline
+$\varphi(p^k)$ & $2^2 \cdot 3$\\
+\end{tabular}
+\end{minipage}
+%
+\hskip 1cm \begin{minipage}{6cm}
+\begin{tabular}{c || l|c}
+factorization of $24$ & relevant factors of $n$ which & $n$ and $2n$ if $n$ odd\\
+& must be relative prime \\
+\hline
+$1 \cdot 24$ & impossible \\
+$2 \cdot 12$ & $\varphi(x) =2$: \quad 4, 3 & 52, 39, 78\\
+&$\varphi(x)=12: \quad 13$ &  \\
+$3 \cdot 8$ & impossible\\
+$4 \cdot 6$ &$\varphi(x)=4: \quad 2^3, 5$ & 72, 56, 45, 35, 90, 70\\
+&$\varphi(x)= 6: \quad 3^2, 7$  \\
+$2 \cdot 2 \cdot 6$ & $\varphi(x) =2 \cdot 2: \quad 12 $ & \sout{108}, 84\\
+& $\varphi(x)= 6: \quad 3^2, 7$  \\
+$2 \cdot 3 \cdot 4$ & impossible\\
+
+\end{tabular}
+\end{minipage}
+
+
+\end{document}
