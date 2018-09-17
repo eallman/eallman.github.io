@@ -1,6 +1,7 @@
 \documentclass{report}
 \usepackage{amsthm, amsmath, amssymb,verbatim,xspace, graphicx}
-\usepackage{pdfsync, listings, color}  
+\usepackage{pdfsync, listings, color,pgf,tikz}
+\usepackage[all,cmtip]{xy}
 
 \setlength{\oddsidemargin}{0in} \setlength{\textwidth}{6in}
 \setlength{\topmargin}{-0.25in} \setlength{\textheight}{8.5in}
@@ -40,22 +41,24 @@
 
 \begin{enumerate}
 
-\item[\S 1.6: 15.] Define a map $\pi: \R^2 \mapsto \R$ by $\pi((x,y)) = x$.  Prove that
-$\pi$ is a homomorphism and find the kernel of $\pi$.
+\item[\S ?:?.]  Please make a few changes to the template for the student solutions.
 
-\begin{proof} (Allman) 
+\begin{enumerate}
 
-\textcolor{magenta}{The crucial ingredients for your \LaTeX\xspace
-contributions to the class solutions are:
-1) the problem number from the textbook, 2) your name to give attribution, 3)
-a correct proof, 4) a file name that follows the pattern 
-$$
-\textcolor{blue}{LASTNAME\_PROBLEMNUMBER.tex}
-$$
-and 5) no additional macros or packages or gunk.}
+\item The name of your solutions file should begin with the problem number.  Try something like
 
-\end{proof}
+\centerline{\textcolor{magenta}{2.2.4to6\_Allman.tex}}
 
+\item Some packages and macros have been added (listed below).  Feel free to download a new version
+of the template, or simply add these to your HW file if you plan to use them.
+
+\begin{verbatim}
+              \usepackage[all,cmtip]{xy}
+              \usepackage{pgf,tikz} 
+              \newcommand\ns{\trianglelefteq} 
+\end{verbatim}
+
+\end{enumerate}
 
 \end{enumerate}
 
