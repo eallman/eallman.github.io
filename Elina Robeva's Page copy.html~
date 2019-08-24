@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Elina Robeva's Page</title>
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+
+    <link href="bootstrap-4/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        margin-top: 0px; /* 60px to make the container go all the way to the bottom of the topbar */
+o      }
+    </style>
+<!--   <meta name="viewport" content="width=2000px">
+   <link href="bootstrap-4/css/bootstrap-responsive.css" Rel="stylesheet"> -->
+    
+   <style>
+    myh1 {
+font-size: 35px;
+font-weight bold;
+color: light-grey;
+letter-spacing: -1px;
+line-height: 2;
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+} 
+    </style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="bootstrap/ico/favicon.ico">
+
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap-transition.js"></script>
+    <script src="bootstrap/js/bootstrap-alert.js"></script>
+    <script src="bootstrap/js/bootstrap-modal.js"></script>
+
+    <script src="bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="bootstrap/js/bootstrap-tab.js"></script>
+    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="bootstrap/js/bootstrap-popover.js"></script>
+    <script src="bootstrap/js/bootstrap-button.js"></script>
+
+    <script src="bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="bootstrap/js/bootstrap-typeahead.js"></script>
+
+
+  </head>
+
+  <body>
+
+<div class="container">
+
+    <div class="navbar navbar-top">
+      <div class="navbar-inner">
+        <div class="container">
+	   <div class="row">
+	  <img class="span8" src="ElinaWebsitePicture2Small.png"/>
+          <div class="span3">
+	  <br>
+	 <myh1>Elina&nbspRobeva</myh1><br>
+	  Department of Mathematics at UBC • Vancouver, BC • erobeva@math.ubc.ca
+	  </div>
+	  </div>
+         
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+		<li><a href = "#"></a></li>
+
+   
+<!--          </div> -->
+<!--	      <li><a href="#"></a></li>	       
+	      <li><a href="#"></a></li>	       
+	      <li><a href="#"></a></li>	       
+	      <li><a href="#"></a></li>	       
+		<li><a href="#"></a></li>	       -->
+		<li class="active"><a href="#"><font size="4">Home</font></a></li>
+   <!--             <li><a href="bio.html"><font size="4">Bio</font></a></li>-->
+		<li><a href="publications.html"><font size="4">Research</font></a></li>
+		<li><a href="teaching.html"><font size="4">Teaching</font></a></li>
+		<li><a href="activities.html"><font size="4">Activities</font></a></li>
+		<li><a href="seminar.html"><font size="4">Seminar</font></a></li>
+<!--              <li><a href="#high-school"><font size="4">High-School Math</font></a></li> -->
+            </ul>
+          </div>   <!--/.nav-collapse -->
+
+          <div class="nav-collapse">
+            <ul class="nav">
+		<li><a href = "#"></a></li>
+        </div>
+      </div>
+
+</div>
+<div class="container">
+
+<div class="row">
+<div class="span11"  style="margin-right:100px"><br>
+  <p style="font-size:16px; line-height:25px">
+    I am thrilled to announce that I am now an Assistant Professor at the <a href="http://www.math.ubc.ca/">Department of Mathematics</a> in the <a href="https://www.ubc.ca/">University of British Columbia</a> in beautiful Vancouver, British Columbia.</p>
+  
+   <p style="font-size:16px; line-height:25px">  
+    Prior to this I was priviliged to spend three years as a Statistics Instructor and an NSF Postdoctoral Fellow in the <a href="http://math.mit.edu">Department of Mathematics</a> and the <a href="https://idss.mit.edu/">Institute for Data, Systems, and Society</a> at <a href="http://mit.edu">MIT</a>.</p>
+  
+<p style="font-size:16px; line-height:25px">   My research lies at the intersection of  mathematical statistics, machine learning, combinatorics, multilinear algebra, and applied algebraic geometry. I particularly enjoy discovering mathematical structure which is inherently responsible for the successful solution to a statistical problem. Most recently I have been working on shape-constrained density estimation, model equivalence for Gaussian graphical models, tensor networks, and structured tensor decomposition. </p>
+
+ <p style="font-size:16px; line-height:25px"> Here is a link to my
+<a href="ElinaRobevaResumeJul2019.pdf">CV</a>.</p>
+
+
+  <p style="font-size:16px; line-height:25px">  In the spring of 2016 I received my PhD in mathematics from UC Berkeley under the supervision of <a href="http://math.berkeley.edu/~bernd/index.html">Bernd Sturmfels</a>. Here is a link to my <a href="Elinas_Thesis.pdf">thesis</a>, which won the Bernard Friedman Memorial prize in applied mathematics.</p>
+
+  <p style="font-size:16px; line-height:25px"> In 2011 I received my BS with Honors in mathematics and a minor in computer science from Stanford University.</p>
+
+
+</div>
+</div>
+</div>
+
+</div>
+  </body>
+</html>
