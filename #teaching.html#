@@ -58,17 +58,18 @@ o      }
   <div class="row">
     <div class="col-sm-auto">
          <br />
-         <img src="Images/fairweather.jpg" height="200" alt="Mt Fairweather" />
-<!--         <img src="Images/EA2.jpg" height="200" alt="River to Ridge"  />  -->
-         <img src="Images/nanuq_2.png" height="200" alt="NANUQ"  />
+ <!--        <img src="Images/fairweather.jpg" height="200" alt="Mt Fairweather" />
+         <img src="Images/bear-sitka.jpg" height="200" alt="Sitka"  />   -->
+         <img src="Images/dilbert.jpg" height="200" alt="Probability"  />   
+
     </div>
     <div class="col-sm-auto text-muted">
          <br />
          <br />
          <br />
          <h4>Elizabeth S. Allman </h4>
-          Mathematics and Statistics â€¢ <br />
-          UAF, Fairbanks, AK â€¢ <br />
+          Mathematics and Statistics œôó¢ <br />
+          UAF, Fairbanks, AK œôó¢ <br />
           e.allman AT alaska.edu <br />
     </div>
   </div>
@@ -87,9 +88,9 @@ o      }
         <li class="nav-item">
           <a class="nav-link" href="research.html">Research</a>
         <li class="nav-item">
-          <a class="nav-link" href="teaching.html">Teaching</a>
+          <a class="nav-link active" href="teaching.html">Teaching</a>
         <li class="nav-item">
-          <a class="nav-link active" href="software.html">Software</a>
+          <a class="nav-link" href="software.html">Software</a>
         <li class="nav-item">
           <a class="nav-link" href="travel.html">Travel</a>
         <li class="nav-item">
@@ -114,46 +115,47 @@ o      }
   <br />  <br />
   <div class="row">
     <div class="col">
+       <p><b>Fall 2019:</b> &nbsp;
        <ul class="list-group"> 
-  
-    <li>   <span style="code; font-size:16px"><FONT color="990033">SplitSup</FONT></span>&nbsp;
-  version 1.02. <br />
-
-  Download from <a href="https://github.com/eallman/SplitSup" target="_blank">GitHub</a> or in 
-  <a href="SplitSup.zip">zip</a> format. <br />
-  
-  Please cite the following paper if you use SplitSup in your research:  
-  <p><em>Split scores: a tool to quantify phylogenetic signal in genome-scale data</em> with L. Kubatko and J. Rhodes.  
-  with L.S. Kubatko and J.A.Rhodes, Systematic Biology, <strong>66</strong> no.4 (2017) 620-636.
-      </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="row">
-  Coming soon ....
-  </div>
-
-  <div class="row">
-    <div class="col">
-       <ul class="list-group"> 
-  
-    <li>  <span style="code; font-size:16px"><FONT color="990033">MSCquartet v. 1.0</FONT></span> 
-    joint with Hector Banos-Cervantes, Jonathan Mitchell, J.A.Rhodes, (R package) </li>
- 
-    <li>  <span style="code; font-size:16px"><FONT color="990033">MSCsimtester v.1.0</FONT></span>, 
-    joint with Hector Banos-Cervantes and J.A. Rhodes.  (R package) </li>
-
-      </ul>
-  
+         <li class="list-group-item"><a href="classes/371/371_2019.html">MATH 371:</a> Probability</li>
+         <li class="list-group-item">MATH 692:  Phylogenetics Working Group</li>
+       </ul>
     </div>
   </div>
   <br />
 </div>
 
+<div class="container text-muted">
+<table class="">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><p>
+Though it has been some time, I always enjoy teaching undergraduate mathematical biology
+   modeling from our textbook.</p>
+<h6>Mathematical Models in Biology: &nbsp;An Introduction</h6>
+<p>Elizabeth S. Allman and John A. Rhodes, <br>
+  <a href="http://us.cambridge.org/titles/catalogue.asp?isbn=0521525861">Cambridge
+    University Press</a>, January 2004. <br>
+
+  <i>Solution Manual for Mathematical Models in Biology: An
+    Introduction</i>, (electronic) <br>
+   </p>
+   <p>List of known <a href="http://www.dms.uaf.edu/%7Ejrhodes/errata.pdf">errata</a>.&nbsp;  
+  <td width="39%" style="vertical-align: top;"><img src="Images/book.jpg" alt="book" border="0" style="width: 130px; height: 190px;" />
+  </td>
+    </tr>
+  </tbody>
+</table>
 
 
-<div class="container ">
+
+
   <div class="row">
    <br />
    <br />
