@@ -143,17 +143,18 @@ Helpful commands from {\tt R}:
       > Murder                  display variable Murder
       > summary(??)             display summary statistics for variable ??
       > fivenum(??)             display Tukey's five number summary for variable ??
+      > head(USArrests)         displays the first part of the dataset USArrests
       > boxplot(Murder,Rape)    creates boxplots for variables Murder, Rape
-      > boxplot(USArrest)       creates boxplots for all variables in dataset
+      > boxplot(USArrests)      creates boxplots for all variables in dataset
       > hist(Rape,seq(0,50,5))  creates a frequency histogram for Rape, with bins of
                                 size 5 and a range from 0 to 50
                                 
                                 
-       >read(file="annual_income")      loads data from file
-       >ls()                            displays variable names
-       >incomes                         displays the variable `incomes'
-       >getwd()                         get the working directory
-       >setwd('??')                     set the working directory to ??
+       > load("annual_income")           loads data from file
+       > ls()                            displays variable names
+       > incomes                         displays the variable `incomes'
+       > getwd()                         get the working directory
+       > setwd('??')                     set the working directory to ??
 \end{verbatim}
 
 \end{document}
