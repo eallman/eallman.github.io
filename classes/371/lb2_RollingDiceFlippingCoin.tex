@@ -1,0 +1,139 @@
+\documentclass{report}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{xifthen}
+\newboolean{long}
+\setboolean{long}{true}
+
+\usepackage{verbatim,color}
+
+\begin{document}
+
+{\bf \centerline{{\large Lab 2: Throwing dice}}}
+
+\centerline{due date: Friday, Oct 4 in class}
+
+\bigskip
+
+\subsection*{Introduction}
+
+This week you will complete a short R lab that involves rolling dice and computing sums,
+and tossing coins.  Again and again and again.  This is why we use R.  Each question
+is worth 5 points.
+
+You will be graded both on correctness of your answers and on the presentation of
+your answer.  This means you need to \emph{explain} your methodology well.
+
+A list of useful R commands is included as the last page of this handout.  You will
+need to modify the commands to your purposes.  A copy of this file is available
+on the class webpage, if you want to use something like WORD or \LaTeX 
+~for your write up, 
+or to cut and paste commands.
+
+\subsection*{Problems}
+
+\begin{enumerate}
+
+\item In this problem, you will explore the sum of the roll of three dice.
+For sample sizes, try $n = 10, 25, 50, 100$ or other values $n$ of your choice.
+Suppose you roll the three dice and sum the outcomes repeatedly.  If you
+were to earn a \$1 for the sum, for instance, then a roll of 1,1,1 earns you
+\$3. 
+
+How much do you expect to earn in an average game?
+Carefully, explain your answer and methodology below.
+
+
+%\vskip 8cm
+%
+%\item (Quick introduction to maximum likelihood.)  Suppose you flip a possibly
+%unfair coin 10 times with the outcomes:  3 H and 7 T.   Let $p = p(H)$ denote
+%the unknown parameter value for a binomial experiment with $n = 10$ and $p$
+%unknown.  The \emph{data} for this experiment is denoted by $(H = 3, T = 7)$.
+%
+%\begin{enumerate}
+%
+%\item Write down explicitly the Likelihood function $L(p \mid \text{ data })$.
+%$$
+%
+%$$
+%
+%
+%\item 
+%
+%\end{enumerate}
+
+\newpage
+
+\item  You toss a \emph{biased} coin repeatedly, with the probability of
+heads, $P (H) = p$, for some unknown value of $p$.  Your goal is to
+give the best estimate of $p$ that you can.  To that end, suppose you
+flip this coin \textcolor{red}{three} times and that you earn \$3 for each H that comes up, 
+and lose \$1 for each T that comes up.
+
+There are 3 data sets available for you.  They are called
+\emph{earningsN} where $N = 10, 100, 1000$.
+Again, your task is to give the best estimate for $p$ you can give from
+these datasets and explain how you arrived at your answer.
+
+\smallskip
+
+I estimate the value of $p$ to be \underline{\hskip 2cm} ~ because .....
+
+
+\end{enumerate}
+
+
+\newpage
+
+
+\section*{Helpful commands from {\tt R}:}
+
+\bigskip
+
+\begin{verbatim}
+
+# generate 10 random rolls of a di with values between 5 and 9
+        d10=floor(runif(10,min=5,max=10))               
+                                   
+# more or less the contents of my R file named dice.R                                                                               
+        sampleSize<-10
+        numberDice=7
+
+        sumOfDice=rep(0,sampleSize)
+
+        str=sprintf("Generating %d samples of the experiment   `Find the sum of %d dice'  ",
+             sampleSize,numberDice)
+        print(str)
+
+        for (ii in 1:sampleSize){
+           sumOfDice[ii]=sum(floor(runif(numberDice,5,11)))
+           #print(sumOfDice[ii])
+        }
+        if (sampleSize<1000){
+          print(sumOfDice)
+        }
+# end of batch file dice.R
+
+# how to execute the commands in dice.R
+        source("dice.R")
+        
+# reminder for making histograms
+        hist(d10,seq(.5,6.5,1))        
+        hist(d10,seq(.5,6.5,1),freq=T)
+        hist(d10,seq(.5,6.5,1),freq=F)
+
+
+# how to load the datasets with earnings, or load and save to a variable
+        load(file="earnings10")
+        ....
+
+# count number of entries in a vector matching some value c
+# In this example, count the number of times vec has entries = 0
+       vec = c(0, 0, 1, 1, 1, 2, 0, 2, 0, 0, 5)
+       sum(vec==0)
+
+\end{verbatim}
+
+\end{document}
