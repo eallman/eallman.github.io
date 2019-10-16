@@ -58,7 +58,9 @@ hist(dataPOIS,prob=T,breaks=25)
 # scale = beta.  If you forget this, R will use rate = 1/scale
 
 # gammas
-{
+{ 
+  # mean is not held constant at 1, scale is held fixed
+  
   x=seq(.01,5,.01)
   
   beta=.2
@@ -74,7 +76,27 @@ hist(dataPOIS,prob=T,breaks=25)
   gamma_a20=dgamma(x, shape=20, scale=beta)
 }
 
+{ 
+  # mean is not held constant at 1, shape is held fixed
+  
+  x=seq(.01,5,.01)
+  
+  beta=.2
+  
+  gamma_a.1=dgamma(x, shape=2, scale=.1)
+  gamma_a.5=dgamma(x, shape=2, scale=.5)
+  gamma_a1=dgamma(x, shape=2, scale=1)
+  gamma_a2=dgamma(x, shape=2, scale=2)
+  gamma_a3=dgamma(x, shape=2, scale=3)
+  gamma_a4=dgamma(x, shape=2, scale=4)
+  gamma_a7=dgamma(x, shape=2, scale=7)
+  gamma_a10=dgamma(x, shape=2, scale=10)
+  gamma_a20=dgamma(x, shape=2, scale=20)
+}
+
 {
+  # all have mean 1
+  
   x=seq(.01,5,.01)
   
   gamma_a.1=dgamma(x, shape=.1, scale=1/.1)
@@ -92,12 +114,13 @@ hist(dataPOIS,prob=T,breaks=25)
   plot(x,gamma_a1,col="magenta",type='l',lwd=3,ylim=c(0,2))
   lines(x,gamma_a.1,col="blue",type='l',lwd=3)
   lines(x,gamma_a.5,col="dark green",lwd=3)
-  lines(x,gamma_a3,col="cadet blue",lwd=3)
+  lines(x,gamma_a1,col="cadet blue",lwd=3)
   lines(x,gamma_a2,col="sky blue",lwd=3)
+  lines(x,gamma_a3,col="violetred",lwd=3)
   lines(x,gamma_a4,col="orange",lwd=3)
   lines(x,gamma_a7,col="thistle4",lwd=3)
   lines(x,gamma_a10,col="turquoise",lwd=3)
-  lines(x,gamma_a20,col="salmon1",lwd=3)
+  lines(x,gamma_a20,col="salmon4",lwd=3)
 }
 
 graphics.off()
@@ -118,23 +141,24 @@ lines(x,exp_b2,col="sky blue",lwd=3)
 lines(x,exp_b4,col="orange",lwd=3)
 
 # chi-squared
-x=seq(.01,8,.01)
+x=seq(.01,40,.01)
 
 # degrees of freedom = 2*shape
-chi_vu1=dgamma(x, shape=.5, scale = 2 )
-chi_vu2=dgamma(x, shape=1, scale = 2 )
-chi_vu3=dgamma(x, shape=1.5, scale = 2)
-chi_vu4=dgamma(x, shape=2, scale = 2)
-chi_vu5=dgamma(x, shape=2.5, scale = 2)
-chi_vu6=dgamma(x, shape=3, scale = 2)
+{
+  chi_vu3=dgamma(x, shape=1.5, scale = 2 )
+  chi_vu4=dgamma(x, shape=2, scale = 2 )
+  chi_vu8=dgamma(x, shape=4, scale = 2 )
+  chi_vu12=dgamma(x, shape=6, scale = 2)
+  chi_vu16=dgamma(x, shape=8, scale = 2)
+  chi_vu20=dgamma(x, shape=10, scale = 2)
+}
 
-plot(x,chi_vu1,col="magenta",type='l',lwd=3)
-#plot(x,chi_vu2,col="blue",type='l',lwd=3)
-lines(x,chi_vu2,col="blue",lwd=3)
-lines(x,chi_vu3,col="dark green",lwd=3)
-lines(x,chi_vu4,col="sky blue",lwd=3)
-lines(x,chi_vu5,col="orange",lwd=3)
-lines(x,chi_vu6,col="black",lwd=3)
+plot(x,chi_vu3,col="red",type='l',lwd=3)
+lines(x,chi_vu4,col="magenta",type='l',lwd=3)
+lines(x,chi_vu8,col="blue",lwd=3)
+lines(x,chi_vu12,col="dark green",lwd=3)
+lines(x,chi_vu16,col="sky blue",lwd=3)
+lines(x,chi_vu20,col="orange",lwd=3)
 
 # betas
 x=seq(0,1,.01)
@@ -167,9 +191,10 @@ lines(x,beta_a.6_b.3,col="orange",type='l',lwd=3)
 beta_a11_b5=dbeta(x, 1,5)
 beta_a2_b5=dbeta(x, 2,5)
 beta_a10_b3=dbeta(x, 10,3)
+beta_a10_b1=dbeta(x, 10,1.2)
 
 plot(x,beta_a11_b5,col="magenta",type='l',lwd=3,ylim=c(0,5))
 lines(x,beta_a2_b5,col="sky blue",lwd=3)
 lines(x,beta_a10_b3,col="orange",type='l',lwd=3)
-
+lines(x,beta_a10_b1,col="cadet blue",type='l',lwd=3)
 
