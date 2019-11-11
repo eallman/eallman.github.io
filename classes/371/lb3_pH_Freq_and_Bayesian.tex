@@ -1,0 +1,213 @@
+\documentclass{report}
+
+\usepackage{amsmath,amssymb}
+\usepackage{pdfsync,color,graphicx}
+\usepackage[dvipsnames]{xcolor}
+
+\newcommand{\vs}{\vskip 2.7cm}
+
+\usepackage[margin=.75in]{geometry}
+
+\newcommand\dsp{\displaystyle}
+\newcommand{\tcb}{\color{blue}}
+\newcommand{\tcm}{\color{magenta}}
+\newcommand{\tco}{\color{orange}}
+
+\newcommand\Geom{\operatorname{Geom}}
+\newcommand\Binom{\operatorname{Binom}}
+\newcommand\Beta{\operatorname{Beta}}
+\newcommand\Unif{\operatorname{Unif}}
+
+\usepackage{xifthen}
+\newboolean{long}
+\setboolean{long}{true}
+
+\begin{document}
+
+{\bf \centerline{{\large Lab: Giving a good estimate for $p = p(H)$}}}
+
+\smallskip
+\centerline{This lab, worth 15 points, is due on Friday, November 15 in class.}
+
+\bigskip
+
+\noindent \begin{minipage}{8cm}
+
+Tabulated in the table to the right are some data based on flipping an unfair coin where
+$p = p(H)$ is the probability that $Heads$ was flipped. 
+
+\end{minipage}
+%
+\begin{minipage}{8cm}
+\hskip 1cm \  \begin{tabular}{c|c}
+Sample size & Number $H$ \\
+\hline\hline
+10 & 1\\
+100 & 16\\
+1000 & 207\\
+$n$ & $n_1$
+\end{tabular}
+\end{minipage}
+
+\smallskip
+
+\noindent {\sc The {\bf Frequentist} approach}
+
+\begin{enumerate}
+
+\item Give the best approximation to $p$ you can for each of the four sample sizes.  Then
+briefly explain why this is the `frequentist' approach and which estimate of $p$ you believe to be the
+most accurate.
+
+\ifthenelse{\boolean{long}}{\vskip 4cm}{}
+
+\end{enumerate}
+\smallskip
+
+\noindent {\sc The {\bf Bayesian} approach}:  Now you will give a Bayesian posterior estimate for $p$.  This
+will be a density function for the random variable $p$.  The next questions will step you through this.
+
+\begin{enumerate}
+\setcounter{enumi}{1}
+
+\item \emph{Preliminary:} Maximizing a function of the form $y = x^m (1-x)^n$ on the interval $[0,1]$ when
+$m, n > 1$.  
+
+The quick way to maximize this function is to take its log and since $\log(y)$ is an increasing function, 
+the value of $x$ that maximizes $\log(y)$ is the same value that maximizes $y$.  
+(Indeed, you \emph{know} that $y$ has a global maximum
+on $[0,1]$ by our study of $\Beta$-distributed random variables so just finding critical points should
+be enough.) For starters, the value(s) of $x$ that maximizes $y = x^m (1-x)^n$ is the
+same as the $x$ that maximizes $\log(y) = \log(x^m (1-x)^n) = m \log(x) + n \log(1-x)$.   Find the maximizer $x$
+of function $y$ above in terms of $m$ and $n$.  (This is a Calculus I problem, find the critical points, etc.)
+Store this information away in your brain for use multiple times in the next problem.
+
+
+\ifthenelse{\boolean{long}}{\vskip 6cm}{}
+
+The maximizer is $x = \underline{\hskip 6cm}$.
+
+\medskip
+
+\item If the sample size is $n$, then $Y$: \emph{number of $H$ in $n$ coin tosses} is modeled by a
+binomial random variable $Y \sim \Binom(n,p)$.  Letting $n_1$ denote the number of $H$ in $n$
+tosses and $n_2$ the number of $T$ (so that $n_1 + n_2 = n$), then the likelihood function
+$L ( p \mid \text{data }) = L ( p \ \mid n_1, n_2 ) = P( \text{data} \mid p )$ is
+$$
+L ( p \mid n_1, n_2) = \binom{n}{n_1} p^{n_1} (1-p)^{n_2}, 
+$$
+and the Likelihood function is proportional to $L( p \mid \text{data} ) \propto p^{n_1} (1-p)^{n_2}$.
+
+\hskip .5cm Stating Bayes' Rule in this context we have
+$$
+P ( p \mid \text{data}  ) = \frac{L ( p \mid \text{data} ) \, \boldsymbol{\pi}(p) }{P( \text{data} )}
+$$
+where the constituent parts are indicated in the following color-coded equation.
+
+\hskip 6.5cm {\tcm Likelihood function}  \hskip 1cm {\tco Prior}
+
+\hskip 8cm {\tcm $\downarrow$} \hskip 1.7cm {\tco $\swarrow$}\\
+$$
+{\tcb \text{Posterior probability of } p \rightarrow \ P ( p \mid \text{data}  )} = \frac{{\tcm L ( p \mid \text{data} )} \, {\tco \boldsymbol{\pi}(p)} }{P( \text{data} )}
+\hskip 6cm \ 
+$$
+
+\hskip .5cm The first simplification we will make is that the \emph{posterior probability} of $p$, informally `the posterior',
+ is a {\bf density} function.  In particular, if we can find a formula $\varphi(p)$ for the posterior $P ( p \mid \text{data}  )$ 
+ that is correct up to a normalizing constant, then we can find the posterior exactly by integrating 
+ $\varphi(p)$ over the support $p \in [0,1]$ to find the posterior.  That is,
+simply divide (or multiply) $\varphi(p)$ by an appropriate normalizing constant to get the posterior distribution for $p$.
+
+\hskip .5cm To this end, the posterior of $p$ is proportional to $\varphi(p)$,  
+the product of the likelihood $L(p \mid \text{data} )$ and the prior $\boldsymbol{\pi}(p)$
+via
+$$
+P ( p \mid \text{data}  )\  \propto \ \varphi(p) = p^{n_1} (1-p)^{n_2} \, \boldsymbol{\pi}(p).
+$$
+
+\hskip .5cm Your goal is to find 1) the formula for the posterior distribution $P(p \mid \text{data} )$; 2) plot the 
+posterior density; and 3) find the mode of the posterior density for each of the three sample sizes $n = 1, 100, 1000$
+and for two choices of prior $\boldsymbol{\pi}(p) \sim \Unif(0,1)$ and $\boldsymbol{\pi}(p) \sim \Beta(2,8)$.  
+Then you will comment on your findings.  To be clear, there are {\bf SIX} posterior probabilities you are finding, 
+one for each choice of sample size and prior.
+
+\end{enumerate}
+
+\
+
+\centerline{\Large \tcm SOLUTIONS}
+
+\medskip
+
+Below are the formulas and plots of the posterior probability densities, labelled by the choice of sample size
+and prior.
+
+\begin{enumerate}
+
+\item Sample size $n = 10$ and $\boldsymbol{\pi}(p) \sim \Unif(0,1)$ so that $\boldsymbol{\pi}(p) = 1$ on $[0,1]$.
+
+\smallskip
+
+A quick calculation shows that the posterior density is proportional to
+$$
+P( p \mid n_1 = 1) \, \propto \, \varphi(p) = p^1\, (1-p)^{9} \cdot 1 = p \, (1-p)^{9} \text{ for } 0 \le p \le 1.
+$$
+Thus, $\varphi$ is, up to a constant, $\varphi(p) \sim \Beta(2,10)$ and we compute that multiplying by 
+$C = 1 / \Beta(2,10) = $\\
+$\dsp \frac{\Gamma(12)}{\Gamma(2) \Gamma(10)} = 11 \cdot 10 = 110$ will give us total probability 1.
+(The 110 is the reciprocal of the normalizing constant since we multiply by it, instead of dividing.)
+Putting this together, we find that the posterior is
+$$
+P( p \mid n_1 = 1) = 110 \, p \, (1-p)^{9} \text{ for } 0 \le p \le 1,
+$$
+whose graph is shown below.  
+
+\begin{minipage}{7cm}
+\includegraphics[width=7cm]{sampleSize10.pdf}
+\end{minipage}
+%
+\begin{minipage}{7cm}
+The global maximum of the posterior occurs at $p= .1$ and values of $p$ around
+that value are also highly likely to be close to the true value of $p$.
+\end{minipage}
+
+\ifthenelse{\boolean{long}}{\newpage}{}
+
+\item Sample size $n = 100$ and $\boldsymbol{\pi}(p) \sim \Unif(0,1)$ so that $\boldsymbol{\pi}(p) = 1$ on $[0,1]$.
+
+\smallskip
+
+\ifthenelse{\boolean{long}}{\vskip 11cm}{}
+
+\item Sample size $n = 1000$ and $\boldsymbol{\pi}(p) \sim \Unif(0,1)$ so that $\boldsymbol{\pi}(p) = 1$ on $[0,1]$.
+
+\smallskip
+
+\ifthenelse{\boolean{long}}{\vskip 12cm}{}
+
+
+\item Sample size $n = 10$ and $\boldsymbol{\pi}(p) \sim \Beta(2,8)$ so that $\boldsymbol{\pi}(p) = \underline{\hskip 5cm}$ on $[0,1]$.
+
+\smallskip
+
+\ifthenelse{\boolean{long}}{\vskip 11cm}{}
+
+\item Sample size $n = 100$ and $\boldsymbol{\pi}(p) \sim \Beta(2,8)$ so that $\boldsymbol{\pi}(p) = \underline{\hskip 5cm}$ on $[0,1]$.
+
+\smallskip
+
+\ifthenelse{\boolean{long}}{\newpage}{}
+
+\item Sample size $n = 1000$ and $\boldsymbol{\pi}(p) \sim \Beta(2,8)$ so that $\boldsymbol{\pi}(p) = \underline{\hskip 5cm}$ on $[0,1]$.
+
+\smallskip
+
+\ifthenelse{\boolean{long}}{\vskip 10cm}{}
+
+\item Commentary:  What do you notice about the posteriors as the sample size $n \to \infty$?  Do you prefer
+a uniform prior or a beta prior?  Why?  What do you think about the Frequentist approach versus the Bayesian one?  
+What have you learned? ....
+
+\end{enumerate}
+
+\end{document}
