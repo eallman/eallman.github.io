@@ -1,0 +1,1748 @@
+% This is a latex file
+% last modified Sept 2020
+
+\documentclass[10pt]{report}
+\usepackage{amsmath, amssymb, verbatim}
+\usepackage{pdfsync}
+\usepackage{xifthen}
+\newboolean{uafCV}
+\setboolean{uafCV}{true}
+%\setboolean{uafCV}{false}
+
+\newboolean{tcu}
+\setboolean{tcu}{false}
+\usepackage{revnum}
+
+\usepackage[usenames]{color}
+\newcommand{\tcm}{\textcolor{magenta}}
+
+\newenvironment{pub_list}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{pub_list}}
+
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{9in}
+
+\font\namefont=cmr10 scaled\magstep2
+\voffset=-.6in
+\hoffset=-.15in
+\parskip=.075in
+\parindent=0in
+
+\newenvironment{packed_enum}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+\thispagestyle{empty}
+
+\begin{document}
+
+\enlargethispage{1cm}
+
+\bigskip
+\centerline{\namefont ELIZABETH S. ALLMAN}
+
+\vskip 8mm
+%\bigskip
+
+\hbox to \hsize {
+\vbox{\hbox{ \bf Current Address:       }
+      \hbox{ Department of Mathematics and Statistics}
+      \hbox{ University of Alaska Fairbanks}
+      \hbox{ PO Box 756660}
+      \hbox{ Fairbanks, AK \ \ 99775}
+      }
+\hfill
+
+\begin{comment}
+\vbox{\hbox{ \bf Contact:               }
+      \hbox{ Natural Sciences and Mathematics}
+      \hbox{ Institute for Arctic Biology}
+      \hbox{ https://eallman.github.io}
+      \hbox{ (907) 474-2479}
+      }
+}
+\end{comment}
+
+%\begin{comment}
+\vbox{\hbox{ \bf Contact:               }
+      \hbox{ 1640 Golden View Drive}
+      \hbox{ Fairbanks, AK \ 99709 \ USA}
+      \hbox{ https://eallman.github.io}
+      \hbox{ (907) 474-2479}
+      }
+}
+%\end{comment}
+
+\vspace{.1 in} \hrule \makebox[3.5in][l]{{\bf Internet:} e.allman@alaska.edu}
+\makebox[2.5in][r]{\bf Citizenship: } USA
+%\vspace{.1 in} \hrule \makebox[2.25in][l]{{\bf Internet:} e.allman@alaska.edu}
+%\makebox[2.25in][c]{{\bf Citizenship: } USA}
+%\makebox[2in][r]{{\bf Date of birth: } February, 28, 1965}
+
+\vspace{2mm}
+
+%\vspace{2mm}
+
+{\bf EDUCATION}
+
+{ \leftskip=.6in \parindent=-.3in  \parskip=.05in
+
+{\bf University of California at Los Angeles}, (1990 -- 1995) \\
+M.A.\ Mathematics (1992).  \\
+Ph.D.\ Mathematics (1995).
+``Polynomials Without Roots in Division Algebras'' \\
+Graduate Opportunity Fellow, (1990 -- 1991).
+
+{\bf Yale University}, (1983 --  1987) \\
+B.A. Mathematics, {\it magna cum laude}, Distinction in Mathematics,
+DeForest Senior Prize in Pure and Applied Mathematics, (1987).  IBM
+Thomas J. Watson Scholar (1983-1987)
+
+\mbox{}
+}
+
+{\bf EMPLOYMENT}
+
+{\leftskip=.6in  \parindent=-.3in  \parskip=.05in
+
+{\bf University of Alaska}, Professor (2005 --
+\ifthenelse{\boolean{uafCV}}{tenure effective 2007}{}
+)\\
+Department of Mathematics and Statistics.  \\
+Senior Research Associate, Institute for Arctic Biology (2006 --)
+
+{\bf University of Southern Maine}, Associate Professor (2000 -- 2005) \\
+\hspace{.9in} Department of Mathematics and Statistics.  Department of
+Teacher Education.
+
+{\bf Mathematical Sciences Research Institute}, Member (fall 1999) \\
+\hspace{.9in} Special programs in Noncommutative Algebra and Galois
+Theory and Fundamental Groups.
+
+{\bf University of North Carolina, Asheville}, Assistant Professor of
+Mathematics (1997 -- 1999)
+
+{\bf Bates College}, Assistant Professor of Mathematics (1995 --
+1997)
+
+{\bf University of California Los Angeles}, Instructor, Teaching
+Assistant Consultant, Teaching Assistant/Associate, Mathematics
+Department (1991-1994)
+
+{\bf Infoservice}, Consultant, Mestre, Italy (1989 -- 1990) %\\
+%\hspace{.9in} Computer start-up company.
+
+{\bf The American School in Switzerland}, Mathematics Teacher, Lugano, Switzerland
+(1988 -- 1989)
+
+{\bf St. Albans School}, Mathematics Teacher, Washington, D.C.
+(1987 -- 1988)
+
+\mbox{}
+}
+
+{\bf PROFESSIONAL INTERESTS}
+
+%\medskip
+
+{ \leftskip=.6in \parindent=-.3in  \parskip=.05in
+
+  Phylogenetics including tree construction methods and statistical
+  models; Modeling of evolutionary processes. Mathematical Biology,
+  Statistical Models with Latent Variables, 
+  Algebraic Statistics, Computational Algebra, Galois theory and
+  Brauer groups, Mathematics Education.
+
+\mbox{}
+}
+
+{\bf HONORS AND MEMBERSHIPS}
+
+{ \leftskip=.6in \parindent=-.3in  \parskip=.05in
+
+Fellow, American Mathematical Society.  (2013 --) %
+
+Member: American Mathematical Society, Mathematical Association of
+America, Society for Industrial and Applied Mathematics, 
+Society for Systematic Biologists, Society for Molecular
+Biology and Evolution, Association for Women in Mathematics, Project
+NExT.
+
+Teaching Awards: CNSM Outstanding Teacher Award (2009--2010).
+Distinguished Teaching Assistant Award, UCLA, (1995).
+%Nominee, Campus Teaching Award, UNCA and Bates College.
+
+Erskine Fellow, University of Canterbury, Christchurch, New Zealand, 2013.
+
+%\mbox{}
+
+}
+
+{\bf PUBLICATIONS}
+
+\medskip
+ 
+{ \leftskip=.6in \parindent=-.3in %\parskip=.05in
+\parskip=3pt \parsep=0pt \itemsep=0pt
+
+\ifthenelse{\boolean{uafCV}}
+{
+\begin{revnumerate}[44]
+%\begin{revnumerate}[43]
+ \setlength{\itemsep}{2pt}
+ \setlength{\parskip}{0pt}
+ \setlength{\parsep}{0pt}
+ 
+ \item
+ ``Parameter identifiability for a profile mixture model of protein evolution."
+ with S.~Yourdkhani and J.~Rhodes, J. Computational Biology, \emph{to appear}.
+ 
+ \item 
+``Gene tree discord, simplex plots, and statistical tests under the coalescent."
+with J.D.~Mitchell and J.~Rhodes,  \emph{Syst. Biol.}, 2021, 
+{\tt https://doi.org/10.1093/sysbio/syab008}
+
+ \item ``Testing Multispecies Coalescent Simulators using Summary Statistics,"
+ with H.~Ba\~nos-Cervantes and J.~Rhodes,
+ \emph{submitted}.
+ 
+  \item 
+ ``MSCquartets 1.0: Quartet methods for species trees and networks under the multispecies coalescent model in R." 
+ with H.D. Banos-Cervantes, J.D. Mitchell and J.Rhodes, Bioinformatics, 10 (1367-4803), 2020. 
+ 
+ \item ``NANUQ: A method for inferring species networks
+from gene trees under the coalescent model,"
+ with H.~Ba\~nos-Cervantes and J.~Rhodes,
+ Algorithms for Molecular Biology.
+ {\bf 14} no.~24 (2019).
+% {\tt https://doi.org/10.1186/s13015-019-0159-2}
+ 
+ \item 
+ ``Hypothesis testing near singularities and boundaries,"
+ with J.~Mitchell and J.~Rhodes,
+Electronic Journal of Statistics,
+{\bf13} no.~1 (2019) 1250-1293.
+ 
+ \item 
+ ``Species tree inference from genomic sequences using the log-det distance,"
+ with C.~Long and J.~A.~Rhodes,
+ SIAM J.~of Applied Algebra and Geometry,
+ {\bf 3} no.~1 (2019) 107-127.
+ 
+ \item 
+ ``Maximum likelihood estimation of the Latent Class Model through model boundary decomposition,"
+ with H.~Ba\~{n}os-Cervantes, R.~Evans, S.~Ho\c{s}ten, K.~Kubjas, D.~Lemke and J.~Rhodes, and P. Zwiernik,
+ Journal of Algebraic Statistics,
+{\bf 10} no.~1 (2019) 3-18. 
+ 
+ \item 
+``Species tree inference from gene splits by Unrooted STAR methods,''
+with J.~Degnan and J.~Rhodes,
+IEEE/ACM Transactions in Computational Biology and Bioinformatics, 
+{\bf 15} no.~1 (2018) 337-342. 
+%{\tt doi:10.1109/TCBB.2016.2604812.}
+
+ \item ``Split probabilities and species tree inference under the
+multispecies coalescent model"
+ with J.H.~Degnan and J.A.~Rhodes,
+ Bulletin of Mathematical Biology,
+ {\bf 80}, no.~1 (2018) 64-103.
+ % {\tt \ doi:10.1007/s11538-017-0363-5}.		
+
+\item ``Split scores: a tool to quantify phylogenetic signal in genome-scale data,"
+with L.S.~Kubatko and J.A.~Rhodes,
+Systematic Biology,
+{\bf 66} no.~4 (2017) 620--636.
+%\newblock {\tt \ doi:10.1093/sysbio/syw103}.
+
+\item 
+``Statistically-Consistent $k$-mer Methods for Phylogenetic Tree Reconstruction,''
+with J.~Rhodes and S.~Sullivant,
+J. Computational Biology, 
+{\bf 24} no.~2 (2017) 153-171.
+
+\item 
+``Parameter identifiability of discrete Bayesian networks with hidden variables,''
+with J.~Rhodes, E.~Stanghellini, and M.~Valtorta,
+J.~Causal Inference, {\bf 3} no.~2 (2015) 189-205.
+
+\item 
+``Tensors of nonnegative rank two,''
+with J.~Rhodes, B.~Sturmfels, and P.~Zwiernik,
+Linear Algebra Appl. {\bf 473} (2015) 37-53.
+
+\item ``A Letter from the Guest Editors," special issue in 
+Mathematical Biology, 
+with F.~Adler and L.~de Pillis,
+American Mathematical Monthly {\bf 121} no.~9 (2014) 751-753.
+
+\item
+``A semialgebraic description of the general Markov model on phylogenetic trees,"
+with J.~Rhodes and A.~Taylor, 
+SIAM J. Discrete Math. {\bf 28} no.~2 (2014) 736-755.
+
+\item 
+``Tensor Rank, Invariants, Inequalities, and Applications,"
+with P.~Jarvis, J.~Rhodes, and J.~Sumner, 
+SIAM. J. Matrix Anal.~\& Appl. {\bf 34}  no.~3 (2013) pp. 1014-1045.
+
+\item 
+``Identifiability of binary directed graphical models with hidden variables,''
+with J.~Rhodes, E.~Stanghellini, and M.~Valtorta,
+\emph{Approaches to Causal Structure Learning
+Workshop, UAI 2013}, technical report.
+ 
+\item
+``Species tree inference by the \emph{STAR} method, and generalizations,"
+with J.~Degnan and J.~Rhodes, J. Computational Biology, {\bf 20} no.~1 (2013) 50-61.
+
+\item
+``When do phylogenetic mixture models mimic other phylogenetic models?," 
+with J.~Rhodes and S.~Sullivant,
+Systematic Biology, {\bf 61} no.~6 (2012) 1049-1059.
+
+\item 
+``Determining species tree topologies from clade probabilities under the coalescent,"
+with J.H.~Degnan, and J.A.~Rhodes,
+J.~of Theoretical Biology, {\bf 289} (2011) 96-106.
+
+\item 
+``Parameter Identifiability in a class of random graph mixture models"
+with C.~Matias and J.A.~Rhodes,
+Journal of Statistical Planning and Inference, {\bf 141} no.~5 (2011) 1719-1736.
+
+\item
+``Identifying the rooted species tree from the distribution of unrooted gene trees under the coalescent,"
+with J.H.~Degnan, and J.A.~Rhodes,
+J.~of Mathematical Biology, {\bf 62} no.~6 (2011) 833--862.
+
+\item
+``Identifiability of 2-tree mixtures for group-based models,"
+with  S.~Petrovic, J.~A.~Rhodes, and S.~Sullivant,
+IEEE/ACM Transactions in Computational Biology and Bioinformatics, 
+{\bf 8} no.~3 (2011) 710-722.
+
+\item 
+``The Phylogenetic Connection," section
+in \emph{Advanced topics in linear algebra: {W}eaving matrix problems through the Weyr form} 
+by John Clark, Kevin O'meara, and Charles Vinsonhaler,
+Oxford University Press, (2011).
+
+\item 
+``Trees, Fast and Accurate,"
+with John A.~Rhodes,
+Science, {\bf 327} (2010) 1334-1335.
+
+\item 
+``Estimating trees from filtered data: Identifiability of models
+for morphological phylogenetics,"
+with M.~Holder and J.~A.~Rhodes,
+J.~of Theoretical Biology, {\bf 263} (2010) 108-119.
+
+\item
+``Identifiability of parameters in latent structure models with many observed variables,"
+with C.~Matias and J.~A.~Rhodes,  
+Annals of Statistics, {\bf 37} no.~6A (2009) 3099-3132.
+
+\item
+``The identifiability of covarion models in phylogenetics,''
+with J.~A.~Rhodes, IEEE/ACM Transactions in Computational Biology and
+Bioinformatics, {\bf 6} no.~1 (2009) 76-88.
+
+\item
+``Identifiability of a Markovian model of molecular evolution
+with Gamma-distributed rates,''
+with C.~An\'e and J.~A.~Rhodes, Advances in Applied Probability,
+{\bf 40} no.~1 (2008) 229-249.
+
+\item
+``Identifying evolutionary trees and substitution parameters
+for the general Markov model with invariable sites,'' with
+J.~A.~Rhodes, Mathematical Biosciences, {\bf 211} no.~1 (2008) 18-33.
+
+\item
+``Phylogenetic ideals and varieties for the general Markov model,''
+with J.~A.~Rhodes, Advances in Applied Mathematics, {\bf 40} no.~2
+(2008) 127-148.
+(online Jan.~2007)
+
+\item
+``Molecular phylogenetics from an algebraic viewpoint,'' with J.~A.~Rhodes,
+Statistica Sinica, {\bf 17} no.~4 (2007) 1299-1316.
+
+\item
+``Phylogenetic invariants,'' with J.~A.~Rhodes, in
+\emph{Reconstructing Evolution:~New Mathematical and Computational Advances}, ed.~by O.~Gascuel and
+M.~Steel. Oxford University Press, 2007.
+
+\item
+``Phylogenetics,'' with J.~A.~Rhodes, in \emph{Modeling and Simulation of
+Biological Networks}, ed.~by R.~Laubenbacher. Proceedings of
+Symposia in Applied Mathematics, American Mathematical Society,
+2007.
+
+\item
+``The identifiability of tree topology for phylogenetic models,
+including covarion and mixture models,'' with J.~A.~Rhodes, Journal
+of Computational Biology, {\bf 13}  (2006) 1101--1113.
+
+\item
+``Phylogenetic invariants for stationary base composition,''
+with J.~A.~Rhodes, J. Symbolic Computation, {\bf 41} no.~2
+(2006) 138--150.
+
+\item
+``Quartets and parameter recovery for the general Markov model of
+sequence mutation,'' \ with J.~A.~Rhodes, Applied Mathematics
+Research eXpress, {\bf 2004} no.~4 (2004) 107--131.
+
+\item
+``Phylogenetic invariants for the general Markov model of sequence
+mutation,'' \ with J.~A.~Rhodes, Math. Biosciences, {\bf 186}
+no.~2 (2003) 113--144.
+
+\item
+``Division algebras with $PSL(2,q)$-Galois maximal subfields,'' with
+M.~Schacher, J. Algebra, {\bf 240} no.~2 (2001) 808--821.
+
+\item
+``Abelian subgroups of finitely generated Kleinian groups are
+separable,'' with E.~Hamilton, Bulletin of the London
+Mathematical Society, {\bf 31} no.~2 (1999) 163--172.
+
+\item
+``Polynomials Without Roots in Division Algebras,''
+Communications in Algebra, {\bf 24} no.~13 (1996) 3891--3919.
+
+\end{revnumerate}
+}
+{ 
+``Parameter identifiability for a profile mixture model of protein evolution."
+with S.~Yourdkhani and J.~Rhodes, J. Computational Biology, \emph{to appear}.
+
+``Gene tree discord, simplex plots, and statistical tests under the coalescent."
+with J.D.~Mitchell and J.~Rhodes,  \emph{Syst. Biol.}, 2021, 
+{\tt https://doi.org/10.1093/sysbio/syab008}
+
+``Testing Multispecies Coalescent Simulators using Summary Statistics,"
+with H.~Ba\~nos-Cervantes and J.~Rhodes,
+\emph{submitted}.
+
+``MSCquartets 1.0: Quartet methods for species trees and networks under the multispecies coalescent model in R." 
+with H.D. Banos-Cervantes, J.D. Mitchell and J.Rhodes,  Bioinformatics, 10 (1367-4803), 2020.  
+
+
+``NANUQ: A method for inferring species networks
+from gene trees under the coalescent model,"
+ with H.~Ba\~nos-Cervantes and J.~Rhodes,
+ Algorithms for Molecular Biology.
+ {\bf 14} no.~24 (2019).
+% {\tt https://doi.org/10.1186/s13015-019-0159-2}
+ 
+ ``Hypothesis testing near singularities and boundaries,"
+ with J.~Mitchell and J.~Rhodes,
+Electronic Journal of Statistics,
+{\bf13} no.~1 (2019) 1250-1293.
+ 
+ ``Species tree inference from genomic sequences using the log-det distance,"
+ with C.~Long and J.~A.~Rhodes,
+ SIAM J.~of Applied Algebra and Geometry,
+ {\bf 3} no.~1 (2019) 107-127.
+
+ ``Maximum likelihood estimation of the Latent Class Model through model boundary decomposition,"
+ with H.~Ba\~{n}os-Cervantes, R.~Evans, S.~Ho\c{s}ten, K.~Kubjas, D.~Lemke and J.~Rhodes, and P. Zwiernik,
+ Journal of Algebraic Statistics
+{\bf 10} no.~1 (2019) 3-18. 
+ 
+``Species tree inference from gene splits by Unrooted STAR methods,''
+with J.~Degnan and J.~Rhodes,
+IEEE/ACM Transactions in Computational Biology and Bioinformatics, 
+{\bf 15} no.~1 (2018) 337-342. 
+%{\tt doi:10.1109/TCBB.2016.2604812.}
+ 
+`Split probabilities and species tree inference under the
+multispecies coalescent model"
+ with J.H.~Degnan and J.A.~Rhodes,
+ Bulletin of Mathematical Biology,
+ {\bf 80}, no.~1 (2018) 64-103.
+ % {\tt \ doi:10.1007/s11538-017-0363-5}.		
+
+``Split scores: a tool to quantify phylogenetic signal in genome-scale data,"
+with L.S.~Kubatko and J.A.~Rhodes,
+Systematic Biology,
+{\bf 66} no.~4 (2017) 620--636.
+%\newblock {\tt \ doi:10.1093/sysbio/syw103}.
+
+``Statistically-Consistent $k$-mer Methods for Phylogenetic Tree Reconstruction,''
+with J.~Rhodes and S.~Sullivant,
+J. Computational Biology,
+{\bf 24} no.~2 (2017) 153-171.
+
+``Parameter identifiability of discrete Bayesian networks with hidden variables,''
+with J.~Rhodes, E.~Stanghellini, and M.~Valtorta,
+J.~Causal Inference, {\bf 3} no.~2 (2015) 189-205.
+
+``Tensors of nonnegative rank two,''
+with J.~Rhodes, B.~Sturmfels, and P.~Zwiernik,
+Linear Algebra Appl. {\bf 473} (2015) 37-53.
+
+ ``A Letter from the Guest Editors," special issue in 
+Mathematical Biology, 
+with F.~Adler and L.~de Pillis,
+American Mathematical Monthly {\bf 121} no.~9 (2014) 751-753.
+
+``A semialgebraic description of the general Markov model on phylogenetic trees,"
+with J.~Rhodes and A.~Taylor, 
+SIAM J. Discrete Math. {\bf 28} no.~2 (2014) 736-755.
+
+`Tensor Rank, Invariants, Inequalities, and Applications,"
+with P.~Jarvis, J.~Rhodes, and J.~Sumner, 
+SIAM. J. Matrix Anal.~\& Appl. {\bf 34}  no.~3 (2013) 1014-1045.
+
+``Identifiability of binary directed graphical models with hidden variables,''
+with J.~Rhodes, E.~Stanghellini, and M.~Valtorta,
+\emph{Approaches to Causal Structure Learning
+Workshop, UAI 2013}, technical report.
+
+``Species tree inference by the \emph{STAR} method, and generalizations,"
+with J.~Degnan and J.~Rhodes, J. Computational Biology, {\bf 20} no.~1 (2013) 50-61.
+
+``When do phylogenetic mixture models mimic other phylogenetic models?," 
+with J.~Rhodes and S.~Sullivant,
+Systematic Biology, {\bf 61} no.~6 (2012) 1049-1059.
+
+``Determining species tree topologies from clade probabilities under the coalescent,"
+with J.H.~Degnan, and J.A.~Rhodes,
+J.~of Theoretical Biology, {\bf 289} (2011) 96-106.
+
+``Parameter Identifiability in a class of random graph mixture models"
+with C.~Matias and J.A.~Rhodes,
+Journal of Statistical Planning and Inference, {\bf 141} no.~5 (2011) 1719-1736.
+
+``Identifying the rooted species tree from the distribution of unrooted gene trees under the coalescent,"
+with J.H.~Degnan, and J.A.~Rhodes,
+J.~of Mathematical Biology, {\bf 62} no.~6 (2011) 833--862.
+
+``Identifiability of 2-tree mixtures for group-based models,"
+with  S.~Petrovic, J.~A.~Rhodes, and S.~Sullivant,
+IEEE/ACM Transactions in Computational Biology and Bioinformatics, 
+{\bf 8} no.~3 (2011) 710-722.
+
+``The Phylogenetic Connection," section
+in \emph{Advanced topics in linear algebra: {W}eaving matrix problems through the Weyr form} 
+by John Clark, Kevin O'meara, and Charles Vinsonhaler,
+Oxford University Press, (2011).
+
+``Trees, Fast and Accurate,"
+with John A.~Rhodes,
+Science, {\bf 327} (2010) 1334-1335.
+
+``Estimating trees from filtered data: Identifiability of models
+for morphological phylogenetics,"
+with M.~Holder and J.~A.~Rhodes,
+J.~of Theoretical Biology, {\bf 263} (2010) 108-119.
+
+``Identifiability of parameters in latent structure models with many observed variables,"
+with C.~Matias and J.~A.~Rhodes,  
+Annals of Statistics, {\bf 37} no.~6A (2009) 3099-3132.
+
+``The identifiability of covarion models in phylogenetics,''
+with J.~A.~Rhodes, IEEE/ACM Transactions in Computational Biology and
+Bioinformatics, {\bf 6} no.~1 (2009) 76-88.
+
+``Identifiability of a Markovian model of molecular evolution
+with Gamma-distributed rates,''
+with C.~An\'e and J.~A.~Rhodes, Advances in Applied Probability,
+{\bf 40} no.~1 (2008) 229-249.
+
+``Identifying evolutionary trees and substitution parameters
+for the general Markov model with invariable sites,'' with
+J.~A.~Rhodes, Mathematical Biosciences, {\bf 211} no.~1 (2008) 18-33.
+
+``Phylogenetic ideals and varieties for the general Markov model,''
+with J.~A.~Rhodes, Advances in Applied Mathematics, {\bf 40} no.~2
+(2008) 127-148.
+(online Jan.~2007)
+
+``Molecular phylogenetics from an algebraic viewpoint,'' with J.~A.~Rhodes,
+Statistica Sinica, {\bf 17} no.~4 (2007) 1299-1316.
+
+``Phylogenetic invariants,'' with J.~A.~Rhodes, in
+\emph{Reconstructing Evolution:~New Mathematical and Computational Advances}, ed.~by O.~Gascuel and
+M.~Steel. Oxford University Press, 2007.
+
+``Phylogenetics,'' with J.~A.~Rhodes, in \emph{Modeling and Simulation of
+Biological Networks}, ed.~by R.~Laubenbacher. Proceedings of
+Symposia in Applied Mathematics, American Mathematical Society,
+2007.
+
+``The identifiability of tree topology for phylogenetic models,
+including covarion and mixture models,'' with J.~A.~Rhodes, Journal
+of Computational Biology, {\bf 13}  (2006) 1101--1113.
+
+``Phylogenetic invariants for stationary base composition,''
+with J.~A.~Rhodes, J. Symbolic Computation, {\bf 41} no.~2
+(2006) 138--150.
+
+``Quartets and parameter recovery for the general Markov model of
+sequence mutation,'' \ with J.~A.~Rhodes, Applied Mathematics
+Research eXpress, {\bf 2004} no.~4 (2004) 107--131.
+
+``Phylogenetic invariants for the general Markov model of sequence
+mutation,'' \ with J.~A.~Rhodes, Math. Biosciences, {\bf 186}
+no.~2 (2003) 113--144.
+
+``Division algebras with $PSL(2,q)$-Galois maximal subfields,'' with
+M.~Schacher, J. Algebra, {\bf 240} no.~2 (2001) 808--821.
+
+``Abelian subgroups of finitely generated Kleinian groups are
+separable,'' with E.~Hamilton, Bulletin of the London
+Mathematical Society, {\bf 31} no.~2 (1999) 163--172.
+
+``Polynomials Without Roots in Division Algebras,''
+Communications in Algebra, {\bf 24} no.~13 (1996) 3891--3919.
+}
+
+%\medskip
+
+{\sc In preparation:}
+
+%\smallskip
+
+\begin{itemize}
+
+ \setlength{\itemsep}{2pt}
+ \setlength{\parskip}{0pt}
+ \setlength{\parsep}{0pt}
+
+\item ``New methods of inferring network distances,"
+ with H.~Ba\~nos and J.~Rhodes, 
+ \emph{in preparation}.
+ 
+ \item ``Density contours in BHV space under the coalescent model,"
+ with J.H.~Degnan, M.~Owen, and Claudia Solis-Lemus, 
+ \emph{in preparation}.
+ 
+\end{itemize}
+
+%\medskip
+
+%\newpage
+
+{\sc Textbooks:}
+
+%\smallskip
+
+\ifthenelse{\boolean{uafCV}}
+{
+\begin{revnumerate}[2]
+%\begin{revnumerate}[10]
+ \setlength{\itemsep}{2pt}
+ \setlength{\parskip}{0pt}
+ \setlength{\parsep}{0pt}
+
+\item {\it Mathematical Models in Biology: An Introduction},
+with J.~Rhodes, Cambridge University Press (2004) 384 pages.
+
+\item 
+{\it Solution Manual to Mathematical Models in Biology: An
+Introduction}, \ Allman, E.  and Rhodes, J., Cambridge University
+Press (2004) 81 pages.  (electronic)
+
+\end{revnumerate}
+}
+{
+{\it Mathematical Models in Biology: An Introduction},
+with J.~Rhodes, Cambridge University Press (2004) 384 pages.
+
+{\it Solution Manual to Mathematical Models in Biology: An
+Introduction}, \ Allman, E.  and Rhodes, J., Cambridge University
+Press (2004) 81 pages.  (electronic)
+}
+
+\medskip
+
+{\sc Unpublished Lecture Notes}
+
+\smallskip
+
+ \setlength{\itemsep}{2pt}
+ \setlength{\parskip}{0pt}
+ \setlength{\parsep}{0pt}
+
+
+\ifthenelse{\boolean{uafCV}}
+{\begin{itemize}
+\item
+``The Mathematics of Phylogenetics,'' with J.~A.~Rhodes, Institute for
+Advanced Study -- Park City Mathematics Institute: summer program in
+Mathematical Biology, (June 2005, revised spring 2009) 127 pages.
+\end{itemize}
+}
+{
+``The Mathematics of Phylogenetics,'' with J.~A.~Rhodes, Institute for
+Advanced Study -- Park City Mathematics Institute: summer program in
+Mathematical Biology, (June 2005) 127 pages.
+}
+
+\medskip
+
+{\sc Software packages}
+
+\smallskip
+
+ \begin{itemize}
+ 
+ \setlength{\itemsep}{2pt}
+ \setlength{\parskip}{0pt}
+ \setlength{\parsep}{0pt}
+ 
+ \item {\tt MSCquartets v.~1.0.5}, joint with H.~Ba\~nos-Cervantes, J.~Mitchell, J.A.~Rhodes, ($R$ package) available
+ on CRAN Jan 2020.
+ 
+ \item {\tt MSCsimtester v.~1.0}, joint with H.~Ba\~nos-Cervantes and J.A.~Rhodes.  ($R$ package) July 2019.
+
+ \item {\tt SplitSup v.~1.02}, joint with L.S.~Kubatko and J.A.~Rhodes.  July 2016.
+
+ 
+ \end{itemize}
+ 
+ \medskip
+
+
+{\sc Other Publications:}
+
+\smallskip
+
+\ifthenelse{\boolean{uafCV}}
+{\begin{revnumerate}[8]
+
+ \setlength{\itemsep}{2pt}
+ \setlength{\parskip}{0pt}
+ \setlength{\parsep}{0pt}
+
+\item
+``On Teaching Geometry to Pre-service Elementary Teachers, II,'' \
+Allman, E., in Journeys: Maine Mathematics and Science Teacher
+Education Excellence Collaborative monograph (2006) 36--41.
+
+\item
+``International Views on Education,'' \ Allman, E., in {\it
+Complexities: Women in Mathematics}, edited by B.~Case and
+A.~Leggett, Princeton University Press (2005) 128--131.
+
+\item
+``On Teaching Geometry to Pre-service Elementary Teachers'' \ Allman,
+E., in Preparing Future Science and Mathematics Teachers, edited by
+D.~Smith and E.~Swanson, (2005) 26--28.
+
+\item
+``Lessons Learned from Four Years in a Joint Position in Mathematics
+and Mathematics Education,'' \ Allman, E., National Science
+Foundation 2004 Teacher Preparation PI Conference Proceedings (April
+2004) 1--9. (electronic)
+
+\item
+Review of ``Generalized Non-abelian Reciprocity Laws: A Context for
+Wiles' Proof,'' by A. Ash and R. Gross, College Mathematics Journal,
+{\bf 33} no.~1 (2002) 67.
+
+\item
+Review of ``Mathematics of Infectious Disease,'' by H.  Hethcote,
+College Mathematics Journal, {\bf 32} no.~5 (2001) 397--399.
+
+\item
+``AWM panel in San Antonio,'' \ Allman, E., Association of Women in
+Mathematics Newsletter, 29 no.~3 (1999) 8--9.
+
+\item
+``Numbers,'' Association of Women in Mathematics Newsletter, {\bf 28}
+no.~3 (1998) 14.
+\end{revnumerate}
+}
+{
+``On Teaching Geometry to Pre-service Elementary Teachers, II,'' \
+Allman, E., in Journeys: Maine Mathematics and Science Teacher
+Education Excellence Collaborative monograph (2006) 36--41.
+
+``International Views on Education,'' \ Allman, E., in {\it
+Complexities: Women in Mathematics}, edited by B.~Case and
+A.~Leggett, Princeton University Press (2005) 128--131.
+
+``On Teaching Geometry to Pre-service Elementary Teachers'' \ Allman,
+E., in Preparing Future Science and Mathematics Teachers, edited by
+D.~Smith and E.~Swanson, (2005) 26--28.
+
+``Lessons Learned from Four Years in a Joint Position in Mathematics
+and Mathematics Education,'' \ Allman, E., National Science
+Foundation 2004 Teacher Preparation PI Conference Proceedings (April
+2004) 1--9. (electronic)
+
+Review of ``Generalized Non-abelian Reciprocity Laws: A Context for
+Wiles' Proof,'' by A. Ash and R. Gross, College Mathematics Journal,
+{\bf 33} no.~1 (2002) 67.
+
+Review of ``Mathematics of Infectious Disease,'' by H.  Hethcote,
+College Mathematics Journal, {\bf 32} no.~5 (2001) 397--399.
+
+``AWM panel in San Antonio,'' \ Allman, E., Association of Women in
+Mathematics Newsletter, 29 no.~3 (1999) 8--9.
+
+``Numbers,'' Association of Women in Mathematics Newsletter, {\bf 28}
+no.~3 (1998) 14.
+}
+
+\mbox{}
+
+\ifthenelse{\boolean{tcu}}{\newpage}{}
+
+}
+
+{\bf  ADDRESSES}
+
+\medskip
+
+{ \leftskip=.6in \parindent=-.3in  \parskip=3pt
+
+{\sc Plenary Addresses and Short Courses:}
+
+\smallskip
+
+Nonlinear algebra in applications, ICERM workshop, Providence, RI,
+Nov. 2018. ``Reconstructing Hybridization Networks,"
+
+Algebraic and Combinatorial Phylogenetics Workshop, Barcelona, Spain,
+June 2017.  ``An Introduction to Algebraic Methods in Phylogenetics."
+
+Mathematical and Computational Evolutionary Biology conference,
+Porquerolles Island, 
+France, June 2017.  ``Split Scores for Phylogenetic Trees and Applications."
+
+New Mexico Statewide High School Mathematics Contest plenary speaker, University
+of New Mexico, Albuquerque, Feb.~2014. 
+
+Algebraic Statistics in the Alleghenies, Pennsylvania State University, State
+College, PA, June 2012.
+\emph{A semialgebraic description of the general Markov model on trees}.
+
+Workshop on Evolutionary Genomics, Institute for Pure and Applied Mathematics
+(IPAM), Nov~2011. 
+\emph{Identifying Rooted Species Trees from Unrooted Gene Tree and Clade Probabilities}.
+
+2011 Workshop for Young Researchers in Mathematical Biology (WYRMB),
+Mathematical Biosciences Research Institute, Columubus, Ohio, Aug 2011.
+\emph{Phylogenetic tree models: An algebraic perspective}.
+
+AMS Western Sectional Meeting, Las Vegas, NV, May 2011.
+\emph{Evolutionary trees and phylogenetics: An algebraic perspective}.
+
+A Day of Biology and Mathematics, KTH, Stockholm, Sweden, Feb.~2011,
+\emph{Gene trees vs.~species trees}.
+
+Centre of Mathematics for Applications, 
+``Algebraic Geometry in the sciences,"
+Oslo, Norway, Jan 2011.
+
+Tutorial on phylogenetics at SAMSI's opening workshop for the
+year-long research program in
+algebraic methods in systems biology and statistics, Sept.~2008.
+
+Workshop ``Applications in Biology, Dynamics, and Statistics,'' part
+of thematic year in algebraic geometry at the Institute for
+Mathematics and its Applications. Minneapolis, MN, March 2007,
+\emph{Phylogenetic Models: Algebra and Evolution}.
+
+American Mathematical Society Short Course ``Modeling and Simulation
+of Biological Networks,'' Joint Mathematics Meetings. Jan,~2006,
+\emph{Phylogenetics}.
+
+Workshop ``Phylogeography and Phylogenetics,'' Mathematical
+Biosciences Institute at the Ohio State University. Columbus, Ohio,
+Sept.~2005, \emph{Progress and Potential for Phylogenetic
+Invariants}.
+
+XVI Coloquio Latinoamericano de \'Algebra.  Colonia, Uruguay,
+Aug.~2005, \emph{Progress in Phylogenetics using Algebraic
+Varieties}.
+
+Institute for Advanced Study - Park City Mathematics Institute ``The
+Mathematics of Phylogenetic Trees,'' co-instructor undergraduate
+course. June - July 2005, Park City, Utah.
+
+Mathematics of Evolution and Phylogeny - Institut Henri
+Poincar\'e. Paris, France, June 2005, \emph{Phylogenetic
+Invariants: Recent Progress and New Directions}.
+
+MEGA 2005 - The Eighth International Symposium on Effective
+Methods in Algebraic Geometry
+: ``Computing in and with algebraic
+geometry: Theory, Algorithms, Implementations, Applications.''
+Porto Conte, Alghero, Sardinia, May 2005, \emph{Phylogenetics and
+Algebraic Geometry: Problems from Biology}.
+
+American Institute of Mathematics, Research conference on
+Computational Algebraic Statistics, Palo Alto, CA, Dec. 2003, {\it
+Progress towards understanding the phylogenetic ideal}.
+
+\mbox{}
+
+{\sc Selected Research Addresses:}
+
+\smallskip
+
+SIAM  Conference on Applied Algebraic Geometry, Bern, Switzerland,
+July 2019.   \emph{Inferring Species Networks from Gene Trees}.
+
+Evolution Meetings, Providence, Rhode Island, June 2019.
+  \emph{Inferring Species Networks from Gene Trees}.
+
+Center for Integrative Bioinformatics Vienna, June 2017.
+\emph{Split scores for phylogenetic trees and applications}.
+
+Oberwolfach Mathematics Research Institute workshop on
+``Algebraic Statistics," April 2017.
+\emph{Identifying species trees from split probabilities}.
+
+Banff International Research Station Workshop on 
+``Mathematical Approaches to Evolutionary Trees and Networks,"
+Feb 2017. 
+\emph{Identifying species trees from summary statistics}.
+
+SIAM Conference on the Life Sciences, July 2016.
+\emph{Splits scores on phylogenetic trees and applications}.
+
+Evolution Meetings, Austin, TX, June 2016.
+\emph{Splits scores on phylogenetic trees and applications}.
+
+Joint Statistics Meeting, Seattle, WA, Aug 2015.
+\emph{Splits scores on phylogenetic trees and applications}.
+
+Texas Christian University, Mathematics Department Colloquium,
+Ft.~Worth, TX, Feb 2015.
+\emph{Algebraic methods in phylogenetics}.
+
+University of New Mexico, Mathematics and Statistics Department Colloquium,
+Albuquerque, New Mexico, Jan 2014.  
+\emph{An algebraic perspective on evolutionary trees and phylogenetics}.
+
+University of Canterbury, Christchurch, New Zealand, Aug 2013.
+\emph{Ranks of matrices and tensors}.
+
+UC Berkeley Computational Biology seminar, March 2013.
+\emph{Inferring species trees from gene trees: Combinatorial approaches}.
+
+AMS-MAA Joint Meetings, Boston, MA, Jan 2012. \emph{Species trees from gene trees}.
+
+\ifthenelse{\boolean{uafCV}}{University of Tasmania colloquium, Dec~2010.
+\emph{Primary decomposition and phylogenetic varieties.}}{}
+
+Phylomania, Hobart, Tasmania, Nov 2010. \emph{On $2$-tree mixtures}.
+
+Evolution Meetings, Portland, OR, June 2010.
+ \emph{Identifying the rooted species tree from unrooted gene tree probabilities
+under the coalescent model}.
+
+University of Canterbury Mathematics and Statistics Department Colloquium, Christchurch, 
+New Zealand, July 2009.
+
+Phylogenetics 2009, Renyi Institute, Budapest, Hungary, June 2009.
+ \emph{Two-tree mixtures of group-based models}.
+
+SAMSI Algebraic Statistical Models, Raleigh, NC, Jan 2009. 
+\emph{Applications of Kruskal's theorem to the identifiability of algebraic statistical models}.
+
+Annual Meeting of the Society for Molecular Biology and Evolution,
+Barcelona, Spain, June 2008, poster \emph{Identifiability of covarion models
+in phylogenetics}.
+
+University of Barcelona, Barcelona, Spain, June 2008, Mathematics
+Colloquium speaker.
+
+Joint Mathematics Meetings, AMS Special Session on Secant Varieties
+and related topics, San Diego, CA,  Jan.~2008. \emph{Secant Varieties and
+Statistical Models.}
+
+University of Sheffield, Sheffield, England,  Oct.~2007. \emph{Models
+of DNA site substitution}.
+
+\ifthenelse{\boolean{uafCV}}{
+Isaac Newton Institute for the Mathematical Sciences,
+Cambridge, England,  Oct.~2007. \emph{On the identifiability
+of substitution models}.
+}
+{}
+
+Isaac Newton Institute for the Mathematical Sciences workshop,
+``Current Challenges and Problems in Phylogenetics,'' Cambridge,
+England, Sept.~2007. \emph{The identifiability of the GTR+$\Gamma$
+model of molecular evolution}.
+
+Joint Statistics Meetings: Annual meetings of the American
+Statistical Association, the International Biometric Society (ENAR
+and WNAR), the Institute of Mathematical Statistics, and the
+Statistical Society of Canada, Aug.~2006.  Invited speaker in special session
+on phylogenetics, organized by B. Larget.
+
+Satellite conference to XVI Coloquio at University of Buenos Aires,
+Buenos Aires, Argentina, Aug.~2005. {\it Constructing phylogenetic
+invariants}.
+
+Virginia Polytechnic Institute and State University, Blacksburg,
+VA, April 2005.  \emph{Markov models of DNA mutation on
+phylogenetic trees}.
+
+Dartmouth College, Hanover, NH, Feb. 2005.  \emph{Modeling
+Molecular Evolution: Probabilistic Models of Base Substitution}.
+
+Maine Medical Center Research Institute, the Jackson Laboratories,
+University of Maine Orono,
+%(video lecture for Computational Methods in
+%Genomics, course for Ph.D. program in Computational Genomics at Orono),
+Nov. 2004. {\it Probabilistic Models of Base Substitution: the
+Jukes-Cantor distance}.
+
+Evolution 2004,
+Annual Meeting of Society of Systematic Biologists,
+%Annual Meeting of
+Society for the Study of Evolution, Society of Systematic Biologists
+and the American Society of Naturalists.
+
+Colorado State University, Fort Collins, CO, June 2004.
+ {\it Phylogenetic Invariants
+  and Parameter Recovery for the General Markov-Invariable Sites
+  Model}.
+
+Valley Geometry Seminar, Amherst, MA, April 2004. {\it The Algebra of
+Molecular Evolution and Phylogenetic Tree Construction}.
+
+St.~Olaf College, Northfield, MN, Feb. 2004. {\it The Algebra of
+Molecular Evolution}.
+
+James Madison University, Harrisonburg, VA, Feb. 2004. {\it Phylogenetic
+Tree Construction: An Overview}.
+
+The Annual New Zealand Phylogenetics Meeting, Whakapapa Village, New Zealand,
+Feb.~2004. {\it Constructing Phylogenetic Invariants for the General
+Markov Model of Sequence Mutation}.
+
+International Conference on Statistics, Combinatorics and Related
+Areas, Session on bioinformatics, University of Southern Maine,
+Oct.~2003.
+
+University of California, Berkeley, Mathematics of Phylogenetic Trees,
+seminar, Sept.~2003. {\it Algebraic techniques for phylogeny
+reconstruction from DNA sequence data}.
+
+\newpage
+University of Maine, Orono, Dec.~2002. {\it Constructing Phylogenetic
+  Trees using DNA sequences and the Method of Phylogenetic
+  Invariants}.
+
+International Congress of Mathematicians: Beijing, China, poster,
+Aug. 2002. {\it Phylogenetic Invariants for General Models of Sequence
+Mutation}.
+
+Brauer Groups Conference, Fort Collins, CO, July 2002.
+
+Joint Mathematics Meeting, AMS - MAA: San Diego, CA, Jan. 2002.
+Special Session ``Algebras, Forms, and Algebraic Groups,''
+
+MSRI Postdoctoral Seminar: MSRI, Berkeley, CA, Dec. 1999,
+
+Olga Taussky Todd Conference: MSRI, Berkeley, CA, July 1999,
+invited postdoctoral participant.
+
+AWM Workshop at the Joint Mathematics Meeting, AMS - MAA: San Antonio,
+TX, Jan.~1999.
+\emph{Subgroup Separability: A Blending of Number Theory, Geometry and
+  Topology}.
+
+Center for Communications Research, La Jolla, CA, \ June 1996.
+{\it Deficient Polynomials over Number Fields}.
+
+Conference on Brauer Groups and Galois Groups: Technion University,
+Haifa, Israel, \ June/July 1996.
+\emph{Polynomials Without Roots in Division Algebras}.
+
+Joint Meeting AMS - Israel Mathematical Union: Hebrew University,
+Jerusalem, Israel, May 1995. \emph{Polynomials Without Roots in Division
+Rings}.
+
+Conference on Division Algebras: Bar-Ilan University, Bar-Ilan, Israel,
+May 1995.
+\emph{Polynomials Without Roots in Division Rings}.
+
+\ifthenelse{\boolean{uafCV}}{
+USC Algebra Seminar: Los Angeles, Oct. 1994.
+\emph{Deficient Polynomials over Algebraic Number Fields}.}
+
+\mbox{}
+
+%\newpage
+
+\smallskip
+
+{\sc Selected Professional Service Addresses:}
+
+\smallskip
+
+{\it Starting a Career in Mathematics}, AWM panel, Joint Mathematics Meetings,
+San Diego, Jan.~2008.
+
+{\it Joining the Mathematical Community}.  Project NExT, San Jose State
+University, Mathfest, July 2007.
+
+\ifthenelse{\boolean{uafCV}}{
+{\it Phylogenetics: Techniques of Tree Construction}.  Colby College,
+Waterville, ME, Sept. 2004.}
+{}
+
+{\it A Joint Position in Mathematics and Mathematics Education at USM}.
+National Visiting Committee of the National Science Foundation's review
+of MMSTEC grant, Freeport, ME, April 2004.
+
+{\it Lessons Learned from Four Years in a Joint Position in Mathematics
+and Mathematics Education}. National Science Foundation 2004 Teacher
+Preparation PI Conference, Crystal City, VA, March 2004.
+
+\ifthenelse{\boolean{uafCV}}{
+{\it Reconstructing Evolution: The Mathematics of DNA sequences}.
+St. Olaf College, Northfield, MN, Feb. 2004.}
+{}
+
+%\enlargethispage{.5in}
+
+%\newpage
+
+{\it Models of Molecular Evolution: An Introduction}. Computational
+Methods in Genomics, Orono and Bar Harbor, ME, Nov. 2003.
+
+{\it Molecular Evolution Models and Phylogeny Reconstruction in an
+Introductory Biomathematics Course}. Conference on Bioinformatics in the
+Undergraduate Curriculum, Dickinson College, Carlisle, PA, March 2003.
+
+{\it Mathematical Models in Biology: an undergraduate course}. MAA
+MathFest, Los Angeles, CA, Aug.~2000.
+
+\begin{comment}
+{\it To reform or not to reform: Where do we stand now?}. Invited
+panelist, MAA MathFest, Los Angeles, CA, Aug.~2000.
+
+{\it Epidemic Modeling: MATLAB Exercises for an Undergraduate Course in
+Mathematical Models in Biology}. Invited speaker, MAA special session on
+Discrete Mathematics Revisited, Joint Mathematics Meetings, San Antonio,
+TX, Jan. 1999.
+
+{\it An Introduction to Hyperbolic Geometry}.  Colloquium, Western
+Carolina University, Sylva, NC, Nov. 1998.
+
+{\it An Introduction to the Mathematics of Special Relativity}.
+Colloquium, Trinity College, Hartford, CT, April 1998.
+
+{\it An Introduction to Hyperbolic Geometry}. Colloquium, Occidental
+College, Los Angeles, CA, March 1998.
+
+%{\it Maple and Implicit Differentiation: a Laboratory Exercise}. Project
+%NExT-SE special session at the spring southeastern sectional meeting of
+%the MAA, Charleston, SC, March 1998.
+
+{\it An Introduction to Hyperbolic Geometry}.  Colloquium, Davidson
+College, Davidson, NC, Feb. 1998.
+
+{\it Growing an Active Classroom; the Pros and Cons of Different
+Teaching Styles}.  Panelist and contributing author, Project NExT
+special session,  Joint Mathematics Meetings, AMS-MAA, Jan. 1998.
+
+%{\it Starting a Course from Scratch}. Co-organizer panel discussion for
+%Project NExT, Joint Mathematics Meetings, AMS-MAA, Jan. 1998.
+\end{comment}
+
+\mbox{}
+}
+
+%\newpage
+
+%\enlargethispage{.3in}
+
+{\bf GRANTS}
+
+\medskip
+
+{ \leftskip=.6in \parindent=-.3in  \parskip=3pt
+
+INBRE Sustaining Research Excellence grant, \ifthenelse{\boolean{uafCV}}{(\$75,000)}{}
+June 2020-21.  
+
+Banff International Research Station, Banff, CA, June 2020 (postponed due to Covid-19).
+
+American Institute of Mathematics SQuaRE (Structured Quartet Research Ensembles) grant, 
+``Mean trees from samples of gene trees under the coalescent model" with J.~Degnan, M.~Owen,
+and C.~Sol\'is-Lemus.
+2019-2021.
+
+Oberwolfach Mathematics Research Institute, Oberwolfach, Germany, April 2017. 
+
+Banff International Research Station, Banff, CA, Feb 2017.
+
+NIH Award R01 GM117590,
+Mathematics and computational analysis for specie tree inference, Joint DMS/NIGMS Initiative to Support 
+Research at the Interface of the Biological and Mathematical Sciences, with co-PIs J.~Rhodes, J.~Degnan, and N.~Rosenberg,
+\ifthenelse{\boolean{uafCV}}{(\$1,543,628),}{} 2015-2020.
+
+Erskine Fellowship, University of Canterbury, Christchurch, New Zealand.  Erskine Fellow 2013.
+
+\ifthenelse{\boolean{uafCV}}{Genome Consortium for Active Teaching (GCAT) Workshop on Synthetic Biology,
+funded by HHMI and NSF, attended curricular development workshop with UAF B\&W/IAB faculty member K.~O'Brien,  June 2012.}
+{}
+
+National Institute for Mathematical and Biological Synthesis (NIMBioS) grant.  Funded short-term
+visit to NIMBioS to collaborate with visiting scholar there,  June 2012.
+
+%\newpage
+
+American Institute of Mathematics SQuaRE grant, (Structured Quartet Research Ensembles)
+`Integrating and extending techniques for identification of latent variables in graphical models'
+with J.~Rhodes, E.~Stanghellini (Perugia) and M.~Valtorta (South Carolina).  
+\ifthenelse{\boolean{uafCV}}{Grant funds trips to AIM for a week of focused research
+by this quartet.}
+{}
+2011-2014.
+
+NIMBioS working group on Species Delimitation, (group member).
+\ifthenelse{\boolean{uafCV}}{Grant funds small research group for collaborative
+investigation into delimitation.  Co-PIs are R.~Yoshida and D.~Weisrock of 
+the University of Kentucky.}{}
+2010-2012.
+
+National Science Foundation Grant \#1047839:  Participant Suppport:
+2011 Mittag-Leffler Institute, Division of Mathematical Sciences,
+Program in Algebra, Number Theory and Combinatorics, and Program
+in Other Global Learning and Training; with co-PI S.~Sullivant,
+\ifthenelse{\boolean{uafCV}}{(\$48,515),}{}
+2010-2011.
+
+Mittag-Leffler Institute, Jan--March 2011, Research Fellow.
+
+University of Tasmania Visiting Scholar, Hobart, Tasmania, fall 2010.
+
+Statistical and Applied Mathematical Sciences Institute (SAMSI),  Raleigh, NC, 2009.\\
+Research Fellow, Special program on ``Algebraic Methods in Systems
+Biology and Statistics."
+
+ National Science Foundation Grant \#0714830: Enhancing Phylogenetic
+ Methods and Theory via Algebraic Perspectives, Division of
+ Mathematical Sciences, Program in Mathematical Biology; with co-PI
+ John Rhodes,
+ \ifthenelse{\boolean{uafCV}}{(\$486,450),}{}
+2007-2012.
+
+Isaac Newton Institute for Mathematical Sciences, Cambridge
+University, England; fall 2007.\\
+Visiting Fellow.  Special research program in ``Phylogenetics.''
+
+Mathematical Biosciences Institute, Columbus, OH;
+two-week residency, April 2007.
+
+Institute for Mathematics and Applications, Minneapolis, MN; Jan-Mar
+2007.\\ Long-term visitor in special research program in
+``Applications of Algebraic Geometry.''
+
+Clay Mathematics Institute Workshop, ``Algebraic Statistics and
+Computational Biology,'' Nov.~2005.
+
+Mathematical Biosciences Institute at the Ohio State University,
+``Phylogeography and Phylogenetics,'' workshop, Columbus, Ohio; Sept.
+2005,
+
+NSA travel subgrant, for participation in BASCOLA, Buenos Aires,
+Argentina; Aug.~2005.
+
+Institute for Advanced Study - Park City Mathematics Institute, Park
+City, UT; June-July 2005.\\  Summer program in Mathematical Biology,
+
+NSF-AWM travel grants, 2004, 1999, 1996.
+
+Association of Women in Mathematics -- NSF, AWM Leadership Conference
+grant, March 2004.
+
+AIM and NSF workshop, American Institute of Mathematics, Palo Alto, CA; Dec.~2003.\\
+Computational Algebraic Statistics.
+
+USM College of Arts and Sciences Research and Creative Activity Fund,
+spring 2003.
+
+NSF and AMS Grant, August 2002.\\
+Grant to participate in the {International Congress of Mathematicians}
+in Beijing, China.
+
+NSF and ExxonMobil Foundation Grant, fall 2001. \\
+Grant to participate in the {\it National Summit on the Mathematical
+Education of Teachers}.  This summit, sponsored by the MAA, was by
+invitation only.
+
+USM Faculty Technology Grant, spring 2002.
+
+USM Faculty Development Research Grants, 2000, 2001, 2003, 2004,
+2005.
+
+NSF Grant for Junior US mathematicians, to attend the {\it Mathematical
+Challenges of the 21st Century} AMS Meeting at UCLA, August 2000.
+
+Mathematical Sciences Research Institute (MSRI) member, fall 1999.  %\\
+
+NSA-AWM Grant, July 1999.  \\
+\hspace{.9in} Olga Taussky Todd Celebration of Careers in Mathematics
+for Women, MSRI.
+
+UNCA University Research Grant recipient, spring 1999.
+
+AWM Workshop for Women Graduate Students and Post-doctoral
+Mathematicians, San Antonio; Jan.~1999.
+
+American Association of University Women Summer Faculty Fellowship,
+summer 1998. \\
+\hspace{.9in} {\it Kleinian Groups, Subgroup Separability, and
+Mathematical Biology}.
+
+NSF-CBMS Conference in Division Algebras, Colorado State University,
+Fort Collins, June 1998.
+
+UNCA University Teaching Grant, fall 1997.
+
+Project NExT Fellow, 1996--1998.  \\
+\hspace{.9in} MAA/Exxon Grant for \lq\lq New Experiences in Teaching".
+
+\mbox{}
+}
+
+{\bf OTHER PROFESSIONAL ACTIVITIES}
+
+\medskip
+
+{ \leftskip=.6in \parindent=-.3in  \parskip=3pt
+
+{\sc Reviewer:}
+
+\medskip
+
+Associate Editor:  \emph{SIAM Review}, 2021-24.
+
+Editorial board: \emph{American Mathematical Monthly}, 2011-2016, 2017-2022.
+
+Guest Editor, \emph{American Mathematical Monthly} special issue
+in Mathematical Biology, in Nov.~2014.
+
+National Science Foundation reviewer:
+
+\hskip .3in Joint NSF/NIGMS Initiative to Support Research in the Area of
+Mathematical Biology
+
+\hskip .3in DMS Mathematical Biology program 
+\ifthenelse{\boolean{uafCV}}{(multiple years)}{}
+
+\hskip .3in program ``Collaboration in
+Mathematical Geosciences: Opportunities for research collaborations
+between the Mathematical Sciences and the Geosciences.''
+
+\hskip .3in OISE organization
+
+Referee: {\sl Advances in Applied Mathematics}, {\sl Algorithms for
+  Molecular Biology}, {\sl Annals of Statistics}, 
+   {\sl Biometrika}, 
+  {\sl Bulletin of Mathematical Biology}, 
+  {\sl Cambridge University Press}, {\sl College
+  Mathematics Journal}, {\sl Institute for Mathematics and its
+  Applications Volume Series}, {\sl International Symposium in
+  Symbolic and Algebraic Computation} (ISSAC), {\sl Journal of
+  Interdisciplinary Mathematics}, {\sl Journal of Online Mathematics
+  and its Applications}, {\sl Journal of Symbolic Computation}, {\sl
+  MAA Online}, {\sl Journal of Mathematical Biology}, 
+  {\sl Journal of Theoretical Biology},  {\sl Mathematical Biosciences}, {\sl Mathematics
+  Magazine}, {\sl Molecular Biology and Evolution}, {\sl Molecular Phylogenetics
+  and Evolution}, {\sl Oxford   University Press}, {\sl PeerJ}, {\sl Systematic Biology}, {\sl IEEE/ACM Transactions on
+  Computational Biology and Bioinformatics}
+
+Ph.D.~examiner:
+
+\hskip .3in University of Canterbury Department of Mathematics and
+Statistics, New Zealand.
+
+\hskip .3in McGill University Department of Mathematics and
+Statistics, Canada.
+
+Promotion and/or Tenure outside reviewer:  University of Tasmania, North Carolina State University,
+Colorado College, Clemson University, San Francisco State University,
+American University of Sharjah, United Arab Emirates, University of Hawai'i
+
+New Zealand's Marsden Fund Reviewer
+
+AWM graduate student and recent Ph.D.~workshop co-organizer.  Review
+graduate student applications for the joint meetings AWM workshop
+(2008, 2009, 2011).
+
+AWM travel grant program reviewer.  Helped review the
+effectiveness of the AWM grants and activities.
+
+\bigskip
+
+{\sc Program Committees and Professional Leadership:}
+
+\smallskip
+
+Program committee, Algebraic Statistics at the University of Hawaii at Manoa, June 2020, now postponed
+until May 2021.
+
+SIAM selection committee for the SIAG/Algebraic Geometry Early Career Prize, 2018.
+
+Mathematics and the Quest for Fundamental Principles in Biology.  Group of 17
+researchers funded by Army Research Office to investigate and explore 
+future directions of mathematical biology.  Met at University of Utah, Dec.~2015.
+
+SIAM Nominating committee for the SIAM Activity Group in Algebraic Geometry, 2015.
+
+Chair Scientific Advisory Board,
+NSF-CBMS Regional Research Conference in Mathematical Phylogenetics.
+
+Program committee, 21st International Conference on
+Intelligent Systems for Molecular Biology; 12th European
+Conference on Computational Biology (ISMB/ECCB 2013), Evolution and
+Comparative Genomics track.
+
+Program committee, SIAM Meeting on Applications of Algebraic Geometry, Raleigh, NC, Oct 2011.
+
+Vice Chair, SIAM's Activity Group for Algebraic Geometry -- $\text{SI(AG)}^2$, 2009 -- 2011.
+
+Program committee, Workshop on Algorithms in Bioinformatics (WABI 2009).
+
+Program committee, Sixteenth International Conference on
+Intelligent Systems for Molecular Biology (ISMB 2008), Evolution and
+Phylogeny track.
+
+Scientific committee, Mathematics and Informatics in Evolution
+and Phylogeny, Hameau de l'Etoile, France, 2008.
+
+\bigskip
+
+{\sc Organizer:}
+
+\smallskip
+
+Co-organizer `Applications of Mathematical Biology' mini-symposium at
+the SIAM meeting on Applications of Algebraic Geometry, Raleigh, NC, Oct 2011.
+
+Co-chair SAMSI's working group on Evolutionary Biology, 2008 -- 2009.
+
+Co-organizer, with R.~Thomas of the University of Washington, AMS
+special session {\sl Applications of Algebraic Geometry}, AMS
+Sectional meetings, Vancouver, BC, Oct.~2008.
+
+Co-organizer AWM Workshop for Women Graduate Students and Recent PhDs,
+Joint Mathematics Meetings, San Diego, Jan.~2008; Jan.~2010.
+
+Co-organizer, with V.~Moulton of University of East Anglia, London
+Mathematical Society's Spitalfields Day at the Isaac Newton
+Institute for the Mathematical Sciences.  ``Yggdrasil:
+Reconstructing the Tree of Life.'' Dec.~2007.
+
+Co-organizer, with S. Sullivant of Harvard University, Special Session
+{\sl Algebraic Statistics:  Theory and Practice}, Joint Mathematics
+Meetings, San Antonio, TX, Jan. 2006.
+
+\ifthenelse{\boolean{uafCV}}{
+Chair, AMS session on Field Theory and Commutative Rings, Joint
+Mathematical Meetings, New Orleans, LA; Jan. 2001.}
+{}
+
+Co-organizer Project NExT session {\it What Makes a Mathematics Program
+Thrive?}, Joint Mathematics Meetings, New Orleans, LA; Jan. 2001.
+
+\medskip
+
+{\sc Mathematics Education:}
+
+\smallskip
+
+{ \leftskip=.6in \parindent=-.3in  \parskip=3pt
+
+MMSTEC, participated in Maine Mathematics and Science Teaching
+Excellence Collaborative, a NSF funded grant to the State of Maine --
+DUE Collaboratives for Excellence in Teacher Preparation program. Took
+a leadership role in designing a secondary mathematics certification
+program at USM and improving the preparation of HS mathematics
+teachers.
+
+College Board Faculty Consultant, June 1997, 1999, 2001, 2002, 2003.
+
+\begin{comment}
+Undergraduate Research/Independent Studies.  Geometry of Surfaces,
+Applications of Integration in the Sciences, Introduction to Proofs,
+Networking, Using {\it Mathematica} to Model Solutions to the Lorenz
+Differential Equations, Senior Seminar Talks: Number Theory
+and Atonality; Generating Functions; Divergence Theorem and Gauss Flux
+Theorem; Magic Squares; Latin squares and the design of tournaments.
+\end{comment}
+
+\mbox{}
+}
+
+\newpage
+
+{\sc Curricular Interests:}
+
+{ \leftskip=.6in \parindent=-.3in  \parskip=3pt
+
+Courses taught include: Calculus I, II, and III, Linear Algebra,
+Differential Equations, Foundations, Real Analysis, Complex
+Analysis, Topology, Abstract Algebra, Number Theory, Galois Theory, Algebraic
+Geometry, Numerical Analysis,
+Probability, Statistical Inference, Mathematical Models in Biology,
+Mathematical Modeling, Synthetic Biology, Introductory Programming, An Introduction to
+the Internet, Geometry for Elementary Teachers, Mathematical Methods
+for High School Teachers, Capstone course, Seminar, Supervision of
+Mathematics teachers.
+
+Software Expertise: Macaulay2, Singular, MATLAB, Mathematica, Maple,
+Pari, SplitsTree, Phylip, PAUP*, PhyML, IQtreee, R, C.
+
+%\mbox{}
+}
+
+{\sc Curricular Development:}
+
+{ \leftskip=.6in \parindent=-.3in  \parskip=3pt
+
+Undergraduate/graduate course:  Mathematical Models in Biology
+
+Graduate course:  Theory of Phylogenetics, Algebraic Geometry, Galois Theory
+
+Undergraduate math and biology course:  An Introduction to Synthetic Biology
+
+\mbox{}
+}
+
+}
+
+%\newpage
+
+{\bf UAF PhD  and POSTDOC ADVISING}
+
+\medskip
+
+{\leftskip=.6in \parindent=-.2in  \parskip=3pt
+
+2015--19 \, Hector Ba\~nos, PhD: ``Species Network inference under the multispecies coalescent
+model."
+
+2015--20  \, Samaneh Yourdkhani (PhD):  ``Investigations in Phylogenetics:  Tree inference and model identifiability"
+
+2017--18, 2020-21 \, Jonathan Mitchell (Post-doc)
+
+\ifthenelse{\boolean{uafCV}}
+{
+\smallskip
+{\sl PhD thesis committee member:}
+
+2018--\phantom{20} Jeffrey Parks (PhD)
+}{}
+
+}
+
+
+
+
+\medskip
+
+{\bf UAF MASTER'S PROJECTS AND THESES}
+
+\medskip
+
+{ \leftskip=.6in \parindent=-.2in  \parskip=3pt
+
+2019--~~  Dakota Dragomir
+
+2017--18 ``Testing Multispecies Coalescent Simulators with Summary Statistics," 
+Hector Ban\~os, (MS Statistics) [co-advisor]
+
+2016--18 ``Reliability Analysis of Reconstructing Phylogenies under Long Branch Attraction Conditions,"
+Ranjan Dissanayake  (MS Statistics)
+
+2015--16  ``Expectation Maximization and Latent Class Models,"  (MS Mathematics) Hector Ba\~nos
+
+\ifthenelse{\boolean{uafCV}}{2014--14 \, Emily Hill (left program)}{}
+
+2009--11 ``An exposition on the Kronecker-Weber Theorem,"  Jason Bagett
+
+2006--09 ``Algebraic geometry applied to phylogenetics," Beth Zirbes
+
+2007--08 ``A software system for simulating the evolution of biological sequences under complex models," M.M.~Haque (computer science  -- informal advisor) 
+
+\ifthenelse{\boolean{uafCV}}
+{
+\smallskip
+{\sl Master's thesis committee member:}
+
+\smallskip
+
+2017- Mason Brewer (left program)
+
+2013--16 Caleb Jurkowski
+
+2013--16 Samantha Warren
+
+2012--16 Andres Dajles
+
+2012--13, 2015-- Erin Rausch VanHouten
+
+2012--14 Vikenty Miheev
+
+2013--14 Mark Layer
+
+2010--14 Lyman Gillispie 
+
+2008--13 Yuanyuan Zhao
+
+2008-- Mike Hazlett (left program fall 2010)
+
+2005--06 Robert Luz
+
+\smallskip
+
+
+
+\smallskip
+
+{\sl Independent studies and projects:}
+
+2012 -- Lyman Gillispie, 697: Representation theory 
+
+2010 -- Jason Baggett, Number theory
+
+2008 -- Rachel Krieg, undergraduate statistics project in phylogenetics
+}{}
+
+\smallskip
+
+%\mbox{}
+}
+
+\ifthenelse{\boolean{uafCV}}
+{
+{\bf UAF University Service}
+
+\medskip
+
+{ \leftskip=.6in \parindent=-.2in  \parskip=3pt
+
+2019-2020 Outside Examiner, Oral Comprehensive PhD Exam, Kendall Mills, Biology and Wildlife
+
+\hskip 1.65cm Outside Examiner, Oral Comprehensive PhD Exam, Katie Rubin, Biology and Wildlife
+
+2015--2016 Planning and Budget Committee
+
+2014--2016 Faculty Senate CNSM Senator
+
+2014--2016 Faculty Affairs Committee
+
+2014 Biology and Wildlife Instructor of the Year Selection Committee
+
+2009-2010 Chancellor's Committee on the Integration of Research and Teaching in
+the Sciences (CIRTS)
+
+2008--2010 Faculty Senate Committee on the Status of Women
+
+2008--2009 Core Curriculum Review Committee
+
+Department Colloquia: 2007, 2012, 2016
+
+
+%\mbox{}
+}
+}
+{}
+
+\ifthenelse{\boolean{uafCV}}
+{
+{\bf Department service}
+
+\medskip
+
+{ \leftskip=.6in \parindent=-.2in  \parskip=3pt
+
+B.A./B.S.~Mathematics program review 2017-2018, edited 2019-2020
+
+Math B.A.~plan, 2015-2016
+
+Calculus review committee, 2015-2016
+
+Core curriculum committee, 2015-2016
+
+B.A./B.S.~Mathematics program and special program review, 2014-2015
+
+Alignment committee, 2014-2015
+
+Statistics Faculty Search committee 2014-2015
+
+Statistics Faculty Search committee 2013-2014
+
+Curriculum Whip 2012-2015
+
+Graduate Ph.D. Admissions committee
+
+Graduate Ph.D.~program review
+
+Peer Review committee
+
+Graduate committee
+
+Undergraduate committee
+
+Committee assignments as needed
+
+%\mbox{}
+}
+}
+{}
+
+\ifthenelse{\boolean{uafCV}}
+{
+{\bf Community service}
+
+\medskip
+
+{ \leftskip=.6in \parindent=-.2in  \parskip=3pt
+
+\emph{Building with Biology} at the Museum of the North, synthetic biology public outreach, Aug 2016.
+
+New Mexico State High School Mathematics Contest plenary speaker 2014.
+
+Fairbanks home school science fair judge, Feb 2012.
+
+\mbox{}
+}
+}
+{}
+
+
+{\bf OTHER INTERESTS}
+
+\medskip
+
+{ \leftskip=.6in \parindent=-.2in  \parskip=3pt
+
+Travel, Marathon Running, Hiking, Speaking Italian, Swimming, Skiing, Music, Kids,
+Good Humor
+
+%\mbox{}
+}
+
+\end{document}
