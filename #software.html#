@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Teaching</title>
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+
+    <link href="bootstrap-4/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        margin-top: 0px; /* 60px to make the container go all the way to the bottom of the topbar */
+o      }
+    </style>
+<!--   <meta name="viewport" content="width=2000px">
+   <link href="bootstrap-4/css/bootstrap-responsive.css" Rel="stylesheet"> -->
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="bootstrap/ico/favicon.ico">
+
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap-transition.js"></script>
+    <script src="bootstrap/js/bootstrap-alert.js"></script>
+    <script src="bootstrap/js/bootstrap-modal.js"></script>
+
+    <script src="bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="bootstrap/js/bootstrap-tab.js"></script>
+    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="bootstrap/js/bootstrap-popover.js"></script>
+    <script src="bootstrap/js/bootstrap-button.js"></script>
+
+    <script src="bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="bootstrap/js/bootstrap-typeahead.js"></script>
+</head>
+
+<body>
+
+<div class="container bg-light text-muted">
+<!--style="background-color: #17a2b8;">-->
+
+  <div class="row">
+    <div class="col-sm-auto">
+         <br />
+         <img src="Images/fairweather.jpg" height="200" alt="Mt Fairweather" />
+         <img src="Images/nanuq_2.png" height="200" alt="NANUQ"  />
+    </div>
+    <div class="col-sm-auto text-muted">
+         <br />
+         <br />
+         <br />
+         <h4>Elizabeth S. Allman </h4>
+          Mathematics and Statistics œôó¢ <br />
+          UAF, Fairbanks, AK œôó¢ <br />
+          e.allman AT alaska.edu <br />
+    </div>
+  </div>
+
+<!--
+  <div class="row">
+    <div class="col-sm-auto">
+         <br />
+         <img src="Images/fairweather.jpg" height="200" alt="Mt Fairweather" />
+         <img src="Images/nanuq_2.png" height="200" alt="NANUQ"  />
+    </div>
+    <div class="col-sm-auto text-muted">
+         <br />
+         <br />
+         <br />
+         <h4>Elizabeth S. Allman </h4>
+          Mathematics and Statistics œôó¢ <br />
+          UAF, Fairbanks, AK œôó¢ <br />
+          e.allman AT alaska.edu <br />
+    </div>
+  </div>
+-->
+
+<!--<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <a class="nav-link active" href="#">Home</a>
+</nav>-->
+
+<!--<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #17a2b8;">-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+        <li class="nav-item">
+          <a class="nav-link" href="research.html">Research</a>
+        <li class="nav-item">
+          <a class="nav-link" href="teaching.html">Teaching</a>
+        <li class="nav-item">
+          <a class="nav-link active" href="software.html">Software</a>
+        <li class="nav-item">
+          <a class="nav-link" href="travel.html">Travel</a>
+        <li class="nav-item">
+          <a class="nav-link" href="photos.html">Photos</a>
+    </div>
+  </nav>
+
+<!--
+  <nav class="nav">
+    <a class="nav-link active" href="#">Home</a>
+    <a class="nav-link" href="#">Research</a>
+    <a class="nav-link" href="#">Teaching</a>
+    <a class="nav-link" href="#">Software</a>
+    <a class="nav-link" href="#">Travel</a>
+    <a class="nav-link" href="#">Photos</a>
+   </nav>
+-->
+</div>
+
+
+<div class="container text-muted">
+  <br />  <br />
+  <div class="row">
+    <div class="col">
+       <ul class="list-group"> 
+
+    <li>  <span style="code; font-size:16px"><FONT color="990033">MSCquartets v. 1.0.5</FONT></span> <br />
+    MSCquartets: Analyzing Gene Tree Quartets under the Multi-species Coalescent.<br />
+    joint with Hector Banos-Cervantes, Jonathan Mitchell, J.A.Rhodes, (R package). <br />
+    CRAN <a href = "https://cran.r-project.org/web/packages/MSCquartets/index.html">download.</a> &nbsp;
+
+    Please cite: &nbsp; <br />
+
+    J.A. Rhodes, H.D. Banos-Cervantes, J.D. Mitchell and E.S. Mitchell, 
+    &quot; MSCquartets 1.0: Quartet methods for species trees and networks under the multispecies coalescent model in R. &quot;
+    Bioinformatics, 37 no. 12 (1766œôòó1768), 2021. &nbsp;
+    <a href="https://doi.org/10.1093/bioinformatics/btaa868">online</a> </p>
+
+    Other relevant and helpful citations include: 
+</p>
+
+&quot;Gene tree discord, simplex plots, and statistical tests under the coalescent.&quot; 
+E.S.Allman, J.D. Mitchell and J.Rhodes, Syst. Biol. <br />
+Published: 09 February 2021 &nbsp;
+<a href="https://doi.org/10.1093/sysbio/syab008">online</a>
+
+  </p>
+
+
+ &quot;NANUQ: A method for inferring species networks from gene trees under the coalescent model,&quot; 
+ E.S. Allman, H. Banos-Cervantes and J.Rhodes, 
+ Algorithms for Molecular Biology,   <strong>14</strong> no. 24 (2019). &nbsp;
+ <a href="https://doi.org/10.1186/s13015-019-0159-2">online</a>
+ 
+  </p>
+
+ &quot;Hypothesis testing near singularities and boundaries,&quot; 
+ E.S. Allman,  J. Mitchell and J.Rhodes, 
+Electronic Journal of Statistics,
+<strong>13</strong> no. 1 (2019) 1250-1293.
+
+ </li>
+
+</p>  
+    <li>   <span style="code; font-size:16px"><FONT color="990033">SplitSup</FONT></span>&nbsp;
+  version 1.02. <br />
+
+  Download from <a href="https://github.com/eallman/SplitSup" target="_blank">GitHub</a> or in 
+  <a href="SplitSup.zip">zip</a> format. <br />
+  
+  Please cite the following paper if you use SplitSup in your research:  
+  <p><em>Split scores: a tool to quantify phylogenetic signal in genome-scale data</em> with L. Kubatko and J. Rhodes.  
+  with L.S. Kubatko and J.A.Rhodes, Systematic Biology, <strong>66</strong> no.4 (2017) 620-636.
+      </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+  Coming soon ....
+  </div>
+
+  <div class="row">
+    <div class="col">
+       <ul class="list-group"> 
+  
+ 
+    <li>  <span style="code; font-size:16px"><FONT color="990033">MSCsimtester v.1.0</FONT></span>, 
+    joint with Hector Banos-Cervantes and J.A. Rhodes.  (R package) available on request. </li>
+
+      </ul>
+  
+    </div>
+  </div>
+  <br />
+</div>
+
+
+
+<div class="container ">
+  <div class="row">
+   <br />
+   <br />
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
