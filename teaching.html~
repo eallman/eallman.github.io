@@ -18,17 +18,6 @@ o      }
 <!--   <meta name="viewport" content="width=2000px">
    <link href="bootstrap-4/css/bootstrap-responsive.css" Rel="stylesheet"> -->
     
-   <style>
-      myh1 {
-          font-size: 35px;
-          font-weight normal;
-          color: light-grey;
-          letter-spacing: -1px;
-          line-height: 2;
-          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    } 
-    </style>
-
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -64,11 +53,13 @@ o      }
 <body>
 
 <div class="container bg-light text-muted">
+<!--style="background-color: #17a2b8;">-->
 
   <div class="row">
     <div class="col-sm-auto">
          <br />
-         <img src="Images/image-travel-page.png" height="200" alt="Mt Fairweather" />
+         <img src="Images/image-teaching-page.png" height="200" alt="Probability"  />   
+
     </div>
     <div class="col-sm-auto text-muted">
          <br />
@@ -81,14 +72,13 @@ o      }
     </div>
   </div>
 
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="index.html">Home</a>
         <li class="nav-item">
-          <a class="nav-link" href="teaching.html">Teaching</a>
+          <a class="nav-link active" href="teaching.html">Teaching</a>
         <li class="nav-item">
           <a class="nav-link" href="research.html">Research</a>
         <li class="nav-item">
@@ -96,9 +86,9 @@ o      }
         <li class="nav-item">
           <a class="nav-link" href="software.html">Software</a>
 <!--        <li class="nav-item">
-	  <a class="nav-link" href="Images/ICERM-2024-advert.pdf">ICERM 2024</a> -->
-        <li class="nav-item">	  
-          <a class="nav-link active" href="travel.html">Travel</a>
+          <a class="nav-link" href="Images/ICERM-2024-advert.pdf">ICERM 2024</a>-->	  
+        <li class="nav-item">
+          <a class="nav-link" href="travel.html">Travel</a>
         <li class="nav-item">
           <a class="nav-link" href="photos.html">Photos</a>
     </div>
@@ -109,54 +99,68 @@ o      }
 
 <div class="container text-muted">
   <br />  <br />
-  <div class="row">
-  <p><a name="talks" id="talks"></a> <span style="font-weight: bold;">Upcoming and recent travel:</span> </p>
-  </div>
 
   <div class="row">
-    <div class="col-sm-auto text-muted">
-
-      <a href="https://mceb2025.sciencesconf.org">MCEB</a> Granada, Spain (May 2025) <br/>
-   ICERM for its semester program:  Theory, Methods, and Applications of Quantitative Phylogenetics (Fall 2024) <br />
-   Mathematics of Evolution-Phylogenetic Trees and Networks, National University of Singapore (Sept 2023) <br />
-  AIM SQuaRE (June 2023) <br />
-  SIAM conference on Applied Algebraic Geometry, Bern, Switzerland (July 2019) <br />
-  AIM SQuaRE (July 2019) <br />
-  Evolution 2018, Providence, RI (June 2018) <br />
-  Nonlinear Algebra and Applications, ICERM Workshop, Providence, RI (Nov 2018) <br />
-  Algebraic and Combinatorial Phylogenetics Workshop, Barcelona, Spain (June/July 2017) <br />
-  Mathematical and Computational Evolutionary Biology conference, Porquerolles island, France (June 2017) <br />
-  Center for Integrative Bioinformatics Vienna (CIBIV) (June 2017) <br />
-  Oberwolfach (April 2017) <br />
-  Banff International Research Station (Feb. 2017) <br />
-
-  </div>
-  </div>
-  
-  <br /> 
-  <div class="row">
-    <p><a name="talks" id="talks"></a> <span style="font-weight: bold;">Some favorite places I've visited professionally:</span> </p>
+    <div class="col">
+       <p><b>Fall 2024:</b> &nbsp;  
+         <ul class="list-group"> 
+         <li class="list-group-item">off campus at ICERM</li>
+       </ul>
+    </div>
   </div>
 
-  <div class="row">
-    <div class="col-sm-auto text-muted">
-      ICERM, Providence, RI<br/>
-  University of Canterbury, Christchurch, NZ<br>
-  NIMBioS, TN<br>
-  American Institute of Mathematics, Palo Alto, CA<br>
-  Mathematical Biosciences Institute, Columbus, OH<br>
-  Mittag-Leffler Institute, Sweden<br>
-  University of Tasmania, Hobart, AU<br>
-  Laboratoire Statistique et Genome, Evry, France<br>
-  Renyi Institute, Budapest, Hungary<br>
-  Isaac Newton Institute, Cambridge, England<br>
-  Institute for Mathematics and its Applications, Minneapolis, MN<br>
-    <br>
-
-  </div>
-  </div>
+  <!-- <div class="row">
+    <div class="col">
+       <p>MATLAB <a href="classes/MATLAB-graphics-intro-2022.zip">tutorial files</a> for UAF engineers &nbsp;
+     <ul class="list-group"> 
+         <li class="list-group-item">MATLAB tutorial <a href="classes/MATLAB-graphics-intro-2022.zip">files</a> for engineers. </li>
+       </ul> 
+    </div>
+  </div> 
 
 
+</p>
+  <br />    -->
 </div>
+
+<div class="container text-muted">
+<table class="">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><p>
+	<p>
+Though it has been some time, I always enjoy teaching undergraduate mathematical biology
+   modeling from our textbook.</p>
+<h6>Mathematical Models in Biology: &nbsp;An Introduction</h6>
+<p>Elizabeth S. Allman and John A. Rhodes, <br>
+  <a href="http://us.cambridge.org/titles/catalogue.asp?isbn=0521525861">Cambridge
+    University Press</a>, January 2004. <br>
+
+  <i>Solution Manual for Mathematical Models in Biology: An
+    Introduction</i>, (electronic) <br>
+   </p>
+   <p>List of known <a href="papers/errata.pdf">errata</a>.&nbsp;  
+  <td width="39%" style="vertical-align: top;"><img src="Images/book.jpg" alt="book" border="0" style="width: 130px; height: 190px;" />
+  </td>
+    </tr>
+  </tbody>
+</table>
+
+
+  <div class="row">
+   <br />
+   <br />
+  </div>
+</div>
+
+
+
+
 </body>
 </html>

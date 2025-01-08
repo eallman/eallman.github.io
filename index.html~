@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Teaching</title>
+    <title>Elizabeth S. Allman - Mathematics and Statistics - University of Alaska</title>
 <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <meta name="description" content="">
     <meta name="author" content="">
@@ -17,11 +17,11 @@ o      }
     </style>
 <!--   <meta name="viewport" content="width=2000px">
    <link href="bootstrap-4/css/bootstrap-responsive.css" Rel="stylesheet"> -->
-    
+
    <style>
-      myh1 {
+     myh1 {
           font-size: 35px;
-          font-weight normal;
+          font-weight bold;
           color: light-grey;
           letter-spacing: -1px;
           line-height: 2;
@@ -63,30 +63,31 @@ o      }
 
 <body>
 
-<div class="container bg-light text-muted">
+<div class="container bg-light text-muted container-fluid">
+<!--style="background-color: #17a2b8;">-->
+
 
   <div class="row">
     <div class="col-sm-auto">
          <br />
-         <img src="Images/image-travel-page.png" height="200" alt="Mt Fairweather" />
-    </div>
+         <img src="Images/image-home-page.png" alt="Elizabeth S. Allman" height="200" /> 
+     </div>
     <div class="col-sm-auto text-muted">
          <br />
          <br />
-         <br />
-         <h4>Elizabeth S. Allman </h4>
+         <br />	 
+          <h4>Elizabeth S. Allman </h4>
           Mathematics and Statistics • <br />
           UAF, Fairbanks, AK • <br />
           e.allman AT alaska.edu <br />
     </div>
   </div>
 
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+        <li class="nav-item active">
+          <a class="nav-link active" href="index.html">Home</a>
         <li class="nav-item">
           <a class="nav-link" href="teaching.html">Teaching</a>
         <li class="nav-item">
@@ -95,68 +96,64 @@ o      }
           <a class="nav-link" href="Allman-papers.html">Publications</a>	  
         <li class="nav-item">
           <a class="nav-link" href="software.html">Software</a>
-<!--        <li class="nav-item">
-	  <a class="nav-link" href="Images/ICERM-2024-advert.pdf">ICERM 2024</a> -->
-        <li class="nav-item">	  
-          <a class="nav-link active" href="travel.html">Travel</a>
+   <!--     <li class="nav-item">
+          <a class="nav-link" href="Images/ICERM-2024-advert.pdf">ICERM 2024</a>-->
+        <li class="nav-item">
+          <a class="nav-link" href="travel.html">Travel</a>
         <li class="nav-item">
           <a class="nav-link" href="photos.html">Photos</a>
     </div>
   </nav>
+</div>
 
+
+<div class="container text-muted container-fluid">
+  <br />
+  <div class="row">
+    <div class="col-sm-auto">
+      Professor Department of Mathematics and Statistics          <br />
+      Senior Research Associate Institute for Arctic Biology         <br />
+     </div>
+    <div class="col-sm-auto">
+      Fellow American Mathematical Society         <br />
+<!--      Associate Editor American Mathematical Monthly         <br />-->
+      Associate Editor SIAM Review         <br />
+     </div>
+   </div>
 </div>
 
 
 <div class="container text-muted">
-  <br />  <br />
   <div class="row">
-  <p><a name="talks" id="talks"></a> <span style="font-weight: bold;">Upcoming and recent travel:</span> </p>
+   <br />
+   <br />
+   I am a Professor in the Mathematics and Statistics Department at UAF with interests
+in phylogenetics, &mdash;and mathematical biology more generally&mdash;, algebraic methods, latent class models
+   in statistics, and teaching. 
+
+   I earned my Ph.D. and M.S. in algebra at UCLA under the direction of Murray M. Schacher.<br />
+<br />
+
+   </p>   
+In 2013, I was elected a Fellow of the American Mathematical Society in its inaugural class. <br /><br />
+
+</p></p>
+If you are interested in participating in ICERM's fall 2024 semester program: &nbsp;
+<a href="https://icerm.brown.edu">Theory, Methods, and Applications of Quantitative Phylogenetics,</a> 
+please contact me or staff at ICERM.
   </div>
-
-  <div class="row">
-    <div class="col-sm-auto text-muted">
-
-      <a href="https://mceb2025.sciencesconf.org">MCEB</a> Granada, Spain (May 2025) <br/>
-   ICERM for its semester program:  Theory, Methods, and Applications of Quantitative Phylogenetics (Fall 2024) <br />
-   Mathematics of Evolution-Phylogenetic Trees and Networks, National University of Singapore (Sept 2023) <br />
-  AIM SQuaRE (June 2023) <br />
-  SIAM conference on Applied Algebraic Geometry, Bern, Switzerland (July 2019) <br />
-  AIM SQuaRE (July 2019) <br />
-  Evolution 2018, Providence, RI (June 2018) <br />
-  Nonlinear Algebra and Applications, ICERM Workshop, Providence, RI (Nov 2018) <br />
-  Algebraic and Combinatorial Phylogenetics Workshop, Barcelona, Spain (June/July 2017) <br />
-  Mathematical and Computational Evolutionary Biology conference, Porquerolles island, France (June 2017) <br />
-  Center for Integrative Bioinformatics Vienna (CIBIV) (June 2017) <br />
-  Oberwolfach (April 2017) <br />
-  Banff International Research Station (Feb. 2017) <br />
-
-  </div>
-  </div>
-  
-  <br /> 
-  <div class="row">
-    <p><a name="talks" id="talks"></a> <span style="font-weight: bold;">Some favorite places I've visited professionally:</span> </p>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-auto text-muted">
-      ICERM, Providence, RI<br/>
-  University of Canterbury, Christchurch, NZ<br>
-  NIMBioS, TN<br>
-  American Institute of Mathematics, Palo Alto, CA<br>
-  Mathematical Biosciences Institute, Columbus, OH<br>
-  Mittag-Leffler Institute, Sweden<br>
-  University of Tasmania, Hobart, AU<br>
-  Laboratoire Statistique et Genome, Evry, France<br>
-  Renyi Institute, Budapest, Hungary<br>
-  Isaac Newton Institute, Cambridge, England<br>
-  Institute for Mathematics and its Applications, Minneapolis, MN<br>
-    <br>
-
-  </div>
-  </div>
-
-
 </div>
+
+
+<div class="container text-info">
+   <div class="row">
+     <br />
+     Office: &nbsp; 308B Chapman, &nbsp; Phone:  (907)474-2479 <br />
+     US Mail:  &nbsp; Department of Mathematics and Statistics, UAF, PO Box 756660, Fairbanks, AK 99775-6660
+   </div> 
+</div>
+
+
+
 </body>
 </html>
